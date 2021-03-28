@@ -44,12 +44,12 @@ section > h2 {
   top: 25%;
   width: 100%;
   padding: 0 5px 0 10px;
-  font-size: 0.9rem;
   word-spacing: 1px;
 }
 
 .cover-title h1 {
   font-family: "Raleway", Cabin, Arial, Helvetica, sans-serif;
+  font-weight: 800;
 }
 
 .cover-title span {
@@ -367,12 +367,7 @@ form .form-row .textarea {
 
   .header-container .cover-title {
     padding: 0 10px 0 20px;
-    font-size: 1.1rem;
-  }
-
-  .cover-title h1 {
-    font-family: "Raleway", Cabin, Arial, Helvetica, sans-serif;
-    font-weight: 800;
+    font-size: 1.2rem;
   }
 
   .cover-title span {
