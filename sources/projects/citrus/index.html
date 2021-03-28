@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./sources/css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Citrus</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="site-header-nav">
+          <ul class="site-nav-left">
+            <li>
+              <a href="#">
+                <img
+                  src="./sources/assets/logo.svg"
+                  alt="Citrus"
+                  class="logo"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="site-nav-link">About</a>
+            </li>
+            <li>
+              <a href="#" class="site-nav-link">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="site-nav-right">
+            <li>
+              <a href="#" class="site-nav-link">
+                <img
+                  src="./sources/assets/icon-search.svg"
+                  alt="Search"
+                  class="search"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="button button-secondary button-small">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="site-main">
+      <header class="clearfix site-main-header">
+        <div class="container">
+          <h1 id="page-title">Contact Our Team</h1>
+          <p class="col-1-2 info">
+            We are standing by for your questions, comments or concerns. If
+            there is anything we can do, please reach out and let us know.
+          </p>
+        </div>
+      </header>
+      <section>
+        <div class="container">
+          <div class="card">
+            <div class="clearfix">
+              <div class="col-1-2">
+                <h2 class="section-header">Leave A Message</h2>
+                <form class="clearfix">
+                  <label>Name</label>
+                  <input type="text" placeholder="Full name" />
+                  <label>Email</label>
+                  <input type="email" placeholder="Email address" />
+                  <label>Contact reason</label>
+                  <select>
+                    <option selected disabled>Please select one</option>
+                    <option>Customer service question</option>
+                    <option>Billing question</option>
+                    <option>Website question</option>
+                  </select>
+                  <label>Issue details</label>
+                  <textarea
+                    placeholder="Provide as much detail as you can so we can address your issue."
+                  ></textarea>
+                  <input
+                    type="submit"
+                    value="Submit Message"
+                    class="button button-primary float-right"
+                  />
+                </form>
+              </div>
+              <div class="col-1-2">
+                <p><b>Our Location</b></p>
+                <img
+                  src="./sources/images/location.png"
+                  alt="Office Location"
+                />
+                <ul class="location-details">
+                  <li><b>Address:</b> 233 S Wacker Dr, Chicago, IL 60606</li>
+                  <li><b>Phone:</b> (123) 456-7890</li>
+                  <li><b>Email:</b> support@citrusmail.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="site-main-background"></div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <nav class="clearfix">
+          <ul class="col-1-4 footer-section">
+            <li>
+              <img src="./sources/assets/logo.svg" alt="Citrus" class="logo" />
+            </li>
+            <li>
+              <p>
+                <small>All Rights Reserved | &copy; <time>2021</time></small>
+              </p>
+            </li>
+          </ul>
+          <div class="col-1-4 footer-section">
+            <p><b>About</b></p>
+            <ul>
+              <li>
+                <a href="#">Features</a>
+              </li>
+              <li>
+                <a href="#">Pricing</a>
+              </li>
+              <li>
+                <a href="#">Schedule Demo</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-1-4 footer-section">
+            <p><b>Support</b></p>
+            <ul>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Documentation</a>
+              </li>
+              <li>
+                <a href="#">API Status</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-1-4 footer-section">
+            <p><b>Stay Up To Date</b></p>
+            <form>
+              <input
+                type="email"
+                placeholder="Your emaill address"
+                class="footer-email-input"
+              />
+              <input
+                type="submit"
+                value="Submit"
+                class="button button-secondary footer-email-button"
+              />
+            </form>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
