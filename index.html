@@ -152,29 +152,29 @@
     <section class="contact">
       <h2 id="contact-title">Contact</h2>
       <div class="form-container">
-        <form action="" method="POST">
+        <form name="contact" method="POST" data-netlify="true">
           <div class="form-row">
             <div class="input-data first">
-              <input type="text" required />
+              <input type="text" name="name" required />
               <div class="underline"></div>
               <label>Name</label>
             </div>
             <div class="input-data">
-              <input type="text" required />
+              <input type="text" name="email" required />
               <div class="underline"></div>
               <label>Email</label>
             </div>
           </div>
           <div class="form-row textarea">
             <div class="input-data">
-              <textarea required></textarea><br />
+              <textarea name="message" required></textarea><br />
               <div class="underline"></div>
-              <label for="">Write you message</label>
+              <label>Write you message</label>
             </div>
           </div>
           <div class="form-row submit-btn">
             <div class="input-data" id="btn-input-data">
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Send" />
             </div>
           </div>
         </form>
