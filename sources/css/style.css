@@ -151,7 +151,7 @@ section > h2 {
 .projects-grid {
   padding: 5px 20px;
   display: grid;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, 300px);
   gap: 10px;
 }
 
@@ -161,9 +161,13 @@ section > h2 {
   overflow: hidden;
 }
 
+.project-card .card-image {
+  height: 80%;
+}
+
 .project-card img {
-  width: 100%;
-  height: auto;
+  min-width: 120%;
+  height: 100%;
 }
 
 .project-card .content {
@@ -171,6 +175,8 @@ section > h2 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4px;
+  height: 20%;
+  border-top: 1.5px solid #c9cbcf;
 }
 
 .content > h3 {
