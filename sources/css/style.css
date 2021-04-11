@@ -447,6 +447,7 @@ form .form-row .textarea {
     position: fixed;
     top: 0;
     background-color: #e6e7e9;
+    border-bottom: 2px solid #b8b9ba;
   }
 
   .nav-container .left {
