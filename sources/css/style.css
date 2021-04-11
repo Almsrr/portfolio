@@ -193,6 +193,9 @@ section > h2 {
 
 /* Contact  */
 .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #e6e7e9;
   height: 350px;
 }
@@ -447,7 +450,7 @@ form .form-row .textarea {
     position: fixed;
     top: 0;
     background-color: #e6e7e9;
-    border-bottom: 2px solid #b8b9ba;
+    border-bottom: 1.5px solid #b8b9ba;
   }
 
   .nav-container .left {
@@ -473,6 +476,11 @@ form .form-row .textarea {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
+  .technologies-container {
+    width: 800px;
+    margin: 0 auto;
+  }
+
   .technologies-container .box {
     width: 150px;
     height: 150px;
@@ -486,7 +494,12 @@ form .form-row .textarea {
 
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 13px;
+    gap: 12px;
+    padding: 5px 60px;
+  }
+
+  .contact {
+    height: 450px;
   }
 
   .content > h3 {
