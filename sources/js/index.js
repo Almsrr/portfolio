@@ -9,3 +9,9 @@ window.addEventListener("scroll", function (e) {
     nav.classList.remove("sticky");
   }
 });
+
+const date = new Date();
+let currentYear = date.getFullYear();
+
+document.getElementById("copyright").innerHTML = "&copy" + currentYear;
+// console.log(actualYear);

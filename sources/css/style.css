@@ -315,6 +315,7 @@ form .form-row .textarea {
   background-color: #a98b4a;
 }
 
+/* Footer  */
 .footer-container {
   padding: 10px 0;
   display: flex;
@@ -330,6 +331,10 @@ form .form-row .textarea {
 
 .footer-info small {
   font-size: 12px;
+}
+
+#copyright {
+  display: inline-block;
 }
 
 .footer-info small a:link,
