@@ -16,8 +16,8 @@ html {
 }
 
 body {
-  color: #341513;
-  background-color: #f1f1f1;
+  color: #000;
+  background-color: #f4f5f7;
 }
 
 /* General  */
@@ -28,8 +28,10 @@ section {
 section > h2 {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 1.2rem;
-  padding: 20px 5px;
+  font-size: 1.5em;
+  padding: 25px 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 /* Cover - Home */
@@ -74,7 +76,6 @@ nav {
   display: block;
   width: 100%;
   background-color: #1a1c1e;
-  /* transition: background-color 0.5s linear; */
 }
 
 .nav-container {
@@ -129,8 +130,8 @@ nav {
 }
 
 /* Technologies  */
-.technologies > h2 {
-  padding-top: 40px;
+.technologies {
+  margin-top: 60px;
 }
 
 .technologies-container {
@@ -140,8 +141,8 @@ nav {
 }
 
 .technologies-container .box {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   margin: 2px;
   padding: 5px;
   position: relative;
@@ -384,10 +385,6 @@ form .form-row .textarea {
 
 /* Tablet Styles */
 @media only screen and (min-width: 601px) and (max-width: 800px) {
-  section > h2 {
-    font-size: 1.3rem;
-  }
-
   .header-container .cover-title {
     margin-left: 25px;
   }
@@ -444,7 +441,6 @@ form .form-row .textarea {
     display: flex;
     margin: 0 20px 0 auto;
     align-items: center;
-    /* border: 1px solid white; */
   }
 
   .links-cont a:not(:last-of-type) {
@@ -459,6 +455,7 @@ form .form-row .textarea {
     color: #ebecf1;
     padding: 10px 15px;
     transition: background-color 0.4s ease-in-out;
+    font-size: 1.1em;
   }
 
   .links-cont a:hover {
@@ -467,7 +464,6 @@ form .form-row .textarea {
 
   .links-cont a:active {
     color: #1a1c1e;
-    font-weight: 500;
   }
 
   .technologies-container {
