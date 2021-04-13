@@ -35,13 +35,12 @@ section > h2 {
 /* Cover - Home */
 .header-container {
   position: relative;
-  height: 620px;
+  height: 750px;
   display: flex;
   flex-direction: column;
-  background-image: url("../images/leone-venter-VieM9BdZKFo-unsplash.jpeg");
+  background-image: url("../images/michael-soledad-NrR6ByFMBas-unsplash.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 70% 80%;
 }
 
 .header-container .cover-title {
