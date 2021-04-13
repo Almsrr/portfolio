@@ -11,8 +11,12 @@
     />
     <link rel="stylesheet" href="sources/css/style.css" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
       rel="shortcut icon"
-      href="sources/assets/favicon.ico"
+      href="sources/assets/Tech-Logo.ico"
       type="image/x-icon"
     />
     <title>AS | Portfolio</title>
@@ -35,154 +39,181 @@
           listening to music and I would like to parachute one day.
         </p>
       </div>
+    </header>
+    <main>
       <nav>
         <ul class="nav-container" id="navbar">
-          <li class="left">
+          <li class="logo-container">
             <a href="#"
-              ><img src="sources/assets/logo.png" alt="logo" class="logo"
+              ><img src="sources/assets/Tech-Logo.png" alt="logo" class="logo"
             /></a>
           </li>
-          <li class="right">
+          <li id="links">
             <ul class="link-container">
-              <a href="#projects-title">Projects</a>
-              <a href="#contact-title">Contact</a>
+              <a href="#Projects">Projects</a>
+              <a href="#Contact">Contact</a>
             </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav-container-desktop">
+          <li class="logo-container">
+            <a href="#"
+              ><img
+                src="./sources/assets/Tech-Logo.png"
+                alt="logo"
+                class="logo"
+            /></a>
+          </li>
+          <li class="links-cont">
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
           </li>
         </ul>
       </nav>
-    </header>
-    <section class="technologies">
-      <h2 id="technologies-title">My technologies</h2>
-      <div class="technologies-container">
-        <div class="box">
-          <img
-            src="sources/images/HTML5_logo_and_wordmark.svg"
-            alt="html-logo"
-          />
-        </div>
-        <div class="box">
-          <img src="sources/images/CSS3_logo_and_wordmark.svg" alt="css-logo" />
-        </div>
-        <div class="box new">
-          <img
-            src="sources/images/Unofficial_JavaScript_logo_2.svg"
-            alt="javascript-logo"
-          />
-        </div>
-        <div class="box">
-          <img
-            src="sources/images/c-sharp-c-seeklogo.com.svg"
-            alt="c-sharp-logo"
-          />
-        </div>
-        <div class="box new">
-          <img src="sources/images/gopher.svg" alt="golang-pet-logo" />
-        </div>
-        <div class="box">
-          <img src="sources/images/java-seeklogo.com.svg" alt="java-logo" />
-        </div>
-      </div>
-    </section>
-    <section class="projects">
-      <h2 id="projects-title">Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="card-image">
-            <a href="./sources/projects/sticky/index.html" target="_blank"
-              ><img src="./sources/images/sticky.png" alt=""
-            /></a>
+      <section class="technologies">
+        <h2 id="Technologies">My technologies</h2>
+        <div class="technologies-container">
+          <div class="box">
+            <img
+              src="sources/images/HTML5_logo_and_wordmark.svg"
+              alt="html-logo"
+            />
           </div>
-          <div class="content">
-            <h3>Sticky</h3>
-            <a
-              href="./sources/projects/sticky/index.html"
-              target="_blank"
-              class="site-link"
-              >Visit</a
-            >
+          <div class="box">
+            <img
+              src="sources/images/CSS3_logo_and_wordmark.svg"
+              alt="css-logo"
+            />
+          </div>
+          <div class="box new">
+            <img
+              src="sources/images/Unofficial_JavaScript_logo_2.svg"
+              alt="javascript-logo"
+            />
+          </div>
+          <div class="box">
+            <img
+              src="sources/images/c-sharp-c-seeklogo.com.svg"
+              alt="c-sharp-logo"
+            />
+          </div>
+          <div class="box new">
+            <img src="sources/images/gopher.svg" alt="golang-pet-logo" />
+          </div>
+          <div class="box">
+            <img src="sources/images/java-seeklogo.com.svg" alt="java-logo" />
           </div>
         </div>
-        <div class="project-card">
-          <div class="card-image">
-            <a href="./sources/projects/citrus/index.html" target="_blank"
-              ><img src="./sources/images/citrus.png" alt=""
-            /></a>
-          </div>
-          <div class="content">
-            <h3>Citrus</h3>
-            <a
-              href="./sources/projects/citrus/index.html"
-              target="_blank"
-              class="site-link"
-              >Visit</a
-            >
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="card-image">
-            <a href="./sources/projects/notmuchthyme/index.html" target="_blank"
-              ><img src="./sources/images/notmuchthyme.png" alt=""
-            /></a>
-          </div>
-          <div class="content">
-            <h3>Not Much Thyme</h3>
-            <a
-              href="./sources/projects/notmuchthyme/index.html"
-              target="_blank"
-              class="site-link"
-              >Visit</a
-            >
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="card-image">
-            <a href="./sources/projects/pinpoint/index.html" target="_blank"
-              ><img src="./sources/images/pintpoint.png" alt=""
-            /></a>
-          </div>
-          <div class="content">
-            <h3>Pint Point</h3>
-            <a
-              href="./sources/projects/pinpoint/index.html"
-              target="_blank"
-              class="site-link"
-              >Visit</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact">
-      <h2 id="contact-title">Contact</h2>
-      <div class="form-container">
-        <form name="contact" method="POST" data-netlify="true">
-          <div class="form-row">
-            <div class="input-data first">
-              <input type="text" name="name" required />
-              <div class="underline"></div>
-              <label>Name</label>
+      </section>
+      <section class="projects">
+        <h2 id="Projects">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="card-image">
+              <a href="./sources/projects/sticky/index.html" target="_blank"
+                ><img src="./sources/images/sticky.png" alt=""
+              /></a>
             </div>
-            <div class="input-data">
-              <input type="text" name="email" required />
-              <div class="underline"></div>
-              <label>Email</label>
+            <div class="content">
+              <h3>Sticky</h3>
+              <a
+                href="./sources/projects/sticky/index.html"
+                target="_blank"
+                class="site-link"
+                >Visit</a
+              >
             </div>
           </div>
-          <div class="form-row textarea">
-            <div class="input-data">
-              <textarea name="message" required></textarea><br />
-              <div class="underline"></div>
-              <label>Write you message</label>
+          <div class="project-card">
+            <div class="card-image">
+              <a href="./sources/projects/citrus/index.html" target="_blank"
+                ><img src="./sources/images/citrus.png" alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <h3>Citrus</h3>
+              <a
+                href="./sources/projects/citrus/index.html"
+                target="_blank"
+                class="site-link"
+                >Visit</a
+              >
             </div>
           </div>
-          <div class="form-row submit-btn">
-            <div class="input-data" id="btn-input-data">
-              <input type="submit" value="Send" />
+          <div class="project-card">
+            <div class="card-image">
+              <a
+                href="./sources/projects/notmuchthyme/index.html"
+                target="_blank"
+                ><img src="./sources/images/notmuchthyme.png" alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <h3>Not Much Thyme</h3>
+              <a
+                href="./sources/projects/notmuchthyme/index.html"
+                target="_blank"
+                class="site-link"
+                >Visit</a
+              >
             </div>
           </div>
-        </form>
-      </div>
-    </section>
+          <div class="project-card">
+            <div class="card-image">
+              <a href="./sources/projects/pinpoint/index.html" target="_blank"
+                ><img src="./sources/images/pintpoint.png" alt=""
+              /></a>
+            </div>
+            <div class="content">
+              <h3>Pint Point</h3>
+              <a
+                href="./sources/projects/pinpoint/index.html"
+                target="_blank"
+                class="site-link"
+                >Visit</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <h2 id="Contact">Contact</h2>
+        <div class="form-container">
+          <form name="contact" method="POST" data-netlify="true">
+            <div class="form-row">
+              <div class="input-data first">
+                <input type="text" name="name" required />
+                <div class="underline"></div>
+                <label>Name</label>
+              </div>
+              <div class="input-data">
+                <input type="text" name="email" required />
+                <div class="underline"></div>
+                <label>Email</label>
+              </div>
+            </div>
+            <div class="form-row textarea">
+              <div class="input-data">
+                <textarea name="message" required></textarea><br />
+                <div class="underline"></div>
+                <label>Write you message</label>
+              </div>
+            </div>
+            <div class="form-row submit-btn">
+              <div class="input-data" id="btn-input-data">
+                <input type="submit" value="Send" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer-container">
       <div class="footer-info">
         <small>

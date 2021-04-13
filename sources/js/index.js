@@ -15,3 +15,12 @@ let currentYear = date.getFullYear();
 
 document.getElementById("copyright").innerHTML = "&copy" + currentYear;
 // console.log(actualYear);
+
+function myFunction() {
+  var links = document.getElementById("links");
+  if (links.style.display === "block") {
+    links.style.display = "none";
+  } else {
+    links.style.display = "block";
+  }
+}
