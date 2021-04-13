@@ -35,20 +35,23 @@ section > h2 {
 /* Cover - Home */
 .header-container {
   position: relative;
-  height: 750px;
+  height: 800px;
   display: flex;
   flex-direction: column;
-  background-image: url("../images/michael-soledad-NrR6ByFMBas-unsplash.jpeg");
+  background-image: url("../images/graham-wilson-M32z_iqV-1U-unsplash.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
 }
 
 .header-container .cover-title {
   position: relative;
-  top: 25%;
-  width: 100%;
-  padding: 0 5px 0 10px;
+  top: 15%;
+  width: 90%;
+  padding: 10px;
   word-spacing: 1px;
+  color: #ebecf1;
+  font-size: 1.3em;
 }
 
 .cover-title h1 {
@@ -58,12 +61,12 @@ section > h2 {
 
 .cover-title span {
   font-family: "Comic Zine", Cabin, Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
-  color: #a98b4a;
+  font-size: 1.6em;
+  color: #7aa0b7;
 }
 
 .cover-title p:first-of-type {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 /* Navigation bar  */
@@ -379,21 +382,8 @@ form .form-row .textarea {
     font-size: 1.3rem;
   }
 
-  .header-container {
-    background-position: 50% 80%;
-  }
-
   .header-container .cover-title {
-    padding: 0 10px 0 20px;
-    font-size: 1.2rem;
-  }
-
-  .cover-title span {
-    font-size: 1.7rem;
-  }
-
-  .cover-title p:first-of-type {
-    margin-bottom: 15px;
+    margin-left: 25px;
   }
 
   .nav-container {
@@ -426,24 +416,14 @@ form .form-row .textarea {
     font-size: 1.6rem;
   }
 
-  .header-container {
-    background-position: 50% 80%;
-  }
-
   .header-container .cover-title {
-    width: 700px;
-    padding-left: 40px;
-    font-size: 1.3rem;
+    width: 710px;
+    margin-left: 50px;
+    font-size: 1.4em;
   }
 
   .cover-title h1 {
-    font-family: "Raleway", Cabin, Arial, Helvetica, sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-  }
-
-  .cover-title span {
-    font-size: 2rem;
+    font-size: 3em;
   }
 
   .cover-title p:first-of-type {
