@@ -173,6 +173,8 @@ nav {
   border-radius: 4px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
   overflow: hidden;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease-out;
 }
 
 .project-card .card-image {
@@ -190,25 +192,27 @@ nav {
   align-items: center;
   margin-bottom: 4px;
   height: 20%;
-  border-top: 1.5px solid #c9cbcf;
 }
 
 .content > h3 {
-  font-size: 0.9rem;
   padding: 10px;
   margin-left: 7px;
 }
 
+.content .site-link {
+  margin-right: 20px;
+  letter-spacing: 1px;
+  transition: color 0.2s linear;
+}
+
 .content .site-link:link,
 .content .site-link:visited {
-  color: #afa097;
+  color: #c9cbcf;
   text-decoration: none;
-  margin-right: 15px;
-  font-size: 0.87rem;
 }
 
 .content .site-link:active {
-  color: #a98b4a;
+  color: #60829b;
 }
 
 /* Contact  */
@@ -401,7 +405,7 @@ form .form-row .textarea {
 /* Desktop Styles */
 @media only screen and (min-width: 801px) {
   section > h2 {
-    font-size: 1.6rem;
+    font-size: 2em;
   }
 
   .header-container .cover-title {
@@ -449,7 +453,6 @@ form .form-row .textarea {
 
   .links-cont a:link,
   .links-cont a:visited {
-    /* border: 2px solid #1a1c1e; */
     text-decoration: none;
     border-radius: 2px;
     color: #ebecf1;
@@ -478,32 +481,27 @@ form .form-row .textarea {
     padding: 10px;
   }
 
-  #projects-title {
-    padding-top: 70px;
-  }
-
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     padding: 5px 60px;
   }
 
-  .contact {
-    height: 450px;
+  .project-card:hover {
+    border: 1px solid #777;
   }
 
   .content > h3 {
     font-size: 1.2rem;
-    padding: 10px;
-  }
-
-  .content .site-link:link,
-  .content .site-link:visited {
-    font-size: 1rem;
   }
 
   .content .site-link:hover {
-    color: #a98b4a;
+    color: #60829b;
+    text-decoration: underline;
+  }
+
+  .contact {
+    height: 450px;
   }
 
   .form-container form {
