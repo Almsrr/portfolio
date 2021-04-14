@@ -217,15 +217,15 @@ nav {
 
 /* Contact  */
 .contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #e6e7e9;
-  height: 350px;
+  background-color: #1a1c1e;
+  color: #eaedf1;
+  height: 450px;
 }
 
-.contact > h2 {
-  padding-top: 40px;
+#Contact {
+  padding: 40px;
+  text-align: center;
+  margin: 5px;
 }
 
 .form-container {
@@ -233,9 +233,10 @@ nav {
   justify-content: center;
 }
 
-.form-container form {
+.form-container > form {
   width: 100%;
-  padding: 5px 20px;
+  max-width: 600px;
+  padding: 10px 20px;
 }
 
 .form-container form .form-row {
@@ -268,9 +269,9 @@ form .form-row .textarea {
   outline: none;
   font-size: 15px;
   font-family: Cabin, Arial, Helvetica, sans-serif;
-  color: #341513;
+  color: #eaedf1;
   background-color: inherit;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 2px solid #eaedf1;
 }
 
 .textarea textarea {
@@ -283,7 +284,7 @@ form .form-row .textarea {
 .input-data input:valid ~ label,
 .textarea textarea:valid ~ label {
   transform: translateY(-20px);
-  color: #a98b4a;
+  color: #60829b;
   font-size: 12px;
 }
 
@@ -311,7 +312,7 @@ form .form-row .textarea {
   content: "";
   height: 2px;
   width: 100%;
-  background: #a98b4a;
+  background: #60829b;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -328,18 +329,18 @@ form .form-row .textarea {
   align-items: flex-end;
 }
 
-.submit-btn #btn-input-data {
+#btn-input-data {
   height: 40px;
   width: 120px;
 }
 
-.submit-btn .input-data input {
+.submit-btn input[type="submit"] {
   cursor: pointer;
-  border: none;
   font-weight: 600;
-  color: #fff;
   border-radius: 2px;
-  background-color: #a98b4a;
+  color: #eaedf1;
+  border: 2px solid #eaedf1;
+  transition: background-color 0.3s ease-out;
 }
 
 /* Footer  */
@@ -348,7 +349,9 @@ form .form-row .textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e6e7e9;
+  /* background-color: #364d60;
+  color: #fff;
+  height: 75px; */
 }
 
 .footer-info {
@@ -395,10 +398,6 @@ form .form-row .textarea {
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .form-container form {
-    width: 400px;
   }
 }
 
@@ -500,14 +499,6 @@ form .form-row .textarea {
     text-decoration: underline;
   }
 
-  .contact {
-    height: 450px;
-  }
-
-  .form-container form {
-    width: 600px;
-  }
-
   .form-container form .form-row {
     flex-direction: row;
     justify-content: flex-end;
@@ -515,6 +506,12 @@ form .form-row .textarea {
 
   form .form-row .input-data {
     margin: 0 10px;
+  }
+
+  .submit-btn input[type="submit"]:hover {
+    color: #ebecf1;
+    background-color: #ffb347;
+    border-color: #ffb347;
   }
 
   .footer-info small {
