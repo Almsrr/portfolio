@@ -349,18 +349,15 @@ form .form-row .textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #364d60;
-  color: #fff;
-  height: 75px; */
+  background-color: #364d60;
+  color: #ebecf1;
+  height: 75px;
 }
 
 .footer-info {
-  width: 350px;
-  padding-left: 20px;
-}
-
-.footer-info small {
-  font-size: 12px;
+  max-width: 350px;
+  padding: 5px;
+  margin-left: 20px;
 }
 
 #copyright {
@@ -369,19 +366,18 @@ form .form-row .textarea {
 
 .footer-info small a:link,
 .footer-info small a:visited {
-  color: #a98b4a;
+  color: #ffb347;
 }
 
 .social {
   display: flex;
-  justify-content: center;
   list-style: none;
   margin-right: 10px;
 }
 
 .social > li {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   padding: 3px;
 }
 
@@ -512,14 +508,5 @@ form .form-row .textarea {
     color: #ebecf1;
     background-color: #ffb347;
     border-color: #ffb347;
-  }
-
-  .footer-info small {
-    font-size: 14px;
-  }
-
-  .social > li {
-    width: 35px;
-    height: 35px;
   }
 }
