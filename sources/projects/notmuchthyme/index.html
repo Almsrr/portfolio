@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
+  <head>
     <meta charset="utf-8" />
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <meta
@@ -12,107 +12,151 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="./sources/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./sources/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <title>Not much THYME</title>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <nav role="navigation" class="site-header-nav">
-          <ul class="site-nav-left">
-            <li>
-              <a href="#">
-                <img
-                  src="https://content.codecademy.com/courses/learn-text-design/logo-white.svg"
-                  alt="logo"
-                  class="logo"
-                />
-              </a>
-            </li>
-          </ul>
-          <ul class="site-nav-right">
-            <li>
-              <a href="#" class="site-nav-link">Apps</a>
-            </li>
-            <li>
-              <a href="#" class="site-nav-link">Dinner</a>
-            </li>
-            <li>
-              <a href="#" class="site-nav-link">Dessert</a>
-            </li>
-            <li>
-              <a href="#" class="site-nav-link-bold">My Account</a>
-            </li>
-          </ul>
-          <ul class="site-nav-mobile">
-            <li>
-              <a
-                href="#"
-                class="button button-secondary button-small site-nav-link"
-                >Menu</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header class="header-site">
+      <nav class="header-nav">
+        <div class="logo-container">
+          <img src="./sources/images/logo-white.svg" alt="logo" class="logo" />
+        </div>
+        <ul class="site-nav-right">
+          <a href="#" class="site-nav-link">Apps</a>
+          <a href="#" class="site-nav-link">Dinner</a>
+          <a href="#" class="site-nav-link">Dessert</a>
+          <a href="#" class="site-nav-link">My Account</a>
+        </ul>
+        <ul class="site-nav-mobile">
+          <li>
+            <a
+              href=""
+              class="button button-secondary button-small site-nav-link"
+              >Menu</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main class="site-main">
-      <header class="clearfix site-main-header">
-        <div class="container">
-          <h1>Appetizers</h1>
-          <p>Learn how to make easy and elegant recipes!</p>
-        </div>
-      </header>
-      <section class="site-main-section-header">
-        <div class="featured-image">
-          <img
-            src="https://content.codecademy.com/courses/learn-text-design/bread.jpeg"
-            alt="Focaccia Bread"
-          />
-        </div>
-        <div class="featured-content">
-          <label>featured</label>
-          <h2>Onion-Herb Focaccia</h2>
+    <main>
+      <section>
+        <header class="main-header">
+          <h1>Asparagus Appetizers</h1>
           <p>
-            Theres nothing in the world like the smell of onions caramelizing in
-            butter. Its even better when you combine both aromas on warm bread.
+            A wonderful appetizer to have on hand that can be made ahead of
+            time, frozen, and used as needed.
           </p>
-          <ul class="recipe-info">
-            <li class="recipe-info-item">prep time: 20 min</li>
-            <li class="recipe-info-item">cook time: 25 min</li>
-            <li class="recipe-info-item">Serves: 4</li>
-          </ul>
-          <a href="#" class="button button-primary button-small">View Recipe</a>
+          <p>By <b>DALEPFEFEER</b> | 109 Ratings | 86 Reviews | 1 Photo</p>
+        </header>
+        <div class="main-cont">
+          <div class="main-recipe-image">
+            <img src="./sources/images/Asparagus.jpeg" alt="Asparagus" />
+          </div>
+          <aside>
+            <ul>
+              <li class="recipe-info-item"><b>Prep:</b> 20 mins</li>
+              <li class="recipe-info-item"><b>Cook:</b> 25 mins</li>
+              <li class="recipe-info-item"><b>Adicional:</b> 1 hr</li>
+              <li class="recipe-info-item"><b>Total:</b> 1 hr 45 mins</li>
+              <li class="recipe-info-item"><b>Servings:</b> 10</li>
+              <li class="recipe-info-item"><b>Yields:</b> 40 pieces</li>
+            </ul>
+          </aside>
         </div>
       </section>
+      <div class="main-recipe-content">
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ol>
+            <li>- 20 thin slices sandwich bread, crusts removed.</li>
+            <li>- ¾ pound butter.</li>
+            <li>- 4 ounces blue cheese, at room temperature.</li>
+            <li>- 1 (8 ounce) package cream cheese, at room temperature.</li>
+            <li>- 1 egg, beaten.</li>
+            <li>- 20 fresh asparagus spears.</li>
+          </ol>
+        </div>
+        <div class="directions">
+          <h3>Directions</h3>
+          <ul>
+            <li>
+              <b>Step 1</b>
+              <p>
+                Trim crusts from bread, and flatten slightly with a rolling pin.
+              </p>
+            </li>
+            <li>
+              <b>Step2</b>
+              <p>
+                In a bowl, stir blue and cream cheeses together with the egg
+                until well blended and creamy. Spread a thin layer of cheese
+                mixture over each slice of bread. Roll one asparagus spear
+                inside each, and fasten with a toothpick.
+              </p>
+            </li>
+            <li>
+              <b>Step 3</b>
+              <p>
+                Melt butter in a small saucepan. Roll each asparagus wrap in
+                butter to coat. Place on a baking sheet small enough to fit into
+                the freezer, and freeze for one hour, or until butter hardens
+                and wraps are somewhat firm. Remove pan from freezer, discard
+                toothpicks, and cut each wrap in half crosswise. Store in a
+                resealable plastic bag in the freezer until ready to use.
+              </p>
+            </li>
+            <li>
+              <b>Step 4</b>
+              <p>To serve, preheat oven to 400 degrees F (205 degrees C).</p>
+            </li>
+            <li>
+              <b>Step 5</b>
+              <p>
+                Arrange frozen asparagus wraps on an ungreased baking sheet.
+                Bake in the preheated oven for 25 minutes, or until lightly
+                browned. Check occasionally, and turn if necessary, for even
+                browning and to prevent burning. Enjoy!
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="nutrition">
+          <h3>Nutrition Facts</h3>
+          <p>
+            <b>Per Serving:</b> 463 calories; protein 8.3g; carbohydrates 18.6g;
+            fat 40.3g; cholesterol 125mg; sodium 650.6mg.
+          </p>
+        </div>
+      </div>
       <hr class="divider" />
 
-      <section class="site-main-section">
-        <label>popular recipes</label>
-        <ul>
+      <section>
+        <h2 class="pop-title">Popular recipes</h2>
+        <ul class="pop-recipes-cont">
           <li class="recipe-preview">
-            <div class="recipe-preview-content">
+            <div class="recipe-preview-cont">
               <img
                 src="https://content.codecademy.com/courses/learn-text-design/spinach-artichoke-dip.jpeg"
                 class="recipe-preview-img"
                 alt="Spinach and Artichoke Dip"
               />
-              <h3>Spinach and Artichoke Dip</h3>
-              <p class="recipe-info-item">Serves: 4 - 6</p>
-              <p>
-                This spinach-artichoke dip is homemade comfort at its best.
-                Salsa ain't got nothin on this fantastic creamy dip. Don't fuss
-                over hummus when you can whip up this tasty appetizer in just 15
-                minutes!
-              </p>
-              <a href="#" class="button button-primary button-small"
-                >View Recipe</a
-              >
             </div>
+            <h3>Spinach and Artichoke Dip</h3>
+            <p class="recipe-info-item">Serves: 4 - 6</p>
+            <p>
+              This spinach-artichoke dip is homemade comfort at its best. Salsa
+              ain't got nothin on this fantastic creamy dip. Don't fuss over
+              hummus when you can whip up this tasty appetizer in just 15
+              minutes!
+            </p>
+            <a href="#" class="button button-primary button-small"
+              >View Recipe</a
+            >
           </li>
           <li class="recipe-preview">
             <img
@@ -153,46 +197,46 @@
               >
             </div>
           </li>
-          <li class="recipe-more">
-            <a href="#">VIEW MORE RECIPES... </a>
-          </li>
         </ul>
+        <div class="recipe-more">
+          <a href="#">VIEW MORE RECIPES... </a>
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <nav class="clearfix">
-          <ul class="footer-section footer-section-left">
-            <li>
-              <img
-                src="https://content.codecademy.com/courses/learn-text-design/logo.svg"
-                class="logo"
-                alt="Logo"
-              />
-            </li>
-            <li>
-              <small>All Rights Reserved | &copy; <time>2017</time></small>
-            </li>
-          </ul>
-          <div
-            class="footer-section footer-section-right"
-          >
-            <p>Subscribe for weekly recipes</p>
-            <form role="form">
+      <nav class="footer-cont">
+        <ul class="footer-section left">
+          <li>
+            <img
+              src="https://content.codecademy.com/courses/learn-text-design/logo.svg"
+              class="logo"
+              alt="Logo"
+            />
+          </li>
+          <li>
+            <small>All Rights Reserved | &copy; <time>2021</time></small>
+          </li>
+        </ul>
+        <div class="footer-section right">
+          <p>Subscribe for weekly recipes</p>
+          <form action="" method="" class="footer-form">
+            <div class="footer-form-row email-row">
               <input
                 type="email"
                 placeholder="Email Address"
                 class="footer-email-input"
               />
+            </div>
+            <div class="footer-form-row button-row">
               <input
                 type="submit"
                 value="Submit"
                 class="button button-primary footer-email-button"
               />
-            </form>
-          </div>
-        </nav>
-      </div>
+            </div>
+          </form>
+        </div>
+      </nav>
     </footer>
   </body>
 </html>
