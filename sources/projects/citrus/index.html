@@ -24,16 +24,12 @@
     <header class="site-header">
       <div class="container">
         <nav class="site-header-nav">
-          <ul class="site-nav-left">
-            <li>
-              <a href="#">
-                <img
-                  src="./sources/assets/logo.svg"
-                  alt="Citrus"
-                  class="logo"
-                />
-              </a>
-            </li>
+          <div class="logo-cont">
+            <a href="#">
+              <img src="./sources/assets/logo.svg" alt="Citrus" class="logo" />
+            </a>
+          </div>
+          <ul class="links-cont">
             <li>
               <a href="#" class="site-nav-link">About</a>
             </li>
@@ -41,28 +37,14 @@
               <a href="#" class="site-nav-link">Contact Us</a>
             </li>
           </ul>
-          <ul class="site-nav-right">
-            <li>
-              <a href="#" class="site-nav-link">
-                <img
-                  src="./sources/assets/icon-search.svg"
-                  alt="Search"
-                  class="search"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#" class="button button-secondary button-small">Login</a>
-            </li>
-          </ul>
         </nav>
       </div>
     </header>
     <main class="site-main">
-      <header class="clearfix site-main-header">
+      <header class="site-main-header">
         <div class="container">
           <h1 id="page-title">Contact Our Team</h1>
-          <p class="col-1-2 info">
+          <p class="info">
             We are standing by for your questions, comments or concerns. If
             there is anything we can do, please reach out and let us know.
           </p>
@@ -71,25 +53,33 @@
       <section>
         <div class="container">
           <div class="card">
-            <div class="clearfix">
-              <div class="col-1-2">
-                <h2 class="section-header">Leave A Message</h2>
-                <form class="clearfix">
-                  <label>Name</label>
-                  <input type="text" placeholder="Full name" />
-                  <label>Email</label>
-                  <input type="email" placeholder="Email address" />
-                  <label>Contact reason</label>
-                  <select>
-                    <option selected disabled>Please select one</option>
-                    <option>Customer service question</option>
-                    <option>Billing question</option>
-                    <option>Website question</option>
-                  </select>
-                  <label>Issue details</label>
-                  <textarea
-                    placeholder="Provide as much detail as you can so we can address your issue."
-                  ></textarea>
+            <div class="flex-cont">
+              <div class="col">
+                <h2 class="section-header">Leave a message</h2>
+                <form>
+                  <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Full name" />
+                  </div>
+                  <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Email address" />
+                  </div>
+                  <div class="input-group">
+                    <label>Contact reason</label>
+                    <select>
+                      <option selected disabled>Please select one</option>
+                      <option>Customer service question</option>
+                      <option>Billing question</option>
+                      <option>Website question</option>
+                    </select>
+                  </div>
+                  <div class="input-group">
+                    <label>Issue details</label>
+                    <textarea
+                      placeholder="Provide as much detail as you can so we can address your issue."
+                    ></textarea>
+                  </div>
                   <input
                     type="submit"
                     value="Submit Message"
@@ -97,12 +87,14 @@
                   />
                 </form>
               </div>
-              <div class="col-1-2">
+              <div class="col">
                 <p><b>Our Location</b></p>
-                <img
-                  src="./sources/images/location.png"
-                  alt="Office Location"
-                />
+                <div class="img-cont">
+                  <img
+                    src="./sources/images/location.png"
+                    alt="Office Location"
+                  />
+                </div>
                 <ul class="location-details">
                   <li><b>Address:</b> 233 S Wacker Dr, Chicago, IL 60606</li>
                   <li><b>Phone:</b> (123) 456-7890</li>
@@ -117,18 +109,24 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <nav class="clearfix">
-          <ul class="col-1-4 footer-section">
-            <li>
-              <img src="./sources/assets/logo.svg" alt="Citrus" class="logo" />
-            </li>
-            <li>
-              <p>
-                <small>All Rights Reserved | &copy; <time>2021</time></small>
-              </p>
-            </li>
-          </ul>
-          <div class="col-1-4 footer-section">
+        <nav class="flex-cont">
+          <section class="footer-section">
+            <ul>
+              <li>
+                <img
+                  src="./sources/assets/logo.svg"
+                  alt="Citrus"
+                  class="logo"
+                />
+              </li>
+              <li>
+                <p>
+                  <small>All Rights Reserved | &copy; <time>2021</time></small>
+                </p>
+              </li>
+            </ul>
+          </section>
+          <section class="footer-section">
             <p><b>About</b></p>
             <ul>
               <li>
@@ -141,8 +139,8 @@
                 <a href="#">Schedule Demo</a>
               </li>
             </ul>
-          </div>
-          <div class="col-1-4 footer-section">
+          </section>
+          <section class="footer-section">
             <p><b>Support</b></p>
             <ul>
               <li>
@@ -155,22 +153,22 @@
                 <a href="#">API Status</a>
               </li>
             </ul>
-          </div>
-          <div class="col-1-4 footer-section">
-            <p><b>Stay Up To Date</b></p>
-            <form>
+          </section>
+          <section class="footer-section">
+            <p><b>Stay up to date</b></p>
+            <form class="clearfix">
               <input
                 type="email"
-                placeholder="Your emaill address"
+                placeholder="Your email address"
                 class="footer-email-input"
               />
               <input
                 type="submit"
                 value="Submit"
-                class="button button-secondary footer-email-button"
+                class="button button-secondary footer-email-button right"
               />
             </form>
-          </div>
+          </section>
         </nav>
       </div>
     </footer>
