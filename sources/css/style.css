@@ -50,10 +50,11 @@ section > h2 {
   position: relative;
   top: 15%;
   max-width: 710px;
-  padding: 10px;
+  padding: 20px;
   word-spacing: 1px;
-  color: #ebecf1;
+  color: #fff;
   font-size: 1.3em;
+  background-color: rgb(0 0 0 / 30%);
 }
 
 .cover-title h1 {
@@ -182,8 +183,10 @@ nav {
 }
 
 .project-card img {
-  min-width: 120%;
-  height: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  /* min-width: 100%;
+  max-height: 100%; */
 }
 
 .project-card .content {
@@ -343,6 +346,12 @@ form .form-row .textarea {
   transition: background-color 0.3s ease-out;
 }
 
+.submit-btn input[type="submit"]:active {
+  color: #ebecf1;
+  background-color: #ffb347;
+  border-color: #ffb347;
+}
+
 /* Footer  */
 .footer-container {
   padding: 10px 0;
@@ -433,7 +442,9 @@ form .form-row .textarea {
   }
 
   .logo-container {
+    border: 1px solid #ffb347;
     margin-left: 50px;
+    padding: 5px;
   }
 
   .links-cont {
