@@ -230,12 +230,6 @@ nav {
   height: 450px;
 }
 
-#Contact {
-  padding: 40px;
-  text-align: center;
-  margin: 5px;
-}
-
 .form-container {
   display: flex;
   justify-content: center;
@@ -411,6 +405,7 @@ form .form-row .textarea {
 @media only screen and (min-width: 801px) {
   section > h2 {
     font-size: 2em;
+    padding: 70px 40px 30px;
   }
 
   .header-container .cover-text {
