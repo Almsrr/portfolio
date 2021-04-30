@@ -58,15 +58,19 @@ section > h2 {
   background-color: rgb(0 0 0 / 30%);
 }
 
+.cover-text .author {
+  font-family: "Comic Zine", Cabin, Arial, Helvetica, sans-serif;
+  font-size: 1.6em;
+  color: #7aa0b7;
+}
+
 .cover-text h1 {
   font-family: "Raleway", Cabin, Arial, Helvetica, sans-serif;
   font-weight: 800;
 }
 
-.cover-text span {
-  font-family: "Comic Zine", Cabin, Arial, Helvetica, sans-serif;
-  font-size: 1.6em;
-  color: #7aa0b7;
+.typed-cursor {
+  font-size: inherit;
 }
 
 .cover-text p:first-of-type {
