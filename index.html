@@ -4,264 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Permanent+Marker&family=Raleway:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="sources/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="shortcut icon"
-      href="sources/assets/Tech-Logo.ico"
-      type="image/x-icon"
-    />
-    <title>AS | Portfolio</title>
+    <title>AS | Front-End Web Developer</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="styles/css/style.css" />
   </head>
   <body>
-    <header class="header-container">
-      <div class="cover-text">
-        Hi, I'm <span class="author">Alam Sierra</span>
-        <h1 class="dev-title">
-          <span id="typed"></span>
-        </h1>
-        <p>
-          I'm from Santo Domingo, Dominican Republic 🇩🇴. I'm 21 years old and I
-          have many dreams. I'm new to the web development world and I'm looking
-          to deepen my knowledge with professional practice.
-        </p>
-        <p>
-          I enjoy good food, spending time with my family and friends. I love
-          listening to music and I would like to parachute one day.
-        </p>
-      </div>
-    </header>
-    <main>
+    <header>
       <nav>
-        <ul class="nav-container" id="navbar">
-          <li class="logo-container">
-            <a href="#"
-              ><img src="sources/assets/Tech-Logo.png" alt="logo" class="logo"
-            /></a>
-          </li>
-          <li id="links">
-            <ul class="link-container">
-              <a href="#Projects">Projects</a>
-              <a href="#Contact">Contact</a>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="icon" id="mobile-btn">
-              <i class="fa fa-bars"></i>
-            </a>
-          </li>
-        </ul>
-        <ul class="nav-container-desktop">
-          <li class="logo-container">
-            <a href="#"
-              ><img
-                src="./sources/assets/Tech-Logo.png"
-                alt="logo"
-                class="logo"
-            /></a>
-          </li>
-          <li class="links-cont">
-            <a href="#Projects">Projects</a>
-            <a href="#Contact">Contact</a>
-          </li>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Hobbies</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
       </nav>
-      <section class="technologies">
-        <h2 id="Technologies">My technologies</h2>
-        <div class="technologies-container">
-          <div class="box">
-            <img
-              src="sources/images/HTML5_logo_and_wordmark.svg"
-              alt="html-logo"
-            />
-          </div>
-          <div class="box">
-            <img
-              src="sources/images/CSS3_logo_and_wordmark.svg"
-              alt="css-logo"
-            />
-          </div>
-          <div class="box">
-            <img
-              src="sources/images/Unofficial_JavaScript_logo_2.svg"
-              alt="javascript-logo"
-            />
-          </div>
-          <div class="box">
-            <img src="sources/images/React-icon.svg" alt="react-logo" />
-          </div>
-          <div class="box">
-            <img src="sources/images/Node.js_logo.svg" alt="node-logo" />
-          </div>
-          <div class="box">
-            <img src="sources/images/NET_Core_Logo.svg" alt="netcore-logo" />
-          </div>
-          <div class="box">
-            <img
-              src="sources/images/microsoft-sql-server-logo-svgrepo-com.svg"
-              alt="ms-sql-server-logo"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="projects">
-        <h2 id="Projects">Projects</h2>
-        <div class="projects-grid-container">
-          <div class="projects-grid">
-            <div class="project-card">
-              <div class="card-image">
-                <a
-                  href="./sources/projects/dotterblog/index.html"
-                  target="_blank"
-                  ><img
-                    src="./sources/images/dotterblog.png"
-                    alt="project-image"
-                /></a>
-              </div>
-              <div class="content">
-                <h3>Dotter Blog</h3>
-                <a
-                  href="./sources/projects/dotterblog/index.html"
-                  target="_blank"
-                  class="site-link"
-                  >VISIT</a
-                >
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-image">
-                <a href="./sources/projects/citrus/index.html" target="_blank"
-                  ><img src="./sources/images/citrus.png" alt=""
-                /></a>
-              </div>
-              <div class="content">
-                <h3>Citrus</h3>
-                <a
-                  href="./sources/projects/citrus/index.html"
-                  target="_blank"
-                  class="site-link"
-                  >VISIT</a
-                >
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-image">
-                <a
-                  href="./sources/projects/notmuchthyme/index.html"
-                  target="_blank"
-                  ><img src="./sources/images/notmuchthyme.png" alt=""
-                /></a>
-              </div>
-              <div class="content">
-                <h3>Not Much Thyme</h3>
-                <a
-                  href="./sources/projects/notmuchthyme/index.html"
-                  target="_blank"
-                  class="site-link"
-                  >VISIT</a
-                >
-              </div>
-            </div>
-            <div class="project-card">
-              <div class="card-image">
-                <a href="./sources/projects/pinpoint/index.html" target="_blank"
-                  ><img src="./sources/images/pintpoint.png" alt=""
-                /></a>
-              </div>
-              <div class="content">
-                <h3>Pint Point</h3>
-                <a
-                  href="./sources/projects/pinpoint/index.html"
-                  target="_blank"
-                  class="site-link"
-                  >VISIT</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="contact">
-        <h2 id="Contact">Contact</h2>
-        <div class="form-container">
-          <form
-            name="contact"
-            method="POST"
-            autocomplete="off"
-            data-netlify="true"
-          >
-            <div class="form-row">
-              <div class="input-data first">
-                <input type="text" name="name" required />
-                <div class="underline"></div>
-                <label>Name</label>
-              </div>
-              <div class="input-data">
-                <input type="text" name="email" required />
-                <div class="underline"></div>
-                <label>Email</label>
-              </div>
-            </div>
-            <div class="form-row textarea">
-              <div class="input-data">
-                <textarea name="message" required></textarea><br />
-                <div class="underline"></div>
-                <label>Write you message</label>
-              </div>
-            </div>
-            <div class="form-row submit-btn">
-              <div class="input-data" id="btn-input-data">
-                <input type="submit" value="Send" />
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
+    </header>
+    <main>
+      <h1>Main content</h1>
     </main>
-
-    <footer class="footer-container">
-      <div class="footer-info">
-        <small>
-          <p id="copyright"></p>
-          Made by Alam Sierra. View code on
-          <a
-            href="https://bitbucket.org/almsrr/portfolio/src/main/"
-            target="_blank"
-            >BitBucket</a
-          >.</small
-        >
-      </div>
-      <ul class="social">
-        <li>
-          <a href="https://github.com/Almsrr" target="_blank"
-            ><img
-              src="./sources/assets/iconfinder_mark-github_298822.svg"
-              alt=""
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/alamsierrad/?hl=en" target="_blank"
-            ><img
-              src="./sources/assets/iconfinder_instagram_1632517.svg"
-              alt=""
-          /></a>
-        </li>
+    <footer>
+      <p><small id="copyright"></small></p>
+      <ul>
+        <li><a href="">Github</a></li>
+        <li><a href="">Repl.it</a></li>
       </ul>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="sources/js/index.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
