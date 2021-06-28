@@ -1,0 +1,27 @@
+.home {
+  display: block;
+  position: relative;
+  height: 700px;
+  padding: 0 8vw;
+  border: 1px solid #000;
+
+  .home-content {
+    border: 1px solid #000;
+    position: relative;
+    left: 0;
+    top: 40%;
+
+    .dev-title {
+      font-size: 70px;
+      margin-bottom: 25px;
+      letter-spacing: -3px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .quote {
+      line-height: 2;
+      font-size: 16px;
+    }
+  }
+}
