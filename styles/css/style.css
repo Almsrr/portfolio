@@ -426,12 +426,35 @@ header nav .desktop-nav li:not(:last-of-type) {
   border-bottom: 3px solid #000;
 }
 
+footer {
+  padding: 20px 50px;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+footer .info {
+  display: inline-block;
+}
+footer .info .copyright {
+  display: inline;
+}
+footer .info .author {
+  display: inline;
+}
+footer .social {
+  float: right;
+}
+footer .social li {
+  display: inline-block;
+}
+footer .social li .social-link {
+  border: 1px solid #000;
+}
+
 .home {
   display: block;
   position: relative;
   height: 700px;
   padding: 0 8vw;
-  border: 1px solid #000;
 }
 .home .home-content {
   border: 1px solid #000;

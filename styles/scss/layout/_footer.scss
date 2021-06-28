@@ -1,0 +1,29 @@
+footer {
+  padding: 20px 50px;
+  overflow: hidden;
+  border: 1px solid #000;
+
+  .info {
+    display: inline-block;
+
+    .copyright {
+      display: inline;
+    }
+
+    .author {
+      display: inline;
+    }
+  }
+
+  .social {
+    float: right;
+
+    li {
+      display: inline-block;
+
+      .social-link {
+        border: 1px solid #000;
+      }
+    }
+  }
+}
