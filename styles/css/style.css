@@ -491,6 +491,14 @@ footer .social li .social-link {
   max-width: 700px;
 }
 
+.contact {
+  overflow: hidden;
+}
+.contact .form,
+.contact .social {
+  float: left;
+}
+
 .page-header {
   height: 300px;
   padding: 0 8vw;
