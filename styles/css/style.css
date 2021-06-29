@@ -479,6 +479,14 @@ footer .social li .social-link {
   font-size: 16px;
 }
 
+.projects {
+  border: 1px solid red;
+}
+
+.hobbies {
+  border: 1px solid blue;
+}
+
 .about .about-text {
   max-width: 700px;
 }
