@@ -3,6 +3,7 @@
 // Core
 @import "base/normalize";
 @import "base/reset";
+@import "base/typography";
 
 // Helpers
 @import "helpers/containers";
@@ -18,10 +19,14 @@
 @import "pages/about";
 @import "pages/contact";
 
+body {
+  font-family: $base-font;
+}
+
 .page-header {
   height: 300px;
   padding: 0 8vw;
-  background-color: #000;
+  background-color: $base-black;
 }
 
 .header-content {
@@ -36,6 +41,7 @@
     text-transform: uppercase;
     line-height: 1;
     color: $base-white;
+    font-family: $heading-font;
   }
 
   .caption {

@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -375,6 +376,7 @@ h6 {
   margin: 0;
   font-size: inherit;
   font-weight: inherit;
+  line-height: 1;
 }
 
 p {
@@ -385,6 +387,22 @@ img {
   display: block;
 }
 
+@font-face {
+  font-family: "GothamPro Black";
+  src: url("/resources/fonts/GothamPro-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GothamPro Bold";
+  src: url("/resources/fonts/GothamPro-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GothamPro Medium";
+  src: url("/resources/fonts/GothamPro-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GothamPro";
+  src: url("/resources/fonts/GothamPro.woff2") format("woff2");
+}
 .container {
   padding-left: 50px;
   padding-right: 50px;
@@ -403,8 +421,6 @@ header nav {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #000;
-  color: #fff;
 }
 header nav .logo {
   height: 100%;
@@ -431,6 +447,7 @@ header nav .desktop-nav .nav-link {
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   line-height: 2;
+  color: #fdfcfa;
 }
 header nav .desktop-nav li:not(:last-of-type) {
   margin-right: 40px;
@@ -444,10 +461,12 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   overflow: hidden;
-  border: 1px solid #000;
+  background-color: #100c08;
 }
 footer .info {
   display: inline-block;
+  color: #fdfcfa;
+  pointer-events: none;
 }
 footer .info .copyright {
   display: inline;
@@ -462,7 +481,7 @@ footer .social li {
   display: inline-block;
 }
 footer .social li .social-link {
-  border: 1px solid #000;
+  color: #fdfcfa;
 }
 
 .home {
@@ -470,23 +489,26 @@ footer .social li .social-link {
   position: relative;
   height: 700px;
   padding: 0 8vw;
+  background-color: #100c08;
 }
 .home .home-content {
-  border: 1px solid #000;
   position: relative;
   left: 0;
   top: 40%;
+  pointer-events: none;
 }
 .home .home-content .dev-title {
   font-size: 70px;
   margin-bottom: 25px;
   letter-spacing: -3px;
-  line-height: 1;
   text-transform: uppercase;
+  color: #fdfcfa;
+  font-family: "GothamPro Black", "GothamPro Bold", Helvetica, sans-serif;
 }
 .home .home-content .quote {
   line-height: 2;
   font-size: 16px;
+  color: #fdfcfa;
 }
 
 .projects {
@@ -509,10 +531,14 @@ footer .social li .social-link {
   float: left;
 }
 
+body {
+  font-family: "IBM Plex Sans", Helvetica, sans-serif;
+}
+
 .page-header {
   height: 300px;
   padding: 0 8vw;
-  background-color: #000;
+  background-color: #100c08;
 }
 
 .header-content {
@@ -527,6 +553,7 @@ footer .social li .social-link {
   text-transform: uppercase;
   line-height: 1;
   color: #fdfcfa;
+  font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .header-content .caption {
   line-height: 2;
