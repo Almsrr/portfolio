@@ -6,6 +6,7 @@
 
 // Helpers
 @import "helpers/containers";
+@import "helpers/variables";
 
 // Layout
 @import "layout/header";
@@ -20,7 +21,7 @@
 .page-header {
   height: 300px;
   padding: 0 8vw;
-  border: 1px solid blue;
+  background-color: #000;
 }
 
 .header-content {
@@ -34,10 +35,12 @@
     letter-spacing: -3px;
     text-transform: uppercase;
     line-height: 1;
+    color: $base-white;
   }
 
   .caption {
     line-height: 2;
     font-size: 16px;
+    color: $base-white;
   }
 }
