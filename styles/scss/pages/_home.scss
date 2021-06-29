@@ -3,24 +3,27 @@
   position: relative;
   height: 700px;
   padding: 0 8vw;
+  background-color: $base-black;
 
   .home-content {
-    border: 1px solid #000;
     position: relative;
     left: 0;
     top: 40%;
+    pointer-events: none;
 
     .dev-title {
       font-size: 70px;
       margin-bottom: 25px;
       letter-spacing: -3px;
-      line-height: 1;
       text-transform: uppercase;
+      color: $base-white;
+      font-family: $heading-font-black;
     }
 
     .quote {
       line-height: 2;
       font-size: 16px;
+      color: $base-white;
     }
   }
 }
