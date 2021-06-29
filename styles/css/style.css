@@ -479,4 +479,31 @@ footer .social li .social-link {
   font-size: 16px;
 }
 
+.about .about-text {
+  max-width: 700px;
+}
+
+.page-header {
+  height: 300px;
+  padding: 0 8vw;
+  border: 1px solid blue;
+}
+
+.header-content {
+  position: relative;
+  left: 0;
+  top: 50%;
+}
+.header-content .title {
+  margin-bottom: 10px;
+  font-size: 50px;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.header-content .caption {
+  line-height: 2;
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=style.css.map */
