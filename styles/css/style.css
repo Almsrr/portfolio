@@ -423,19 +423,16 @@ img {
   position: relative;
   text-decoration: none;
 }
-
 .home-btn .label,
 .home-btn .icon-arrow {
   backface-visibility: hidden;
   transform: translateZ(0);
   perspective: 1000;
 }
-
 .home-btn .label {
   display: inline-block;
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
-
 .home-btn .icon-arrow {
   fill: #fdfcfa;
   height: 15px;
@@ -443,14 +440,12 @@ img {
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1);
   width: 35px;
 }
-
 .home-btn .icon-arrow.before {
   left: 32px;
   margin-right: 15px;
   position: absolute;
   transform-origin: left center;
 }
-
 .home-btn .icon-arrow.after {
   margin-left: 15px;
   opacity: 0;
@@ -459,26 +454,21 @@ img {
   transform: translateX(75%) scaleX(0.1);
   transform-origin: right center;
 }
-
 .home-btn:hover .label {
   transform: translateX(-52px);
 }
-
 .home-btn:hover .icon-arrow.before {
   opacity: 0;
   transform: translateX(-75%) scaleX(0.1);
 }
-
 .home-btn:hover .icon-arrow.after {
   opacity: 1;
   transform: translateX(0) scaleX(1);
 }
-
 .home-btn:active {
   border-color: #fd6154;
   color: #fd6154;
 }
-
 .home-btn:active .icon-arrow {
   fill: #fd6154;
 }
@@ -558,6 +548,8 @@ footer .social li {
 }
 footer .social li .social-link {
   color: #fdfcfa;
+  font-size: 20px;
+  padding: 8px;
 }
 
 .home {
