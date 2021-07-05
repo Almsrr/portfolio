@@ -577,12 +577,47 @@ footer .social li .social-link {
   pointer-events: none;
 }
 
-.projects {
-  border: 1px solid red;
+.projects .projects-grid {
+  border: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 5% 0;
+  width: 100%;
 }
-
-.hobbies {
-  border: 1px solid blue;
+.projects .projects-grid .project {
+  border: 1px solid #000;
+}
+.projects .projects-grid .project .image {
+  width: 100%;
+}
+.projects .projects-grid .project .caption {
+  width: 100%;
+  font-weight: bold;
+}
+.projects .technologies {
+  padding: 5% 0;
+}
+.projects .technologies h2 {
+  font-weight: bold;
+  text-align: center;
+}
+.projects .technologies .tech-cont {
+  align-items: center;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.projects .technologies .tech-cont .item {
+  border: 1px solid #000;
+  height: 100px;
+  width: 100px;
+}
+.projects .technologies .tech-cont .item img {
+  height: 100%;
+  width: 100%;
 }
 
 .about .about-text {

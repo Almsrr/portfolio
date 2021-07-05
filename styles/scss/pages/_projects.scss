@@ -1,7 +1,52 @@
 .projects {
-  border: 1px solid red;
-}
+  .projects-grid {
+    border: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 5% 0;
+    width: 100%;
 
-.hobbies {
-  border: 1px solid blue;
+    .project {
+      border: 1px solid #000;
+
+      .image {
+        width: 100%;
+      }
+
+      .caption {
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .technologies {
+    padding: 5% 0;
+
+    h2 {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .tech-cont {
+      align-items: center;
+      border: 1px solid #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+
+      .item {
+        border: 1px solid #000;
+        height: 100px;
+        width: 100px;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
