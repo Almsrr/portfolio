@@ -414,7 +414,7 @@ img {
 }
 
 .home-btn {
-  border: 1px solid #fdfcfa;
+  border: 2px solid #fdfcfa;
   color: #fdfcfa;
   font-size: 18px;
   font-weight: 500;
@@ -524,6 +524,7 @@ header nav .desktop-nav {
   align-items: center;
 }
 header nav .desktop-nav .nav-link {
+  position: relative;
   display: inline-block;
   padding: 0 5px;
   font-size: 12px;
@@ -532,6 +533,26 @@ header nav .desktop-nav .nav-link {
   line-height: 2;
   color: #fdfcfa;
   text-align: center;
+  transition: all 1s ease-in;
+}
+header nav .desktop-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 98%;
+  height: 2px;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+header nav .desktop-nav .nav-link:hover:after {
+  background-color: #fdfcfa;
+}
+header nav .desktop-nav .active::after {
+  background-color: #fdfcfa;
 }
 header nav .desktop-nav li:not(:last-of-type) {
   margin-right: 40px;
