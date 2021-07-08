@@ -676,12 +676,8 @@ footer .social li .social-link {
   background-color: #100c08;
   color: #fff;
   gap: 10px;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-.contact .social {
-  grid-area: 1/2/span 1/span 1;
-  border: 1px solid #fff;
+  padding-top: 2%;
+  padding-bottom: 3%;
 }
 .contact .form-container {
   grid-area: 1/1/span 3/span 1;
@@ -762,6 +758,22 @@ footer .social li .social-link {
 .contact .form-container .contact-form .textarea textarea:focus ~ .underline:before,
 .contact .form-container .contact-form .textarea textarea:valid ~ .underline:before {
   transform: scale(1);
+}
+.contact .social {
+  grid-area: 1/2/span 1/span 1;
+}
+.contact .social h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.contact .social .link {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.contact .social .link i {
+  margin-left: 5px;
 }
 
 body {
