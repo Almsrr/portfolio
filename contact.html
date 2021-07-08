@@ -52,24 +52,38 @@
     </div>
     <!-- Page header ends -->
     <main class="container contact">
-      <section class="form">
-        <form action="">
-          <div class="row">
-            <label for="">Name</label>
+      <section class="form-container">
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          autocomplete="off"
+          data-netlify="true"
+        >
+          <div class="form-row">
             <div class="input-data">
-              <input type="text" name="" id="" />
+              <input type="text" name="name" required />
+              <div class="underline"></div>
+              <label for="name">Name</label>
             </div>
           </div>
-          <div class="row">
-            <label for="">Email</label>
+          <div class="form-row">
             <div class="input-data">
-              <input type="email" name="" id="" />
+              <input type="text" name="email" required />
+              <div class="underline"></div>
+              <label for="email">Email</label>
             </div>
           </div>
-          <div class="row">
-            <textarea clasname="textarea" id="" cols="30" rows="10"></textarea>
+          <div class="form-row textarea">
+            <div class="input-data">
+              <textarea name="message" required></textarea>
+              <div class="underline"></div>
+              <label for="message">Message</label>
+            </div>
           </div>
-          <button type="submit">Send</button>
+          <div class="form-row submit">
+            <input class="submit-btn" type="submit" value="Send" />
+          </div>
         </form>
       </section>
       <aside class="social">

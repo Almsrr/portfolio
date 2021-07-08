@@ -73,3 +73,21 @@
     fill: $base-orange;
   }
 }
+
+.submit-btn {
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  color: inherit;
+  border: 1px solid #eaedf1;
+  transition: background-color 0.3s ease-out;
+  background-color: inherit;
+}
+
+.submit-btn:active {
+  color: #ebecf1;
+  background-color: #ffb347;
+  border-color: #ffb347;
+}
