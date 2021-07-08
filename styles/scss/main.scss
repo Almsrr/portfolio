@@ -4,8 +4,8 @@
 @import "base/typography";
 
 // Helpers
-@import "helpers/containers";
 @import "helpers/variables";
+@import "helpers/containers";
 
 // Components
 @import "components/buttons";
@@ -21,7 +21,26 @@
 @import "pages/contact";
 
 body {
+  color: $base-black;
+  background-color: $base-white;
   font-family: $base-font;
+}
+
+h1 {
+  font-family: $heading-font-black;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .page-header {

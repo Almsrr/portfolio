@@ -2,7 +2,7 @@
   display: grid;
   grid-template: 1fr 1fr 1fr / 3fr 1fr 1fr;
   background-color: $base-black;
-  color: #fff;
+  color: $base-white;
   gap: 10px;
   padding-top: 2%;
   padding-bottom: 3%;
@@ -23,7 +23,6 @@
           width: 100%;
           height: 45px;
           position: relative;
-          // border: 1px solid skyblue;
 
           input {
             display: block;
@@ -31,9 +30,9 @@
             height: 100%;
             border: none;
             outline: none;
-            color: #eaedf1;
+            color: $base-white;
             background-color: inherit;
-            border-bottom: 2px solid #eaedf1;
+            border-bottom: 2px solid $base-white;
           }
 
           label {
@@ -56,7 +55,7 @@
             content: "";
             height: 2px;
             width: 100%;
-            background: #60829b;
+            background: $base-orange;
             transform: scaleX(0);
             transform-origin: center;
             transition: transform 200ms linear;
@@ -72,9 +71,9 @@
           border: none;
           outline: none;
           font-size: 15px;
-          color: #eaedf1;
+          color: $base-white;
           background-color: inherit;
-          border-bottom: 2px solid #eaedf1;
+          border-bottom: 2px solid $base-white;
           resize: none;
           padding-top: 10px;
         }
@@ -89,7 +88,7 @@
       textarea:focus ~ label,
       textarea:valid ~ label {
         transform: translateY(-25px);
-        color: #60829b;
+        color: $base-orange;
         font-size: 12px;
       }
 
@@ -110,7 +109,6 @@
       font-size: 30px;
       margin-bottom: 15px;
       font-weight: bold;
-      font-family: $heading-font;
     }
 
     .link {

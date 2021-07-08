@@ -479,15 +479,14 @@ img {
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
-  color: inherit;
-  border: 1px solid #eaedf1;
+  color: #fdfcfa;
+  border: 1px solid #fdfcfa;
   transition: background-color 0.3s ease-out;
   background-color: inherit;
 }
 
 .submit-btn:active {
-  color: #ebecf1;
-  background-color: #fd6154;
+  color: #fd6154;
   border-color: #fd6154;
 }
 
@@ -606,7 +605,6 @@ footer .social li .social-link {
   letter-spacing: -3px;
   text-transform: uppercase;
   color: #fdfcfa;
-  font-family: "GothamPro Black", "GothamPro Bold", Helvetica, sans-serif;
   pointer-events: none;
 }
 .home .home-content .quote {
@@ -639,12 +637,12 @@ footer .social li .social-link {
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: white;
+  background-color: #fdfcfa;
   padding: 10px 25px;
   font-size: 16px;
   text-transform: uppercase;
   width: 100%;
-  font-weight: bold;
+  font-weight: 700;
 }
 .projects .technologies {
   padding: 5% 0;
@@ -654,7 +652,6 @@ footer .social li .social-link {
   text-align: center;
   font-size: 30px;
   margin-bottom: 30px;
-  font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .projects .technologies .tech-cont {
   align-items: center;
@@ -695,7 +692,7 @@ footer .social li .social-link {
   display: grid;
   grid-template: 1fr 1fr 1fr/3fr 1fr 1fr;
   background-color: #100c08;
-  color: #fff;
+  color: #fdfcfa;
   gap: 10px;
   padding-top: 2%;
   padding-bottom: 3%;
@@ -723,9 +720,9 @@ footer .social li .social-link {
   height: 100%;
   border: none;
   outline: none;
-  color: #eaedf1;
+  color: #fdfcfa;
   background-color: inherit;
-  border-bottom: 2px solid #eaedf1;
+  border-bottom: 2px solid #fdfcfa;
 }
 .contact .form-container .contact-form .form-row .input-data label {
   width: 100%;
@@ -745,7 +742,7 @@ footer .social li .social-link {
   content: "";
   height: 2px;
   width: 100%;
-  background: #60829b;
+  background: #fd6154;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 200ms linear;
@@ -757,9 +754,9 @@ footer .social li .social-link {
   border: none;
   outline: none;
   font-size: 15px;
-  color: #eaedf1;
+  color: #fdfcfa;
   background-color: inherit;
-  border-bottom: 2px solid #eaedf1;
+  border-bottom: 2px solid #fdfcfa;
   resize: none;
   padding-top: 10px;
 }
@@ -771,7 +768,7 @@ footer .social li .social-link {
 .contact .form-container .contact-form textarea:focus ~ label,
 .contact .form-container .contact-form textarea:valid ~ label {
   transform: translateY(-25px);
-  color: #60829b;
+  color: #fd6154;
   font-size: 12px;
 }
 .contact .form-container .contact-form .input-data input:focus ~ .underline:before,
@@ -787,7 +784,6 @@ footer .social li .social-link {
   font-size: 30px;
   margin-bottom: 15px;
   font-weight: bold;
-  font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .contact .social .link {
   display: block;
@@ -799,7 +795,26 @@ footer .social li .social-link {
 }
 
 body {
+  color: #100c08;
+  background-color: #fdfcfa;
   font-family: "IBM Plex Sans", Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: "GothamPro Black", "GothamPro Bold", Helvetica, sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .page-header {

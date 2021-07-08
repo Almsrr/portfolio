@@ -1,8 +1,10 @@
+// Base button
 .btn {
   display: inline-block;
   margin-top: 30px;
 }
 
+// Home button
 .home-btn {
   border: 2px solid $base-white;
   color: $base-white;
@@ -74,20 +76,20 @@
   }
 }
 
+// Submit contact button
 .submit-btn {
   width: 120px;
   height: 40px;
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
-  color: inherit;
-  border: 1px solid #eaedf1;
+  color: $base-white;
+  border: 1px solid $base-white;
   transition: background-color 0.3s ease-out;
   background-color: inherit;
 }
 
 .submit-btn:active {
-  color: #ebecf1;
-  background-color: $base-orange;
+  color: $base-orange;
   border-color: $base-orange;
 }
