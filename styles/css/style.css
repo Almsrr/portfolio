@@ -636,8 +636,20 @@ footer .social li .social-link {
   padding: 10px;
 }
 
-.about .about-text {
-  max-width: 700px;
+.about .content {
+  overflow: hidden;
+  padding: 5% 0;
+  font-size: 18px;
+}
+.about .content p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.about .content .author-photo {
+  width: 300px;
+  height: auto;
+  float: right;
+  margin-left: 20px;
 }
 
 .contact {

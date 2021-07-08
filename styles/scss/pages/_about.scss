@@ -1,5 +1,23 @@
 .about {
-  .about-text {
-    max-width: 700px;
+  .content {
+    // max-width: 1000px;
+    // margin: 0 auto;
+    // border: 1px solid blue;
+    overflow: hidden;
+    padding: 5% 0;
+    font-size: 18px;
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .author-photo {
+      width: 300px;
+      height: auto;
+      float: right;
+      margin-left: 20px;
+      // border-radius: 50%;
+    }
   }
 }
