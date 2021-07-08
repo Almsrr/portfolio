@@ -487,8 +487,8 @@ img {
 
 .submit-btn:active {
   color: #ebecf1;
-  background-color: #ffb347;
-  border-color: #ffb347;
+  background-color: #fd6154;
+  border-color: #fd6154;
 }
 
 header {
@@ -787,6 +787,7 @@ footer .social li .social-link {
   font-size: 30px;
   margin-bottom: 15px;
   font-weight: bold;
+  font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .contact .social .link {
   display: block;
