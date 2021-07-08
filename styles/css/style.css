@@ -578,20 +578,32 @@ footer .social li .social-link {
 }
 
 .projects .projects-grid {
-  border: 1px solid #ddd;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
   padding: 5% 0;
   width: 100%;
 }
 .projects .projects-grid .project {
-  border: 1px solid #000;
+  border: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
 .projects .projects-grid .project .image {
   width: 100%;
+  height: auto;
 }
 .projects .projects-grid .project .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  text-transform: uppercase;
   width: 100%;
   font-weight: bold;
 }
@@ -601,23 +613,27 @@ footer .social li .social-link {
 .projects .technologies h2 {
   font-weight: bold;
   text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .projects .technologies .tech-cont {
   align-items: center;
-  border: 1px solid #ddd;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }
 .projects .technologies .tech-cont .item {
-  border: 1px solid #000;
   height: 100px;
   width: 100px;
 }
 .projects .technologies .tech-cont .item img {
   height: 100%;
   width: 100%;
+}
+.projects .technologies .tech-cont .small {
+  padding: 10px;
 }
 
 .about .about-text {
