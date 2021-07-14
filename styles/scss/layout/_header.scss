@@ -13,14 +13,8 @@ header {
     overflow: hidden;
 
     .logo {
-      height: 100%;
-      display: inline-flex;
-      align-items: center;
+      display: inline-block;
       max-width: 150px;
-
-      img {
-        width: 100%;
-      }
     }
 
     .mobile-nav {
@@ -28,10 +22,8 @@ header {
     }
 
     .desktop-nav {
-      height: 100%;
       float: right;
       display: flex;
-      align-items: center;
 
       .nav-link {
         position: relative;

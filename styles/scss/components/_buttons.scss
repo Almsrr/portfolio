@@ -1,14 +1,16 @@
 // Base button
 .btn {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 // Home button
 .home-btn {
   border: 2px solid $base-white;
   color: $base-white;
-  font-size: 18px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
   font-weight: 500;
   line-height: 24px;
   padding: 12px 32px 12px 82px;

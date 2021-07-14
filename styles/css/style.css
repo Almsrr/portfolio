@@ -404,19 +404,21 @@ img {
   src: url("/resources/fonts/GothamPro.woff2") format("woff2");
 }
 .container {
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .home-btn {
   border: 2px solid #fdfcfa;
   color: #fdfcfa;
-  font-size: 18px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
   font-weight: 500;
   line-height: 24px;
   padding: 12px 32px 12px 82px;
@@ -505,22 +507,15 @@ header nav {
   overflow: hidden;
 }
 header nav .logo {
-  height: 100%;
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   max-width: 150px;
-}
-header nav .logo img {
-  width: 100%;
 }
 header nav .mobile-nav {
   display: none;
 }
 header nav .desktop-nav {
-  height: 100%;
   float: right;
   display: flex;
-  align-items: center;
 }
 header nav .desktop-nav .nav-link {
   position: relative;
@@ -590,26 +585,27 @@ footer .social li .social-link {
 .home {
   display: block;
   position: relative;
-  height: 700px;
-  padding: 0 8vw;
-  background-color: #100c08;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1548611716-3000815a5803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 100%;
 }
 .home .home-content {
   position: relative;
   left: 0;
-  top: 40%;
+  top: 35%;
 }
 .home .home-content .dev-title {
-  font-size: 70px;
-  margin-bottom: 15px;
+  font-size: 5rem;
+  margin-bottom: 1rem;
   letter-spacing: -3px;
   text-transform: uppercase;
   color: #fdfcfa;
   pointer-events: none;
 }
 .home .home-content .quote {
-  line-height: 2;
-  font-size: 18px;
+  font-size: 2rem;
   color: #fdfcfa;
   pointer-events: none;
 }
@@ -798,6 +794,7 @@ body {
   color: #100c08;
   background-color: #fdfcfa;
   font-family: "IBM Plex Sans", Helvetica, sans-serif;
+  position: relative;
 }
 
 h1 {
