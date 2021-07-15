@@ -494,21 +494,20 @@ img {
 
 header {
   width: 100%;
-  height: 40px;
+  max-height: 40px;
   position: absolute;
+  min-height: 40;
   top: 0;
   left: 0;
   z-index: 999;
   margin-top: 45px;
 }
-header nav {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-header nav .logo {
+header .logo {
   display: inline-block;
   max-width: 150px;
+}
+header nav {
+  float: right;
 }
 header nav .mobile-nav {
   display: none;
@@ -610,7 +609,7 @@ footer .social li .social-link {
 
 .projects .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
   padding: 5% 0;
   width: 100%;
@@ -815,7 +814,7 @@ img {
 .page-header {
   height: 300px;
   padding: 0 8vw;
-  background-color: #100c08;
+  background-color: #fff5ee;
 }
 
 .header-content {
@@ -829,13 +828,13 @@ img {
   letter-spacing: -3px;
   text-transform: uppercase;
   line-height: 1;
-  color: #fff5ee;
+  color: #100c08;
   font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .header-content .caption {
   line-height: 2;
   font-size: 16px;
-  color: #fff5ee;
+  color: #100c08;
 }
 
 /*# sourceMappingURL=style.css.map */

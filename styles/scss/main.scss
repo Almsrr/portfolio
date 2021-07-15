@@ -47,7 +47,7 @@ img {
 .page-header {
   height: 300px;
   padding: 0 8vw;
-  background-color: $base-black;
+  background-color: $base-white;
 }
 
 .header-content {
@@ -61,13 +61,13 @@ img {
     letter-spacing: -3px;
     text-transform: uppercase;
     line-height: 1;
-    color: $base-white;
+    color: $base-black;
     font-family: $heading-font;
   }
 
   .caption {
     line-height: 2;
     font-size: 16px;
-    color: $base-white;
+    color: $base-black;
   }
 }
