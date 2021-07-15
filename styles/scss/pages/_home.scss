@@ -2,11 +2,7 @@
   display: block;
   position: relative;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1548611716-3000815a5803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 100%;
+  background-color: $base-white;
 
   .home-content {
     position: relative;
@@ -18,13 +14,13 @@
       margin-bottom: 1rem;
       letter-spacing: -3px;
       text-transform: uppercase;
-      color: $base-white;
+      color: $base-black;
       pointer-events: none;
     }
 
     .quote {
       font-size: 2rem;
-      color: $base-white;
+      color: $base-black;
       pointer-events: none;
     }
   }

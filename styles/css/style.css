@@ -414,9 +414,9 @@ img {
 }
 
 .home-btn {
-  border: 2px solid #fdfcfa;
-  color: #fdfcfa;
-  font-size: 0.75rem;
+  border: 2px solid #100c08;
+  color: #100c08;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-weight: 500;
@@ -436,7 +436,7 @@ img {
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .home-btn .icon-arrow {
-  fill: #fdfcfa;
+  fill: #100c08;
   height: 15px;
   top: 17px;
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1);
@@ -481,8 +481,8 @@ img {
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
-  color: #fdfcfa;
-  border: 1px solid #fdfcfa;
+  color: #100c08;
+  border: 1px solid #100c08;
   transition: background-color 0.3s ease-out;
   background-color: inherit;
 }
@@ -522,10 +522,11 @@ header nav .desktop-nav .nav-link {
   display: inline-block;
   padding: 0 5px;
   font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   line-height: 2;
-  color: #fdfcfa;
+  color: #100c08;
   text-align: center;
   transition: all 1s ease-in;
 }
@@ -543,10 +544,10 @@ header nav .desktop-nav .nav-link::after {
   transition: all 0.3s ease-out;
 }
 header nav .desktop-nav .nav-link:hover:after {
-  background-color: #fdfcfa;
+  background-color: #100c08;
 }
 header nav .desktop-nav .active::after {
-  background-color: #fdfcfa;
+  background-color: #100c08;
 }
 header nav .desktop-nav li:not(:last-of-type) {
   margin-right: 40px;
@@ -560,7 +561,7 @@ footer {
 }
 footer .info {
   display: inline-block;
-  color: #fdfcfa;
+  color: #fff5ee;
   pointer-events: none;
   font-size: 14px;
 }
@@ -577,7 +578,7 @@ footer .social li {
   display: inline-block;
 }
 footer .social li .social-link {
-  color: #fdfcfa;
+  color: #fff5ee;
   font-size: 20px;
   padding: 8px;
 }
@@ -586,10 +587,7 @@ footer .social li .social-link {
   display: block;
   position: relative;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1548611716-3000815a5803?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2550&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 100%;
+  background-color: #fff5ee;
 }
 .home .home-content {
   position: relative;
@@ -601,18 +599,18 @@ footer .social li .social-link {
   margin-bottom: 1rem;
   letter-spacing: -3px;
   text-transform: uppercase;
-  color: #fdfcfa;
+  color: #100c08;
   pointer-events: none;
 }
 .home .home-content .quote {
   font-size: 2rem;
-  color: #fdfcfa;
+  color: #100c08;
   pointer-events: none;
 }
 
 .projects .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding: 5% 0;
   width: 100%;
@@ -633,7 +631,7 @@ footer .social li .social-link {
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: #fdfcfa;
+  background-color: #fff5ee;
   padding: 10px 25px;
   font-size: 16px;
   text-transform: uppercase;
@@ -688,7 +686,7 @@ footer .social li .social-link {
   display: grid;
   grid-template: 1fr 1fr 1fr/3fr 1fr 1fr;
   background-color: #100c08;
-  color: #fdfcfa;
+  color: #fff5ee;
   gap: 10px;
   padding-top: 2%;
   padding-bottom: 3%;
@@ -716,9 +714,9 @@ footer .social li .social-link {
   height: 100%;
   border: none;
   outline: none;
-  color: #fdfcfa;
+  color: #fff5ee;
   background-color: inherit;
-  border-bottom: 2px solid #fdfcfa;
+  border-bottom: 2px solid #fff5ee;
 }
 .contact .form-container .contact-form .form-row .input-data label {
   width: 100%;
@@ -750,9 +748,9 @@ footer .social li .social-link {
   border: none;
   outline: none;
   font-size: 15px;
-  color: #fdfcfa;
+  color: #fff5ee;
   background-color: inherit;
-  border-bottom: 2px solid #fdfcfa;
+  border-bottom: 2px solid #fff5ee;
   resize: none;
   padding-top: 10px;
 }
@@ -792,7 +790,7 @@ footer .social li .social-link {
 
 body {
   color: #100c08;
-  background-color: #fdfcfa;
+  background-color: #fff5ee;
   font-family: "IBM Plex Sans", Helvetica, sans-serif;
   position: relative;
 }
@@ -831,13 +829,13 @@ img {
   letter-spacing: -3px;
   text-transform: uppercase;
   line-height: 1;
-  color: #fdfcfa;
+  color: #fff5ee;
   font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .header-content .caption {
   line-height: 2;
   font-size: 16px;
-  color: #fdfcfa;
+  color: #fff5ee;
 }
 
 /*# sourceMappingURL=style.css.map */
