@@ -1,47 +1,39 @@
 header {
   width: 100%;
-  height: 40px;
+  max-height: 40px;
   position: absolute;
+  min-height: 40;
   top: 0;
   left: 0;
   z-index: 999;
   margin-top: 45px;
 
+  .logo {
+    display: inline-block;
+    max-width: 150px;
+  }
+
   nav {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-
-    .logo {
-      height: 100%;
-      display: inline-flex;
-      align-items: center;
-      max-width: 150px;
-
-      img {
-        width: 100%;
-      }
-    }
+    float: right;
 
     .mobile-nav {
       display: none;
     }
 
     .desktop-nav {
-      height: 100%;
       float: right;
       display: flex;
-      align-items: center;
 
       .nav-link {
         position: relative;
         display: inline-block;
         padding: 0 5px;
         font-size: 12px;
+        font-weight: 500;
         letter-spacing: 0.3rem;
         text-transform: uppercase;
         line-height: 2;
-        color: $base-white;
+        color: $base-black;
         text-align: center;
         transition: all 1s ease-in;
       }
@@ -61,11 +53,11 @@ header {
       }
 
       .nav-link:hover:after {
-        background-color: $base-white;
+        background-color: $base-black;
       }
 
       .active::after {
-        background-color: $base-white;
+        background-color: $base-black;
       }
 
       li:not(:last-of-type) {

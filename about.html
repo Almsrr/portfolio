@@ -22,77 +22,88 @@
   </head>
   <body>
     <header>
-      <nav class="container">
+      <div class="container">
         <!-- Logo  -->
         <div class="logo">
-          <img src="/resources/assets/alam-sierra-logo.png" alt="logo" />
+          <img src="/resources/assets/alam-sierra-dark.png" alt="logo" />
         </div>
-        <!-- Mobile nav  -->
-        <ul class="mobile-nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-        <!-- Desktop nav  -->
-        <ul class="desktop-nav">
-          <li><a class="nav-link" href="/index.html">Home</a></li>
-          <li><a class="nav-link" href="/projects.html">Projects</a></li>
-          <li><a class="nav-link active" href="/about.html">About</a></li>
-          <li><a class="nav-link" href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <!-- Mobile nav  -->
+          <ul class="mobile-nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <!-- Desktop nav  -->
+          <ul class="desktop-nav">
+            <li><a class="nav-link" href="/index.html">Home</a></li>
+            <li><a class="nav-link" href="/projects.html">Projects</a></li>
+            <li><a class="nav-link active" href="/about.html">About</a></li>
+            <li><a class="nav-link" href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!-- Page header  -->
-    <div class="page-header about-page">
-      <div class="header-content">
-        <h1 class="title">About me</h1>
-        <p class="caption">My journey starts here.</p>
+    <div class="page-header about-hd">
+      <div class="hd-content">
+        <div class="container">
+          <h1 class="title">About me</h1>
+          <p class="caption">My journey starts here.</p>
+        </div>
       </div>
     </div>
     <!-- Page header ends -->
-    <main class="container about">
+    <main class="about">
       <section class="content">
-        <img class="author-photo" src="resources/images/me.png" alt="alam-sierra-photo">
+        <div class="container">
+          <img
+            class="author-photo"
+            src="resources/images/me.png"
+            alt="alam-sierra-photo"
+          />
           <p>
-            I'm from Santo Domingo, Dominican Republic 🇩🇴. I'm 21 years old and I have many dreams. I'm new to the web
-            development
-            world and I'm looking to deepen my knowledge with professional practice.
+            I'm from Santo Domingo, Dominican Republic 🇩🇴. I'm 21 years old and
+            I have many dreams. I'm new to the web development world and I'm
+            looking to deepen my knowledge with professional practice.
           </p>
           <p>
-            I enjoy good food, spending time with my family and friends. I love listening to music and I would like to parachute
-            one
-            day.
+            I enjoy good food, spending time with my family and friends. I love
+            listening to music and I would like to parachute one day.
           </p>
+        </div>
       </section>
       <!-- <section class="hobbies">
         <h2>Hobbies</h2>
         <p>My hobbies</p>
       </section> -->
     </main>
-    <footer class="container">
-      <div class="info">
-        <p class="copyright"></p>
-        <p class="author">Made by Alam</p>
+    <footer>
+      <div class="container">
+        <div class="info">
+          <p id="copyright" class="copyright"></p>
+          <p class="author">Made by Alam</p>
+        </div>
+        <ul class="social">
+          <li>
+            <a
+              class="social-link"
+              href="https://github.com/almsrr"
+              target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              href="https://codepen.io/almsrr"
+              target="_blank"
+              ><i class="fab fa-codepen"></i
+            ></a>
+          </li>
+        </ul>
       </div>
-      <ul class="social">
-        <li>
-          <a
-            class="social-link"
-            href="https://github.com/almsrr"
-            target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            class="social-link"
-            href="https://codepen.io/almsrr"
-            target="_blank"
-            ><i class="fab fa-codepen"></i
-          ></a>
-        </li>
-      </ul>
     </footer>
     <script src="scripts/main.js"></script>
   </body>

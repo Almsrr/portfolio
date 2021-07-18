@@ -22,83 +22,88 @@
   </head>
   <body>
     <header>
-      <nav class="container">
+      <div class="container">
         <!-- Logo  -->
         <div class="logo">
-          <img src="/resources/assets/alam-sierra-logo.png" alt="logo" />
+          <img src="/resources/assets/alam-sierra-dark.png" alt="logo" />
         </div>
-        <!-- Mobile nav  -->
-        <ul class="mobile-nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-        <!-- Desktop nav  -->
-        <ul class="desktop-nav">
-          <li><a class="nav-link active" href="/index.html">Home</a></li>
-          <li><a class="nav-link" href="/projects.html">Projects</a></li>
-          <li><a class="nav-link" href="/about.html">About</a></li>
-          <li><a class="nav-link" href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <!-- Mobile nav  -->
+          <ul class="mobile-nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <!-- Desktop nav  -->
+          <ul class="desktop-nav">
+            <li><a class="nav-link active" href="/index.html">Home</a></li>
+            <li><a class="nav-link" href="/projects.html">Projects</a></li>
+            <li><a class="nav-link" href="/about.html">About</a></li>
+            <li><a class="nav-link" href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="home">
       <div class="home-content">
-        <h1 class="dev-title">
-          Front-End <br />
-          Web Developer
-        </h1>
-        <p class="quote">Focus on you, until the focus is you.</p>
-        <!-- <a class="btn home-btn" href="">Look at my work</a> -->
+        <div class="container">
+          <h1 class="dev-title">
+            Front-End <br />
+            Web Developer
+          </h1>
+          <p class="quote">Focus on you, until the focus is you.</p>
 
-        <!-- Home animate button -->
-        <a href="projects.html" class="btn home-btn">
-          <svg class="icon-arrow before">
-            <use xlink:href="#arrow"></use>
+          <!-- Home animate button -->
+          <a href="projects.html" class="btn home-btn">
+            <svg class="icon-arrow before">
+              <use xlink:href="#arrow"></use>
+            </svg>
+            <span class="label">Look at my work</span>
+            <svg class="icon-arrow after">
+              <use xlink:href="#arrow"></use>
+            </svg>
+          </a>
+          <svg style="display: none">
+            <defs>
+              <symbol id="arrow" viewBox="0 0 35 15">
+                <title>Arrow</title>
+                <path
+                  d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "
+                />
+              </symbol>
+            </defs>
           </svg>
-          <span class="label">Look at my work</span>
-          <svg class="icon-arrow after">
-            <use xlink:href="#arrow"></use>
-          </svg>
-        </a>
-        <svg style="display: none">
-          <defs>
-            <symbol id="arrow" viewBox="0 0 35 15">
-              <title>Arrow</title>
-              <path
-                d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "
-              />
-            </symbol>
-          </defs>
-        </svg>
-        <!-- Home animate button ends 
+          <!-- Home animate button ends 
         Author: Sven Finger-->
+        </div>
       </div>
     </main>
-    <footer class="container">
-      <div class="info">
-        <p class="copyright"></p>
-        <p class="author">Made by Alam</p>
+    <footer>
+      <div class="container">
+        <div class="info">
+          <p class="copyright" id="copyright"></p>
+          <p class="author">Made by Alam</p>
+        </div>
+        <ul class="social">
+          <li>
+            <a
+              class="social-link"
+              href="https://github.com/almsrr"
+              target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              href="https://codepen.io/almsrr"
+              target="_blank"
+              ><i class="fab fa-codepen"></i
+            ></a>
+          </li>
+        </ul>
       </div>
-      <ul class="social">
-        <li>
-          <a
-            class="social-link"
-            href="https://github.com/almsrr"
-            target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            class="social-link"
-            href="https://codepen.io/almsrr"
-            target="_blank"
-            ><i class="fab fa-codepen"></i
-          ></a>
-        </li>
-      </ul>
     </footer>
     <script src="scripts/main.js"></script>
   </body>

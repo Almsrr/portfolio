@@ -24,6 +24,7 @@ body {
   color: $base-black;
   background-color: $base-white;
   font-family: $base-font;
+  position: relative;
 }
 
 h1 {
@@ -39,34 +40,31 @@ h6 {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .page-header {
   height: 300px;
-  padding: 0 8vw;
-  background-color: $base-black;
-}
+  background-color: $base-white;
 
-.header-content {
-  position: relative;
-  left: 0;
-  top: 50%;
+  .hd-content {
+    position: relative;
+    left: 0;
+    top: 50%;
 
-  .title {
-    margin-bottom: 10px;
-    font-size: 50px;
-    letter-spacing: -3px;
-    text-transform: uppercase;
-    line-height: 1;
-    color: $base-white;
-    font-family: $heading-font;
-  }
+    .title {
+      margin-bottom: 10px;
+      font-size: 3.75rem;
+      letter-spacing: -0.25rem;
+      text-transform: uppercase;
+      color: $base-black;
+      font-family: $heading-font;
+    }
 
-  .caption {
-    line-height: 2;
-    font-size: 16px;
-    color: $base-white;
+    .caption {
+      font-size: 1.25rem;
+      color: $base-black;
+    }
   }
 }

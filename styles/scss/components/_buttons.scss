@@ -1,14 +1,16 @@
 // Base button
 .btn {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 // Home button
 .home-btn {
-  border: 2px solid $base-white;
-  color: $base-white;
-  font-size: 18px;
+  border: 2px solid $base-black;
+  color: $base-black;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
   font-weight: 500;
   line-height: 24px;
   padding: 12px 32px 12px 82px;
@@ -28,7 +30,7 @@
   }
 
   .icon-arrow {
-    fill: $base-white;
+    fill: $base-black;
     height: 15px;
     top: 17px;
     transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),
@@ -83,8 +85,8 @@
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
-  color: $base-white;
-  border: 1px solid $base-white;
+  color: $base-black;
+  border: 1px solid $base-black;
   transition: background-color 0.3s ease-out;
   background-color: inherit;
 }

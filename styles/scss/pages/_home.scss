@@ -1,28 +1,26 @@
 .home {
   display: block;
   position: relative;
-  height: 700px;
-  padding: 0 8vw;
-  background-color: $base-black;
+  height: 100vh;
+  background-color: $base-white;
 
   .home-content {
     position: relative;
     left: 0;
-    top: 40%;
+    top: 35%;
 
     .dev-title {
-      font-size: 70px;
-      margin-bottom: 15px;
-      letter-spacing: -3px;
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.25rem;
       text-transform: uppercase;
-      color: $base-white;
+      color: $base-black;
       pointer-events: none;
     }
 
     .quote {
-      line-height: 2;
-      font-size: 18px;
-      color: $base-white;
+      font-size: 2rem;
+      color: $base-black;
       pointer-events: none;
     }
   }

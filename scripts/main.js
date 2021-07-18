@@ -1,8 +1,10 @@
 // Copyright date
-// const date = new Date();
-// let currentYear = date.getFullYear();
+const date = new Date();
+let currentYear = date.getFullYear();
 
-// document.getElementById("copyright").innerHTML = "&copy" + currentYear;
+window.onload = function () {
+  document.getElementById("copyright").innerHTML = "&copy" + currentYear;
+};
 
 // Mobile navbar links button
 // $(document).ready(function () {
