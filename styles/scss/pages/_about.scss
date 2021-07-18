@@ -1,19 +1,21 @@
 .about {
   .content {
     overflow: hidden;
-    padding: 5% 0;
-    font-size: 18px;
+    padding-bottom: 5%;
 
     p {
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
       line-height: 1.5;
+      font-size: 1rem;
     }
 
     .author-photo {
       width: 300px;
       height: auto;
       float: right;
-      margin-left: 20px;
+      margin-left: 3rem;
+      overflow: hidden;
+      border-radius: 25% 10%;
     }
   }
 }
