@@ -678,32 +678,34 @@ footer .social li .social-link {
 }
 
 .contact {
-  display: grid;
-  grid-template: 1fr 1fr 1fr/3fr 1fr 1fr;
   background-color: #100c08;
   color: #f5f5f5;
+}
+.contact .contact-grid {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/3fr 1fr 1fr;
   gap: 10px;
   padding-top: 2%;
   padding-bottom: 3%;
 }
-.contact .form-container {
+.contact .contact-grid .form-container {
   grid-area: 1/1/span 3/span 1;
 }
-.contact .form-container .contact-form {
+.contact .contact-grid .form-container .contact-form {
   width: 100%;
   padding: 10px;
   overflow: hidden;
 }
-.contact .form-container .contact-form .form-row {
+.contact .contact-grid .form-container .contact-form .form-row {
   margin-bottom: 20px;
   padding: 0 8px;
 }
-.contact .form-container .contact-form .form-row .input-data {
+.contact .contact-grid .form-container .contact-form .form-row .input-data {
   width: 100%;
   height: 45px;
   position: relative;
 }
-.contact .form-container .contact-form .form-row .input-data input {
+.contact .contact-grid .form-container .contact-form .form-row .input-data input {
   display: block;
   width: 100%;
   height: 100%;
@@ -713,20 +715,20 @@ footer .social li .social-link {
   background-color: inherit;
   border-bottom: 2px solid #f5f5f5;
 }
-.contact .form-container .contact-form .form-row .input-data label {
+.contact .contact-grid .form-container .contact-form .form-row .input-data label {
   width: 100%;
   position: absolute;
   pointer-events: none;
   bottom: 12px;
   transition: all 200ms linear;
 }
-.contact .form-container .contact-form .form-row .input-data .underline {
+.contact .contact-grid .form-container .contact-form .form-row .input-data .underline {
   position: absolute;
   bottom: 0;
   height: 2px;
   width: 100%;
 }
-.contact .form-container .contact-form .form-row .input-data .underline::before {
+.contact .contact-grid .form-container .contact-form .form-row .input-data .underline::before {
   position: absolute;
   content: "";
   height: 2px;
@@ -736,7 +738,7 @@ footer .social li .social-link {
   transform-origin: center;
   transition: transform 200ms linear;
 }
-.contact .form-container .contact-form .textarea textarea {
+.contact .contact-grid .form-container .contact-form .textarea textarea {
   display: block;
   width: 100%;
   height: 100%;
@@ -749,38 +751,55 @@ footer .social li .social-link {
   resize: none;
   padding-top: 10px;
 }
-.contact .form-container .contact-form .submit {
+.contact .contact-grid .form-container .contact-form .submit {
   float: right;
 }
-.contact .form-container .contact-form .input-data input:focus ~ label,
-.contact .form-container .contact-form .input-data input:valid ~ label,
-.contact .form-container .contact-form textarea:focus ~ label,
-.contact .form-container .contact-form textarea:valid ~ label {
+.contact .contact-grid .form-container .contact-form .input-data input:focus ~ label,
+.contact .contact-grid .form-container .contact-form .input-data input:valid ~ label,
+.contact .contact-grid .form-container .contact-form textarea:focus ~ label,
+.contact .contact-grid .form-container .contact-form textarea:valid ~ label {
   transform: translateY(-25px);
   color: #fd6154;
   font-size: 12px;
 }
-.contact .form-container .contact-form .input-data input:focus ~ .underline:before,
-.contact .form-container .contact-form .input-data input:valid ~ .underline:before,
-.contact .form-container .contact-form .textarea textarea:focus ~ .underline:before,
-.contact .form-container .contact-form .textarea textarea:valid ~ .underline:before {
+.contact .contact-grid .form-container .contact-form .input-data input:focus ~ .underline:before,
+.contact .contact-grid .form-container .contact-form .input-data input:valid ~ .underline:before,
+.contact .contact-grid .form-container .contact-form .textarea textarea:focus ~ .underline:before,
+.contact .contact-grid .form-container .contact-form .textarea textarea:valid ~ .underline:before {
   transform: scale(1);
 }
-.contact .social {
+.contact .contact-grid .social {
   grid-area: 1/2/span 1/span 1;
 }
-.contact .social h3 {
+.contact .contact-grid .social h3 {
   font-size: 30px;
   margin-bottom: 15px;
   font-weight: bold;
 }
-.contact .social .link {
+.contact .contact-grid .social .link {
   display: block;
   margin-bottom: 5px;
   font-size: 18px;
 }
-.contact .social .link i {
+.contact .contact-grid .social .link i {
   margin-left: 5px;
+}
+
+.dark header nav .desktop-nav .nav-link {
+  color: #f5f5f5;
+}
+.dark header nav .desktop-nav .nav-link:hover:after {
+  background-color: #f5f5f5;
+}
+.dark header nav .desktop-nav .active::after {
+  background-color: #f5f5f5;
+}
+.dark .page-header {
+  background-color: #100c08;
+}
+.dark .page-header .hd-content .title,
+.dark .page-header .hd-content .caption {
+  color: #f5f5f5;
 }
 
 body {
@@ -811,13 +830,12 @@ img {
   height: 300px;
   background-color: #f5f5f5;
 }
-
-.hd-content {
+.page-header .hd-content {
   position: relative;
   left: 0;
   top: 50%;
 }
-.hd-content .title {
+.page-header .hd-content .title {
   margin-bottom: 10px;
   font-size: 3.75rem;
   letter-spacing: -0.25rem;
@@ -825,7 +843,7 @@ img {
   color: #100c08;
   font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
-.hd-content .caption {
+.page-header .hd-content .caption {
   font-size: 1.25rem;
   color: #100c08;
 }

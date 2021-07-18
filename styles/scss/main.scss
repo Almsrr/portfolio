@@ -47,24 +47,24 @@ img {
 .page-header {
   height: 300px;
   background-color: $base-white;
-}
 
-.hd-content {
-  position: relative;
-  left: 0;
-  top: 50%;
+  .hd-content {
+    position: relative;
+    left: 0;
+    top: 50%;
 
-  .title {
-    margin-bottom: 10px;
-    font-size: 3.75rem;
-    letter-spacing: -0.25rem;
-    text-transform: uppercase;
-    color: $base-black;
-    font-family: $heading-font;
-  }
+    .title {
+      margin-bottom: 10px;
+      font-size: 3.75rem;
+      letter-spacing: -0.25rem;
+      text-transform: uppercase;
+      color: $base-black;
+      font-family: $heading-font;
+    }
 
-  .caption {
-    font-size: 1.25rem;
-    color: $base-black;
+    .caption {
+      font-size: 1.25rem;
+      color: $base-black;
+    }
   }
 }
