@@ -1,7 +1,7 @@
 .projects {
   .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     padding: 5% 0;
     width: 100%;
@@ -45,8 +45,8 @@
       justify-content: flex-start;
 
       .item {
-        height: 120px;
-        width: 120px;
+        height: 80px;
+        width: 80px;
 
         img {
           width: 100%;
@@ -60,6 +60,36 @@
 
       .small {
         padding: 15px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $phone-breakpoint) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technologies {
+      .tech-cont {
+        .item {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .technologies {
+      .tech-cont {
+        .item {
+          width: 120px;
+          height: 120px;
+        }
       }
     }
   }

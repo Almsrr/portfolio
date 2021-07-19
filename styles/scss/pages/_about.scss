@@ -10,12 +10,28 @@
     }
 
     .author-photo {
-      width: 300px;
-      height: auto;
-      float: right;
-      margin-left: 3rem;
+      display: block;
+      width: 200px;
+      margin: 0 auto 1.5rem;
       overflow: hidden;
-      border-radius: 25% 10%;
+      border-radius: 50%;
+    }
+
+    @media screen and (min-width: $phone-breakpoint) {
+      .author-photo {
+        float: right;
+        margin: 0 1rem;
+      }
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+      .author-photo {
+        width: 300px;
+      }
+
+      p:first-of-type {
+        padding-top: 3rem;
+      }
     }
   }
 }

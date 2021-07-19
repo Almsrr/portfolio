@@ -1,16 +1,16 @@
 .home {
   display: block;
   position: relative;
-  height: 100vh;
+  height: 700px;
   background-color: $base-white;
 
   .home-content {
     position: relative;
     left: 0;
-    top: 35%;
+    top: 25%;
 
     .dev-title {
-      font-size: 5rem;
+      font-size: calc(1rem + 10vw);
       margin-bottom: 1rem;
       letter-spacing: -0.25rem;
       text-transform: uppercase;
@@ -19,9 +19,25 @@
     }
 
     .quote {
-      font-size: 2rem;
+      font-size: calc(0.5rem + 5vw);
       color: $base-black;
       pointer-events: none;
+    }
+
+    @media screen and (min-width: $phone-breakpoint) {
+      .dev-title {
+        font-size: 4rem;
+      }
+
+      .quote {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+      .dev-title {
+        font-size: 5rem;
+      }
     }
   }
 }

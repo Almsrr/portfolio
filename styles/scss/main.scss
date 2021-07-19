@@ -28,6 +28,7 @@ body {
 }
 
 h1 {
+  font-size: calc(2.25rem + 3vw);
   font-family: $heading-font-black;
 }
 
@@ -55,7 +56,7 @@ img {
 
     .title {
       margin-bottom: 10px;
-      font-size: 3.75rem;
+      font-size: calc(1.25rem + 5vw);
       letter-spacing: -0.25rem;
       text-transform: uppercase;
       color: $base-black;
@@ -63,8 +64,18 @@ img {
     }
 
     .caption {
-      font-size: 1.25rem;
+      font-size: 1rem;
       color: $base-black;
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+      .title {
+        font-size: 3.75rem;
+      }
+
+      .caption {
+        font-size: 1.25rem;
+      }
     }
   }
 }
