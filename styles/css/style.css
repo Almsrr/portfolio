@@ -785,12 +785,25 @@ footer .social li .social-link {
   font-size: 1rem;
 }
 .about .content .author-photo {
-  width: 300px;
-  height: auto;
-  float: right;
-  margin-left: 3rem;
+  display: block;
+  width: 200px;
+  margin: 0 auto 1.5rem;
   overflow: hidden;
-  border-radius: 25% 10%;
+  border-radius: 50%;
+}
+@media screen and (min-width: 481px) {
+  .about .content .author-photo {
+    float: right;
+    margin: 0 1rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .about .content .author-photo {
+    width: 300px;
+  }
+  .about .content p:first-of-type {
+    padding-top: 3rem;
+  }
 }
 
 .contact {
