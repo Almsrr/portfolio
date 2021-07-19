@@ -707,7 +707,7 @@ footer .social li .social-link {
 
 .projects .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   padding: 5% 0;
   width: 100%;
@@ -743,8 +743,8 @@ footer .social li .social-link {
   justify-content: flex-start;
 }
 .projects .technologies .tech-cont .item {
-  height: 120px;
-  width: 120px;
+  height: 80px;
+  width: 80px;
 }
 .projects .technologies .tech-cont .item img {
   width: 100%;
@@ -755,6 +755,24 @@ footer .social li .social-link {
 }
 .projects .technologies .tech-cont .small {
   padding: 15px;
+}
+@media screen and (min-width: 481px) {
+  .projects .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .technologies .tech-cont .item {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .projects .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects .technologies .tech-cont .item {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .about .content {
@@ -936,15 +954,23 @@ img {
 }
 .page-header .hd-content .title {
   margin-bottom: 10px;
-  font-size: 3.75rem;
+  font-size: calc(1.25rem + 5vw);
   letter-spacing: -0.25rem;
   text-transform: uppercase;
   color: #100c08;
   font-family: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
 }
 .page-header .hd-content .caption {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #100c08;
+}
+@media screen and (min-width: 769px) {
+  .page-header .hd-content .title {
+    font-size: 3.75rem;
+  }
+  .page-header .hd-content .caption {
+    font-size: 1.25rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
