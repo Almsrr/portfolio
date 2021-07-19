@@ -405,6 +405,7 @@ img {
 }
 .container {
   max-width: 1150px;
+  padding: 0 1rem;
   margin: 0 auto;
 }
 
@@ -416,7 +417,7 @@ img {
 .home-btn {
   border: 2px solid #100c08;
   color: #100c08;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-weight: 500;
@@ -440,7 +441,12 @@ img {
   height: 15px;
   top: 17px;
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  width: 35px;
+  width: 25px;
+}
+@media screen and (min-width: 769px) {
+  .home-btn .icon-arrow {
+    width: 35px;
+  }
 }
 .home-btn .icon-arrow.before {
   left: 32px;
@@ -496,7 +502,7 @@ header {
   width: 100%;
   max-height: 40px;
   position: absolute;
-  min-height: 40;
+  min-height: 30px;
   top: 0;
   left: 0;
   z-index: 999;
@@ -510,7 +516,7 @@ header nav {
   float: right;
 }
 header nav .menuToggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: relative;
   z-index: 1;
@@ -561,9 +567,8 @@ header nav .menuToggle .mobile-nav {
   top: 0;
   right: 0;
   width: 200px;
-  height: 100vh;
+  height: 500px;
   box-shadow: 0 0 10px #85888c;
-  margin: -50px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
   background-color: #f5f6fa;
@@ -618,6 +623,14 @@ header nav .desktop-nav .active::after {
 header nav .desktop-nav li:not(:last-of-type) {
   margin-right: 40px;
 }
+@media screen and (min-width: 769px) {
+  header nav .menuToggle {
+    display: none;
+  }
+  header nav .desktop-nav {
+    display: flex;
+  }
+}
 
 footer {
   padding-top: 20px;
@@ -629,7 +642,7 @@ footer .info {
   display: inline-block;
   color: #f5f5f5;
   pointer-events: none;
-  font-size: 14px;
+  font-size: 0.75rem;
 }
 footer .info .copyright {
   display: inline;
@@ -639,29 +652,34 @@ footer .info .author {
 }
 footer .social {
   float: right;
+  font-size: 1rem;
 }
 footer .social li {
   display: inline-block;
 }
 footer .social li .social-link {
   color: #f5f5f5;
-  font-size: 20px;
   padding: 8px;
+}
+@media screen and (min-width: 769px) {
+  footer .social {
+    font-size: 1.25rem;
+  }
 }
 
 .home {
   display: block;
   position: relative;
-  height: 100vh;
+  height: 700px;
   background-color: #f5f5f5;
 }
 .home .home-content {
   position: relative;
   left: 0;
-  top: 35%;
+  top: 25%;
 }
 .home .home-content .dev-title {
-  font-size: 5rem;
+  font-size: calc(1rem + 10vw);
   margin-bottom: 1rem;
   letter-spacing: -0.25rem;
   text-transform: uppercase;
@@ -669,9 +687,22 @@ footer .social li .social-link {
   pointer-events: none;
 }
 .home .home-content .quote {
-  font-size: 2rem;
+  font-size: calc(0.5rem + 5vw);
   color: #100c08;
   pointer-events: none;
+}
+@media screen and (min-width: 481px) {
+  .home .home-content .dev-title {
+    font-size: 4rem;
+  }
+  .home .home-content .quote {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .home .home-content .dev-title {
+    font-size: 5rem;
+  }
 }
 
 .projects .projects-grid {
@@ -877,6 +908,7 @@ body {
 }
 
 h1 {
+  font-size: calc(2.25rem + 3vw);
   font-family: "GothamPro Black", "GothamPro Bold", Helvetica, sans-serif;
 }
 
