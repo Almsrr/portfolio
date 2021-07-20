@@ -15,6 +15,7 @@ header {
     text-transform: uppercase;
     line-height: 1.5;
     transition: all 1s ease;
+    pointer-events: none;
   }
 
   nav {
@@ -111,7 +112,7 @@ header {
         font-weight: 500;
         letter-spacing: 2px;
         text-transform: uppercase;
-        line-height: 1.5;
+        line-height: 2;
         text-align: center;
         transition: all 1s ease-in;
       }
@@ -131,11 +132,11 @@ header {
       }
 
       .nav-link:hover:after {
-        background-color: $base-black;
+        background-color: $body-font-color;
       }
 
       .active::after {
-        background-color: $base-black;
+        background-color: $body-font-color;
       }
 
       li:not(:last-of-type) {

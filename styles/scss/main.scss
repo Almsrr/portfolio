@@ -21,8 +21,8 @@
 @import "pages/contact";
 
 body {
-  color: $base-black;
-  background-color: $base-white;
+  color: $body-font-color;
+  background-color: $body-bg-color;
   font-family: $base-font;
   position: relative;
 }
@@ -81,7 +81,7 @@ img {
 // Dark theme
 .dark-theme {
   color: $base-white;
-  background-color: $base-black;
+  background-color: $body-font-color;
 
   header {
     nav {

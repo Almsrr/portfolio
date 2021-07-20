@@ -59,7 +59,7 @@
               content: "";
               height: 2px;
               width: 100%;
-              background: $highlight;
+              background: $highlight-color;
               transform: scaleX(0);
               transform-origin: center;
               transition: transform 200ms linear;
@@ -91,7 +91,7 @@
         textarea:focus ~ label,
         textarea:valid ~ label {
           transform: translateY(-25px);
-          color: $highlight;
+          color: $highlight-color;
           font-size: 12px;
         }
 

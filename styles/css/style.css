@@ -435,11 +435,11 @@ img {
 }
 
 .home-btn {
-  border: 2px solid #f5f5f5;
-  color: #f5f5f5;
-  background-color: #c10000;
+  border: 3px solid #005691;
+  color: #005691;
+  background-color: transparent;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 24px;
@@ -458,7 +458,7 @@ img {
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .home-btn .icon-arrow {
-  fill: #f5f5f5;
+  fill: #005691;
   height: 15px;
   top: 17px;
   transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1);
@@ -495,8 +495,14 @@ img {
   transform: translateX(0) scaleX(1);
 }
 .home-btn:active {
-  border-color: #c10000;
+  border-color: #005691;
+  background-color: #005691;
+  color: #f5f5f5;
 }
+.home-btn:active .icon-arrow {
+  fill: #f5f5f5;
+}
+
 .submit-btn {
   width: 120px;
   height: 40px;
@@ -510,8 +516,8 @@ img {
 }
 
 .submit-btn:active {
-  color: #c10000;
-  border-color: #c10000;
+  color: #005691;
+  border-color: #005691;
 }
 
 header {
@@ -531,6 +537,7 @@ header .logo {
   text-transform: uppercase;
   line-height: 1.5;
   transition: all 1s ease;
+  pointer-events: none;
 }
 header nav .menuToggle {
   display: none;
@@ -613,7 +620,7 @@ header nav .desktop-nav .nav-link {
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  line-height: 1.5;
+  line-height: 2;
   text-align: center;
   transition: all 1s ease-in;
 }
@@ -631,10 +638,10 @@ header nav .desktop-nav .nav-link::after {
   transition: all 0.5s ease;
 }
 header nav .desktop-nav .nav-link:hover:after {
-  background-color: #100c08;
+  background-color: #283149;
 }
 header nav .desktop-nav .active::after {
-  background-color: #100c08;
+  background-color: #283149;
 }
 header nav .desktop-nav li:not(:last-of-type) {
   margin-right: 40px;
@@ -653,7 +660,7 @@ footer {
   padding-bottom: 20px;
   overflow: hidden;
   color: #f5f5f5;
-  background-color: #100c08;
+  background-color: #283149;
 }
 footer .info {
   display: inline-block;
@@ -728,6 +735,8 @@ footer .social li .social-link {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  background-color: #eeeeee;
+  border: 1px solid #ddd;
 }
 .projects .projects-grid .project .content {
   padding: 1rem;
@@ -862,7 +871,7 @@ footer .social li .social-link {
   content: "";
   height: 2px;
   width: 100%;
-  background: #c10000;
+  background: #005691;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 200ms linear;
@@ -887,7 +896,7 @@ footer .social li .social-link {
 .contact .contact-grid .form-container .contact-form textarea:focus ~ label,
 .contact .contact-grid .form-container .contact-form textarea:valid ~ label {
   transform: translateY(-25px);
-  color: #c10000;
+  color: #005691;
   font-size: 12px;
 }
 .contact .contact-grid .form-container .contact-form .input-data input:focus ~ .underline:before,
@@ -916,8 +925,8 @@ footer .social li .social-link {
 }
 
 body {
-  color: #100c08;
-  background-color: #f5f5f5;
+  color: #283149;
+  background-color: #eeeeee;
   font-family: "Hind Vadodara", sans-serif;
   position: relative;
 }
@@ -970,7 +979,7 @@ img {
 
 .dark-theme {
   color: #f5f5f5;
-  background-color: #100c08;
+  background-color: #283149;
 }
 .dark-theme header nav .desktop-nav .nav-link:hover:after {
   background-color: #f5f5f5;

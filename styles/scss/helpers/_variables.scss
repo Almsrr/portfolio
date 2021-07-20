@@ -1,8 +1,15 @@
 // Theme
 $base-white: #f5f5f5;
-$base-black: #100c08;
-$highlight: #c10000;
-$footer-bg-color: $base-black;
+$base-black: #222831;
+
+$base-light: #eeeeee;
+$base-dark: $base-black;
+
+$body-bg-color: $base-light;
+$body-font-color: #283149;
+
+$highlight-color: #005691;
+$footer-bg-color: $body-font-color;
 
 // Breakpoints
 $phone-breakpoint: 481px;
