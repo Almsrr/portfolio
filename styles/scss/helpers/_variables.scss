@@ -1,6 +1,7 @@
 // Theme
 $base-white: #f5f5f5;
 $base-black: #100c08;
+$highlight: #c10000;
 $base-orange: #fd6154;
 $base-blue: #3680af;
 
@@ -10,6 +11,6 @@ $tablet-breakpoint: 769px;
 $desktop-breakpoint: 1025px;
 
 //Fonts
-$heading-font-black: "GothamPro Black", "GothamPro Bold", Helvetica, sans-serif;
-$heading-font: "GothamPro Bold", "GothamPro Medium", Helvetica, sans-serif;
-$base-font: "IBM Plex Sans", Helvetica, sans-serif;
+$heading-font-black: "GothamPro Black", sans-serif;
+$heading-font: "GothamPro Bold", sans-serif;
+$base-font: "Mada", sans-serif;
