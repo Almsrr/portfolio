@@ -2,11 +2,11 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   overflow: hidden;
-  background-color: $base-black;
+  color: $base-white;
+  background-color: $footer-bg-color;
 
   .info {
     display: inline-block;
-    color: $base-white;
     pointer-events: none;
     font-size: 1rem;
 
@@ -27,7 +27,6 @@ footer {
       display: inline-block;
 
       .social-link {
-        color: $base-white;
         padding: 8px;
       }
     }

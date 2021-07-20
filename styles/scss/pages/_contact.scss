@@ -1,10 +1,8 @@
-.contact-hd {
-}
+// .contact-hd {
+// }
 
 .contact {
   padding-top: 5%;
-  background-color: $base-black;
-  color: $base-white;
   // background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2563&q=80");
   // background-position: 0 100%;
   // background-size: cover;
@@ -37,7 +35,6 @@
               height: 100%;
               border: none;
               outline: none;
-              color: $base-white;
               background-color: inherit;
               border-bottom: 2px solid $base-white;
             }
@@ -78,7 +75,6 @@
             border: none;
             outline: none;
             font-size: 15px;
-            color: $base-white;
             background-color: inherit;
             border-bottom: 2px solid $base-white;
             resize: none;
@@ -130,40 +126,6 @@
   @media screen and (min-width: $tablet-breakpoint) {
     .contact-grid {
       grid-template-columns: 3fr 1fr 1fr;
-    }
-  }
-}
-.dark {
-  header {
-    .logo {
-      color: $base-white;
-    }
-
-    nav {
-      .desktop-nav {
-        .nav-link {
-          color: $base-white;
-        }
-
-        .nav-link:hover:after {
-          background-color: $base-white;
-        }
-
-        .active::after {
-          background-color: $base-white;
-        }
-      }
-    }
-  }
-
-  .page-header {
-    background-color: $base-black;
-
-    .hd-content {
-      .title,
-      .caption {
-        color: $base-white;
-      }
     }
   }
 }

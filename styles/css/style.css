@@ -530,7 +530,6 @@ header .logo {
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 1.5;
-  color: #100c08;
   transition: all 1s ease;
 }
 header nav .menuToggle {
@@ -615,7 +614,6 @@ header nav .desktop-nav .nav-link {
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 1.5;
-  color: #100c08;
   text-align: center;
   transition: all 1s ease-in;
 }
@@ -654,11 +652,11 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   overflow: hidden;
+  color: #f5f5f5;
   background-color: #100c08;
 }
 footer .info {
   display: inline-block;
-  color: #f5f5f5;
   pointer-events: none;
   font-size: 1rem;
 }
@@ -676,7 +674,6 @@ footer .social li {
   display: inline-block;
 }
 footer .social li .social-link {
-  color: #f5f5f5;
   padding: 8px;
 }
 @media screen and (min-width: 769px) {
@@ -689,7 +686,6 @@ footer .social li .social-link {
   display: block;
   position: relative;
   height: 700px;
-  background-color: #f5f5f5;
 }
 .home .home-content {
   position: relative;
@@ -699,13 +695,11 @@ footer .social li .social-link {
 .home .home-content .dev-title {
   font-size: calc(1rem + 10vw);
   margin-bottom: 0.5rem;
-  color: #100c08;
   pointer-events: none;
   font-weight: 700;
 }
 .home .home-content .quote {
   font-size: calc(0.5rem + 5vw);
-  color: #100c08;
   pointer-events: none;
 }
 @media screen and (min-width: 481px) {
@@ -820,8 +814,6 @@ footer .social li .social-link {
 
 .contact {
   padding-top: 5%;
-  background-color: #100c08;
-  color: #f5f5f5;
 }
 .contact .contact-grid {
   display: grid;
@@ -849,7 +841,6 @@ footer .social li .social-link {
   height: 100%;
   border: none;
   outline: none;
-  color: #f5f5f5;
   background-color: inherit;
   border-bottom: 2px solid #f5f5f5;
 }
@@ -883,7 +874,6 @@ footer .social li .social-link {
   border: none;
   outline: none;
   font-size: 15px;
-  color: #f5f5f5;
   background-color: inherit;
   border-bottom: 2px solid #f5f5f5;
   resize: none;
@@ -923,26 +913,6 @@ footer .social li .social-link {
   .contact .contact-grid {
     grid-template-columns: 3fr 1fr 1fr;
   }
-}
-
-.dark header .logo {
-  color: #f5f5f5;
-}
-.dark header nav .desktop-nav .nav-link {
-  color: #f5f5f5;
-}
-.dark header nav .desktop-nav .nav-link:hover:after {
-  background-color: #f5f5f5;
-}
-.dark header nav .desktop-nav .active::after {
-  background-color: #f5f5f5;
-}
-.dark .page-header {
-  background-color: #100c08;
-}
-.dark .page-header .hd-content .title,
-.dark .page-header .hd-content .caption {
-  color: #f5f5f5;
 }
 
 body {
@@ -985,11 +955,9 @@ img {
 .page-header .hd-content .title {
   margin-bottom: 0.75rem;
   font-weight: 700;
-  color: #100c08;
 }
 .page-header .hd-content .caption {
   font-size: 1.25rem;
-  color: #100c08;
 }
 @media screen and (min-width: 769px) {
   .page-header .hd-content .title {
@@ -998,6 +966,17 @@ img {
   .page-header .hd-content .caption {
     font-size: 1.5rem;
   }
+}
+
+.dark-theme {
+  color: #f5f5f5;
+  background-color: #100c08;
+}
+.dark-theme header nav .desktop-nav .nav-link:hover:after {
+  background-color: #f5f5f5;
+}
+.dark-theme header nav .desktop-nav .active::after {
+  background-color: #f5f5f5;
 }
 
 /*# sourceMappingURL=style.css.map */

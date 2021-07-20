@@ -2,7 +2,6 @@
   display: block;
   position: relative;
   height: 700px;
-  background-color: $base-white;
 
   .home-content {
     position: relative;
@@ -12,14 +11,12 @@
     .dev-title {
       font-size: calc(1rem + 10vw);
       margin-bottom: 0.5rem;
-      color: $base-black;
       pointer-events: none;
       font-weight: 700;
     }
 
     .quote {
       font-size: calc(0.5rem + 5vw);
-      color: $base-black;
       pointer-events: none;
     }
 

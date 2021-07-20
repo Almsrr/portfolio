@@ -60,12 +60,10 @@ img {
     .title {
       margin-bottom: 0.75rem;
       font-weight: 700;
-      color: $base-black;
     }
 
     .caption {
       font-size: 1.25rem;
-      color: $base-black;
     }
 
     @media screen and (min-width: $tablet-breakpoint) {
@@ -75,6 +73,26 @@ img {
 
       .caption {
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+// Dark theme
+.dark-theme {
+  color: $base-white;
+  background-color: $base-black;
+
+  header {
+    nav {
+      .desktop-nav {
+        .nav-link:hover:after {
+          background-color: $base-white;
+        }
+
+        .active::after {
+          background-color: $base-white;
+        }
       }
     }
   }
