@@ -1,6 +1,14 @@
+.contact-hd {
+}
+
 .contact {
+  padding-top: 5%;
   background-color: $base-black;
   color: $base-white;
+  // background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2563&q=80");
+  // background-position: 0 100%;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   .contact-grid {
     display: grid;
@@ -54,7 +62,7 @@
               content: "";
               height: 2px;
               width: 100%;
-              background: $base-orange;
+              background: $highlight;
               transform: scaleX(0);
               transform-origin: center;
               transition: transform 200ms linear;
@@ -87,7 +95,7 @@
         textarea:focus ~ label,
         textarea:valid ~ label {
           transform: translateY(-25px);
-          color: $base-orange;
+          color: $highlight;
           font-size: 12px;
         }
 
@@ -127,6 +135,10 @@
 }
 .dark {
   header {
+    .logo {
+      color: $base-white;
+    }
+
     nav {
       .desktop-nav {
         .nav-link {

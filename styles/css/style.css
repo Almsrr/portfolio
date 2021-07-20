@@ -431,17 +431,17 @@ img {
 
 .btn {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .home-btn {
   border: 2px solid #f5f5f5;
   color: #f5f5f5;
   background-color: #c10000;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   line-height: 24px;
   padding: 12px 32px 12px 82px;
   position: relative;
@@ -495,13 +495,8 @@ img {
   transform: translateX(0) scaleX(1);
 }
 .home-btn:active {
-  border-color: #fd6154;
-  color: #fd6154;
+  border-color: #c10000;
 }
-.home-btn:active .icon-arrow {
-  fill: #fd6154;
-}
-
 .submit-btn {
   width: 120px;
   height: 40px;
@@ -515,8 +510,8 @@ img {
 }
 
 .submit-btn:active {
-  color: #fd6154;
-  border-color: #fd6154;
+  color: #c10000;
+  border-color: #c10000;
 }
 
 header {
@@ -532,10 +527,11 @@ header .logo {
   padding: 5px;
   font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.3rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  line-height: 1.5;
   color: #100c08;
-  transition: all 1s ease-in;
+  transition: all 1s ease;
 }
 header nav .menuToggle {
   display: none;
@@ -614,11 +610,11 @@ header nav .desktop-nav .nav-link {
   display: inline-block;
   position: relative;
   padding: 0 5px;
-  font-size: 12px;
+  font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.3rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  line-height: 2;
+  line-height: 1.5;
   color: #100c08;
   text-align: center;
   transition: all 1s ease-in;
@@ -631,10 +627,10 @@ header nav .desktop-nav .nav-link::after {
   width: 98%;
   height: 2px;
   z-index: 1;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 header nav .desktop-nav .nav-link:hover:after {
   background-color: #100c08;
@@ -664,7 +660,7 @@ footer .info {
   display: inline-block;
   color: #f5f5f5;
   pointer-events: none;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 footer .info .copyright {
   display: inline;
@@ -702,9 +698,10 @@ footer .social li .social-link {
 }
 .home .home-content .dev-title {
   font-size: calc(1rem + 10vw);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #100c08;
   pointer-events: none;
+  font-weight: 700;
 }
 .home .home-content .quote {
   font-size: calc(0.5rem + 5vw);
@@ -713,7 +710,7 @@ footer .social li .social-link {
 }
 @media screen and (min-width: 481px) {
   .home .home-content .dev-title {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .home .home-content .quote {
     font-size: 2rem;
@@ -721,7 +718,7 @@ footer .social li .social-link {
 }
 @media screen and (min-width: 769px) {
   .home .home-content .dev-title {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 }
 
@@ -742,17 +739,15 @@ footer .social li .social-link {
   padding: 1rem;
 }
 .projects .projects-grid .project .content .caption {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.25rem;
 }
 .projects .technologies {
   padding: 5% 0;
 }
 .projects .technologies h2 {
-  font-size: 2.5rem;
-  text-align: left;
-  letter-spacing: -0.25rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 .projects .technologies .tech-cont {
   min-height: 200px;
@@ -789,6 +784,9 @@ footer .social li .social-link {
   .projects .projects-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .projects .technologies h2 {
+    font-size: 3rem;
+  }
   .projects .technologies .tech-cont .item {
     width: 120px;
     height: 120px;
@@ -796,33 +794,27 @@ footer .social li .social-link {
 }
 
 .about .content {
-  overflow: hidden;
-  padding-bottom: 5%;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10%;
 }
-.about .content p {
+.about .content .info {
+  max-width: 769px;
+}
+.about .content .info p {
   margin-bottom: 1.25rem;
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 .about .content .author-photo {
-  display: block;
-  width: 200px;
-  margin: 0 auto 1.5rem;
+  max-width: 250px;
   overflow: hidden;
-  border-radius: 50%;
-}
-@media screen and (min-width: 481px) {
-  .about .content .author-photo {
-    float: right;
-    margin: 0 1rem;
-  }
 }
 @media screen and (min-width: 769px) {
-  .about .content .author-photo {
-    width: 300px;
-  }
-  .about .content p:first-of-type {
-    padding-top: 3rem;
+  .about .content {
+    flex-direction: row;
+    align-items: stretch;
   }
 }
 
@@ -879,7 +871,7 @@ footer .social li .social-link {
   content: "";
   height: 2px;
   width: 100%;
-  background: #fd6154;
+  background: #c10000;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 200ms linear;
@@ -905,7 +897,7 @@ footer .social li .social-link {
 .contact .contact-grid .form-container .contact-form textarea:focus ~ label,
 .contact .contact-grid .form-container .contact-form textarea:valid ~ label {
   transform: translateY(-25px);
-  color: #fd6154;
+  color: #c10000;
   font-size: 12px;
 }
 .contact .contact-grid .form-container .contact-form .input-data input:focus ~ .underline:before,
@@ -933,6 +925,9 @@ footer .social li .social-link {
   }
 }
 
+.dark header .logo {
+  color: #f5f5f5;
+}
 .dark header nav .desktop-nav .nav-link {
   color: #f5f5f5;
 }
@@ -958,7 +953,11 @@ body {
 }
 
 h1 {
-  font-size: calc(2.25rem + 3vw);
+  font-size: calc(2.5rem + 3vw);
+}
+
+h2 {
+  font-size: calc(1.5rem + 3vw);
 }
 
 h1,
@@ -977,7 +976,6 @@ img {
 
 .page-header {
   height: 300px;
-  background-color: #f5f5f5;
 }
 .page-header .hd-content {
   position: relative;
@@ -985,23 +983,20 @@ img {
   top: 50%;
 }
 .page-header .hd-content .title {
-  margin-bottom: 10px;
-  font-size: calc(1.25rem + 5vw);
-  letter-spacing: -0.25rem;
-  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
   color: #100c08;
-  font-family: "Work Sans", sans-serif;
 }
 .page-header .hd-content .caption {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #100c08;
 }
 @media screen and (min-width: 769px) {
   .page-header .hd-content .title {
-    font-size: 3.75rem;
+    font-size: 4rem;
   }
   .page-header .hd-content .caption {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 

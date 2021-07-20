@@ -11,10 +11,11 @@ header {
     padding: 5px;
     font-size: 1rem;
     font-weight: 500;
-    letter-spacing: 0.3rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: $header-color;
-    transition: all 1s ease-in;
+    line-height: 1.5;
+    color: $base-black;
+    transition: all 1s ease;
   }
 
   nav {
@@ -107,12 +108,12 @@ header {
         display: inline-block;
         position: relative;
         padding: 0 5px;
-        font-size: 12px;
+        font-size: 0.9rem;
         font-weight: 500;
-        letter-spacing: 0.3rem;
+        letter-spacing: 2px;
         text-transform: uppercase;
-        line-height: 2;
-        color: $header-color;
+        line-height: 1.5;
+        color: $base-black;
         text-align: center;
         transition: all 1s ease-in;
       }
@@ -125,18 +126,18 @@ header {
         width: 98%;
         height: 2px;
         z-index: 1;
-        -webkit-transition: all 0.3s ease-out;
-        -moz-transition: all 0.3s ease-out;
-        -o-transition: all 0.3s ease-out;
-        transition: all 0.3s ease-out;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
       }
 
       .nav-link:hover:after {
-        background-color: $header-color;
+        background-color: $base-black;
       }
 
       .active::after {
-        background-color: $header-color;
+        background-color: $base-black;
       }
 
       li:not(:last-of-type) {

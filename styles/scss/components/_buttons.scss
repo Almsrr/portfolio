@@ -1,17 +1,18 @@
 // Base button
 .btn {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 // Home button
 .home-btn {
-  border: 2px solid $base-black;
-  color: $base-black;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  border: 2px solid $base-white;
+  color: $base-white;
+  background-color: $highlight;
+  font-size: 0.9rem;
   font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   line-height: 24px;
   padding: 12px 32px 12px 82px;
   position: relative;
@@ -30,7 +31,7 @@
   }
 
   .icon-arrow {
-    fill: $base-black;
+    fill: $base-white;
     height: 15px;
     top: 17px;
     transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),
@@ -75,12 +76,12 @@
   }
 
   &:active {
-    border-color: $base-orange;
-    color: $base-orange;
+    border-color: $highlight;
+    // color: $highlight;
   }
 
   &:active .icon-arrow {
-    fill: $base-orange;
+    // fill: $highlight;
   }
 }
 
@@ -98,6 +99,6 @@
 }
 
 .submit-btn:active {
-  color: $base-orange;
-  border-color: $base-orange;
+  color: $highlight;
+  border-color: $highlight;
 }

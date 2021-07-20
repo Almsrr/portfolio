@@ -11,12 +11,10 @@
 
     .dev-title {
       font-size: calc(1rem + 10vw);
-      margin-bottom: 1rem;
-      letter-spacing: -0.25rem;
-      text-transform: uppercase;
+      margin-bottom: 0.5rem;
       color: $base-black;
       pointer-events: none;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .quote {
@@ -27,7 +25,7 @@
 
     @media screen and (min-width: $phone-breakpoint) {
       .dev-title {
-        font-size: 4rem;
+        font-size: 5rem;
       }
 
       .quote {
@@ -37,7 +35,7 @@
 
     @media screen and (min-width: $tablet-breakpoint) {
       .dev-title {
-        font-size: 5rem;
+        font-size: 6rem;
       }
     }
   }
