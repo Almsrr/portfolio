@@ -6,9 +6,9 @@
 
 // Home button
 .home-btn {
-  border: 3px solid $highlight-color;
-  color: $highlight-color;
-  background-color: transparent;
+  border: 3px solid $base-light;
+  color: $base-white;
+  background-color: $highlight-color;
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -31,7 +31,7 @@
   }
 
   .icon-arrow {
-    fill: $highlight-color;
+    fill: $base-white;
     height: 15px;
     top: 17px;
     transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),
@@ -77,8 +77,6 @@
 
   &:active {
     border-color: $highlight-color;
-    background-color: $highlight-color;
-    color: $base-white;
   }
 
   &:active .icon-arrow {
@@ -89,17 +87,19 @@
 // Submit contact button
 .submit-btn {
   width: 120px;
-  height: 40px;
+  height: 45px;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   color: $base-white;
-  border: 2px solid $base-white;
-  transition: background-color 0.3s ease-out;
-  background-color: inherit;
+  border: 2px solid $body-font-color;
+  transition: background-color 0.3s ease;
+  background-color: $highlight-color;
 }
 
 .submit-btn:active {
-  color: $highlight-color;
+  color: $base-white;
   border-color: $highlight-color;
 }
