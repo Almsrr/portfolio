@@ -87,7 +87,6 @@
         textarea:focus ~ label,
         textarea:valid ~ label {
           transform: translateY(-25px);
-          color: $highlight-color;
           font-size: 12px;
         }
 

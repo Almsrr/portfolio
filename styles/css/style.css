@@ -899,7 +899,6 @@ footer .social li .social-link {
 .contact .contact-grid .form-container .contact-form textarea:focus ~ label,
 .contact .contact-grid .form-container .contact-form textarea:valid ~ label {
   transform: translateY(-25px);
-  color: #005691;
   font-size: 12px;
 }
 .contact .contact-grid .form-container .contact-form .input-data input:focus ~ .underline:before,
