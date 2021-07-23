@@ -21,96 +21,95 @@
     />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="flex space-between align-center">
-          <!-- Logo  -->
-          <div class="logo">Alam Sierra</div>
-          <nav>
-            <!-- Mobile nav  -->
-            <div class="menuToggle">
-              <input type="checkbox" />
-              <span></span>
-              <span></span>
-              <span></span>
-              <ul class="mobile-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
+    <div id="body-wrapper" class="effect-1">
+      <!-- Mobile nav  -->
+      <div class="burger-btn"></div>
+      <ul class="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="content-wrapper">
+        <header>
+          <div class="container">
+            <div class="flex space-between align-center">
+              <!-- Logo  -->
+              <div class="logo"><p>Alam Sierra</p></div>
+              <nav>
+                <!-- Desktop nav  -->
+                <ul class="desktop-nav">
+                  <li><a class="nav-link active" href="index.html">Home</a></li>
+                  <li><a class="nav-link" href="projects.html">Projects</a></li>
+                  <li><a class="nav-link" href="about.html">About</a></li>
+                  <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
             </div>
-            <!-- Desktop nav  -->
-            <ul class="desktop-nav">
-              <li><a class="nav-link active" href="index.html">Home</a></li>
-              <li><a class="nav-link" href="projects.html">Projects</a></li>
-              <li><a class="nav-link" href="about.html">About</a></li>
-              <li><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <main class="home">
-      <div class="home-content">
-        <div class="container">
-          <h1 class="dev-title">
-            Front-End <br />
-            Web Developer
-          </h1>
-          <p class="quote">Focus on you, until the focus is you.</p>
+          </div>
+        </header>
+        <main class="home">
+          <div class="home-content">
+            <div class="container">
+              <h1 class="dev-title">
+                Front-End <br />
+                Web Developer
+              </h1>
+              <p class="quote">Focus on you, until the focus is you.</p>
 
-          <!-- Home animate button -->
-          <a href="projects.html" class="btn home-btn">
-            <svg class="icon-arrow before">
-              <use xlink:href="#arrow"></use>
-            </svg>
-            <span class="label">Look at my work</span>
-            <svg class="icon-arrow after">
-              <use xlink:href="#arrow"></use>
-            </svg>
-          </a>
-          <svg style="display: none">
-            <defs>
-              <symbol id="arrow" viewBox="0 0 35 15">
-                <title>Arrow</title>
-                <path
-                  d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "
-                />
-              </symbol>
-            </defs>
-          </svg>
-          <!-- Home animate button ends 
+              <!-- Home animate button -->
+              <a href="projects.html" class="btn home-btn">
+                <svg class="icon-arrow before">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+                <span class="label">Look at my work</span>
+                <svg class="icon-arrow after">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </a>
+              <svg style="display: none">
+                <defs>
+                  <symbol id="arrow" viewBox="0 0 35 15">
+                    <title>Arrow</title>
+                    <path
+                      d="M27.172 5L25 2.828 27.828 0 34.9 7.071l-7.07 7.071L25 11.314 27.314 9H0V5h27.172z "
+                    />
+                  </symbol>
+                </defs>
+              </svg>
+              <!-- Home animate button ends 
         Author: Sven Finger-->
-        </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div class="container">
+            <div class="info">
+              <p class="copyright" id="copyright"></p>
+              <p class="author">Made by Alam</p>
+            </div>
+            <ul class="social">
+              <li>
+                <a
+                  class="social-link"
+                  href="https://github.com/almsrr"
+                  target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="social-link"
+                  href="https://codepen.io/almsrr"
+                  target="_blank"
+                  ><i class="fab fa-codepen"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </footer>
       </div>
-    </main>
-    <footer>
-      <div class="container">
-        <div class="info">
-          <p class="copyright" id="copyright"></p>
-          <p class="author">Made by Alam</p>
-        </div>
-        <ul class="social">
-          <li>
-            <a
-              class="social-link"
-              href="https://github.com/almsrr"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              class="social-link"
-              href="https://codepen.io/almsrr"
-              target="_blank"
-              ><i class="fab fa-codepen"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    </div>
     <script src="scripts/main.js"></script>
   </body>
 </html>

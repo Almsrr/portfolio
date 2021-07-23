@@ -6,6 +6,7 @@
 // Helpers
 @import "helpers/variables";
 @import "helpers/containers";
+@import "helpers/mixins";
 
 // Components
 @import "components/buttons";
@@ -83,6 +84,18 @@ img {
   color: $base-white;
   background-color: $body-font-color;
 
+  .burger-btn {
+    border-color: $base-white;
+
+    &::before {
+      background: $base-white;
+    }
+
+    &::after {
+      background: $base-white;
+    }
+  }
+
   header {
     nav {
       .desktop-nav {
@@ -96,4 +109,19 @@ img {
       }
     }
   }
+}
+
+#body-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: visible;
+  @include transition(all 0.3s ease-in);
 }
