@@ -165,25 +165,3 @@ header {
     }
   }
 }
-
-.effect-1.navigation {
-  .content-wrapper {
-    @include opacity(0);
-    @include scale(0.85);
-    visibility: hidden;
-  }
-}
-
-.effect-2.navigation {
-  .content-wrapper {
-    @include scale(0.85);
-    margin-left: 260px;
-  }
-}
-
-.effect-2.navigation {
-  .content-wrapper {
-    margin-left: 320px;
-    @include opacity(0.4);
-  }
-}

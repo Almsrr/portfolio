@@ -692,38 +692,6 @@ header nav .desktop-nav li:not(:last-of-type) {
   left: -2px;
 }
 
-.effect-1.navigation .content-wrapper {
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  -khtml-opacity: 0;
-  -o-opacity: 0;
-  opacity: 0;
-  -webkit-transform: scale(0.85);
-  -moz-transform: scale(0.85);
-  -khtml-transform: scale(0.85);
-  -o-transform: scale(0.85);
-  transform: scale(0.85);
-  visibility: hidden;
-}
-
-.effect-2.navigation .content-wrapper {
-  -webkit-transform: scale(0.85);
-  -moz-transform: scale(0.85);
-  -khtml-transform: scale(0.85);
-  -o-transform: scale(0.85);
-  transform: scale(0.85);
-  margin-left: 260px;
-}
-
-.effect-2.navigation .content-wrapper {
-  margin-left: 320px;
-  -webkit-opacity: 0.4;
-  -moz-opacity: 0.4;
-  -khtml-opacity: 0.4;
-  -o-opacity: 0.4;
-  opacity: 0.4;
-}
-
 footer {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1085,6 +1053,38 @@ img {
   -khtml-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.effect-1.navigation .content-wrapper {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -khtml-transform: scale(0.85);
+  -o-transform: scale(0.85);
+  transform: scale(0.85);
+  visibility: hidden;
+}
+
+.effect-2.navigation .content-wrapper {
+  -webkit-transform: scale(0.85);
+  -moz-transform: scale(0.85);
+  -khtml-transform: scale(0.85);
+  -o-transform: scale(0.85);
+  transform: scale(0.85);
+  margin-left: 260px;
+}
+
+.effect-2.navigation .content-wrapper {
+  margin-left: 320px;
+  -webkit-opacity: 0.4;
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  -o-opacity: 0.4;
+  opacity: 0.4;
 }
 
 /*# sourceMappingURL=style.css.map */
