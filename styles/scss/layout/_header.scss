@@ -18,6 +18,12 @@ header {
     pointer-events: none;
   }
 
+  @media screen and (min-width: $tablet-breakpoint) {
+    .logo {
+      transition: none;
+    }
+  }
+
   nav {
     .desktop-nav {
       align-items: center;
@@ -68,6 +74,10 @@ header {
     @media screen and (min-width: $tablet-breakpoint) {
       .desktop-nav {
         display: flex;
+
+        .nav-link {
+          transition: none;
+        }
       }
     }
   }
