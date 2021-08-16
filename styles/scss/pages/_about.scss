@@ -12,12 +12,34 @@
         margin-bottom: 1.25rem;
         line-height: 1.5;
         font-size: 1.25rem;
+        text-align: justify;
       }
     }
 
     .author-photo {
+      min-width: 200px;
       max-width: 250px;
       overflow: hidden;
+    }
+  }
+
+  .figure {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-image: url("../../../resources/images/bahia-de-las-aguilas-dr.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .caption {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      padding: 10px;
+      text-align: center;
+      color: $base-white;
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -25,6 +47,7 @@
     .content {
       flex-direction: row;
       align-items: stretch;
+      gap: 50px;
     }
   }
 }
