@@ -792,6 +792,12 @@ footer .social li .social-link {
   font-weight: 700;
   font-size: 1.25rem;
 }
+.projects .projects-grid .project .content .fuzzy {
+  color: #535353;
+}
+.projects .projects-grid .project .content .small {
+  font-size: 0.75rem;
+}
 .projects .technologies {
   padding: 5% 0;
 }
