@@ -7,7 +7,6 @@ footer {
 
   .info {
     display: inline-block;
-    pointer-events: none;
     font-size: 1rem;
 
     .copyright {
@@ -16,6 +15,10 @@ footer {
 
     .author {
       display: inline;
+    }
+
+    a {
+      text-decoration: underline;
     }
   }
 

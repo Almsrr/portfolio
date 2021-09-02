@@ -188,9 +188,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -198,9 +198,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -209,9 +209,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -261,8 +261,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -272,8 +272,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -281,7 +281,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -291,7 +291,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -461,8 +461,7 @@ img {
   fill: #f5f5f5;
   height: 15px;
   top: 17px;
-  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),
-    opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1);
   width: 25px;
 }
 @media screen and (min-width: 769px) {
@@ -710,7 +709,6 @@ footer {
 }
 footer .info {
   display: inline-block;
-  pointer-events: none;
   font-size: 1rem;
 }
 footer .info .copyright {
@@ -718,6 +716,9 @@ footer .info .copyright {
 }
 footer .info .author {
   display: inline;
+}
+footer .info a {
+  text-decoration: underline;
 }
 footer .social {
   float: right;
@@ -912,13 +913,7 @@ footer .social li .social-link {
   height: 45px;
   position: relative;
 }
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .form-row
-  .input-data
-  input {
+.contact .contact-grid .form-container .contact-form .form-row .input-data input {
   display: block;
   width: 100%;
   height: 100%;
@@ -928,38 +923,20 @@ footer .social li .social-link {
   border-bottom: 2px solid #f5f5f5;
   color: #f5f5f5;
 }
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .form-row
-  .input-data
-  label {
+.contact .contact-grid .form-container .contact-form .form-row .input-data label {
   width: 100%;
   position: absolute;
   pointer-events: none;
   bottom: 12px;
   transition: all 200ms linear;
 }
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .form-row
-  .input-data
-  .underline {
+.contact .contact-grid .form-container .contact-form .form-row .input-data .underline {
   position: absolute;
   bottom: 0;
   height: 2px;
   width: 100%;
 }
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .form-row
-  .input-data
-  .underline::before {
+.contact .contact-grid .form-container .contact-form .form-row .input-data .underline::before {
   position: absolute;
   content: "";
   height: 2px;
@@ -985,53 +962,17 @@ footer .social li .social-link {
 .contact .contact-grid .form-container .contact-form .submit {
   float: right;
 }
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .input-data
-  input:focus
-  ~ label,
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .input-data
-  input:valid
-  ~ label,
+.contact .contact-grid .form-container .contact-form .input-data input:focus ~ label,
+.contact .contact-grid .form-container .contact-form .input-data input:valid ~ label,
 .contact .contact-grid .form-container .contact-form textarea:focus ~ label,
 .contact .contact-grid .form-container .contact-form textarea:valid ~ label {
   transform: translateY(-25px);
   font-size: 12px;
 }
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .input-data
-  input:focus
-  ~ .underline:before,
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .input-data
-  input:valid
-  ~ .underline:before,
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .textarea
-  textarea:focus
-  ~ .underline:before,
-.contact
-  .contact-grid
-  .form-container
-  .contact-form
-  .textarea
-  textarea:valid
-  ~ .underline:before {
+.contact .contact-grid .form-container .contact-form .input-data input:focus ~ .underline:before,
+.contact .contact-grid .form-container .contact-form .input-data input:valid ~ .underline:before,
+.contact .contact-grid .form-container .contact-form .textarea textarea:focus ~ .underline:before,
+.contact .contact-grid .form-container .contact-form .textarea textarea:valid ~ .underline:before {
   transform: scale(1);
 }
 .contact .contact-grid .social h3 {
