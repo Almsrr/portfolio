@@ -1,0 +1,66 @@
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.cover {
+  .content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 3rem 0;
+
+    .image {
+      max-width: 200px;
+    }
+
+    .text {
+      max-width: 500px;
+    }
+  }
+}
+
+.projects {
+  margin-top: 2rem;
+  .flex-cont {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: 10rem;
+    height: 15rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
+}
+
+.technologies {
+  margin-top: 2rem;
+  .flex-cont {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid #000;
+  }
+}
+
+.contact {
+  margin-top: 2rem;
+}

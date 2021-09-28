@@ -1,0 +1,22 @@
+// Toggle global options
+$enable-gradients: false;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #eeeeee;
+$border-radius: 0.4rem;
+$success: #7952b3;
+
+//Containers
+$container-max: 960px;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: $container-max,
+  xl: $container-max,
+  xxl: $container-max,
+);
+
+//Colors:
+$light: #fff;
