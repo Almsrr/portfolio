@@ -1,33 +1,23 @@
-a {
-  color: inherit;
-}
-
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
+.home {
+  display: flex;
+  align-items: center;
+  height: 500px;
+
+  .bigger {
+    display: block;
+    font-size: 3rem;
+  }
+}
+
 .flex-container {
   display: flex;
   align-items: center;
-}
-
-.cover {
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 3rem 0;
-
-    .image {
-      max-width: 200px;
-    }
-
-    .text {
-      max-width: 500px;
-    }
-  }
 }
 
 .projects {
