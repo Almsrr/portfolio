@@ -23,13 +23,15 @@
   <body>
     <header>
       <!-- Banner top  -->
-      <div class="banner-top py-1">
-        <div class="container d-flex align-items-center">
-          <span class="logo me-auto">Alam Sierra</span>
-          <div class="social-nav d-inline-flex">
-            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+      <div class="banner-top py-2">
+        <div class="container">
+          <div class="d-flex alig-items-center">
+            <span class="logo me-auto">Alam Sierra</span>
+            <div class="social-nav d-inline-flex">
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -43,21 +45,19 @@
               data-bs-toggle="collapse"
               data-bs-target="#myid"
               aria-controls="myid"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="#myid">
+            <div class="collapse navbar-collapse" id="myid">
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a href="#" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Projects</a>
+                  <a href="#projects" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Contact</a>
+                  <a href="#contact" class="nav-link">Contact</a>
                 </li>
               </ul>
             </div>
@@ -73,7 +73,7 @@
             <div class="col-md-6">
               <p class="text-center">
                 Hi <span class="bigger">I'm Alam Sierra.</span>
-                <b>Latin Frontend Web Developer</b>
+                <b>Frontend Web Developer</b>
                 looking for new challenges and a team to achieve them. I'm
                 twenty one years old and I am from a Caribbean island called
                 <b>Dominican Republic 🇩🇴&#127965;</b>. I'm a passionate
@@ -82,9 +82,9 @@
               </p>
             </div>
             <div class="col-md-3">
-              <div class="image">
+              <!-- <div class="image">
                 <img src="resources/images/me.jpeg" alt="author-photo" />
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -92,34 +92,34 @@
       <!-- Projects  -->
       <section class="projects">
         <div class="container">
-          <h2 class="text-center mb-4">Projects</h2>
+          <h2 id="projects" class="text-center mb-4">Projects</h2>
           <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
               <div class="item">
                 <img src="resources/images/citrus.jpeg" alt="" />
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
               <div class="item">
                 <img src="resources/images/citrus.jpeg" alt="" />
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
               <div class="item">
                 <img src="resources/images/citrus.jpeg" alt="" />
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
               <div class="item">
                 <img src="resources/images/citrus.jpeg" alt="" />
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
               <div class="item">
                 <img src="resources/images/citrus.jpeg" alt="" />
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
               <div class="item">
                 <img src="resources/images/citrus.jpeg" alt="" />
               </div>
@@ -152,7 +152,7 @@
       </section>
       <!-- Contact  -->
       <section class="contact">
-        <h2 class="text-center mb-4">Contact</h2>
+        <h2 id="contact" class="text-center mb-4">Contact</h2>
         <div class="container">
           <form action="">
             <div class="control">
