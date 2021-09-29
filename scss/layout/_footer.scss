@@ -1,0 +1,16 @@
+footer {
+  background-color: #696969;
+  padding: 1.5rem 0;
+
+  .content {
+    p {
+      margin-bottom: 0;
+      color: $light;
+      font-size: 0.75rem;
+    }
+
+    .link {
+      color: inherit;
+    }
+  }
+}
