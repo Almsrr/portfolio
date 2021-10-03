@@ -5,9 +5,8 @@
   overflow: hidden;
   padding: 1.75rem;
   height: 230px;
-  margin-bottom: 1.5rem;
   background-color: #eeeeee;
-  border-radius: 10px;
+  border-radius: $border-radius;
 
   .box-body {
     display: flex;
