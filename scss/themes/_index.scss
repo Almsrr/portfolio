@@ -1,0 +1,16 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+@import "home";
+@import "technologies";
