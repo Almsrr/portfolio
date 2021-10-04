@@ -1,7 +1,7 @@
 .home {
   display: flex;
   align-items: center;
-  height: 600px;
+  min-height: 500px;
 
   .bigger {
     display: block;
@@ -9,7 +9,6 @@
   }
 
   .image {
-    border-radius: 50%;
     overflow: hidden;
   }
 }

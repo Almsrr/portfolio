@@ -1,4 +1,4 @@
-import bootstrap from "bootstrap";
+import { Collapse } from "bootstrap";
 import AOS from "aos";
 import $ from "jquery";
 
