@@ -1,13 +1,13 @@
 // Variables
 $navbar-nav-link-padding-x: 0;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: #ccc;
 
 .navigation {
-  background-color: #212121;
-  color: $light;
+  background-color: #000;
 
   .navbar-nav {
     .nav-link {
-      color: $light;
       transition: all 100ms linear;
       font-size: 1.125rem;
     }
@@ -20,9 +20,11 @@ $navbar-nav-link-padding-x: 0;
   width: 100%;
   z-index: 999;
 
-  .navbar-nav {
-    .nav-link {
-      font-size: 1rem;
+  @media screen and (min-width: $container-max) {
+    .navbar-nav {
+      .nav-link {
+        font-size: 1rem;
+      }
     }
   }
 }
