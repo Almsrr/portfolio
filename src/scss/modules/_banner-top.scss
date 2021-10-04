@@ -2,10 +2,27 @@
   background-color: #6d9886;
   color: $light;
 
+  .logo {
+    font-family: "Lora", serif;
+    padding: 0 0.5rem;
+    background-color: $light;
+    color: #6d9886;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
   .social-nav {
+    display: inline-flex;
+    align-items: center;
+
     .social-link {
-      font-size: 1.125rem;
-      color: inherit;
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.25rem;
+      color: $light;
+      text-decoration: none;
     }
     .social-link:not(:first-of-type) {
       margin-left: 0.5rem;
