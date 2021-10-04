@@ -1,5 +1,5 @@
 import "../scss/main.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const greet = () => {
-  console.log("hello");
-};
+AOS.init();
