@@ -6,8 +6,10 @@ $navbar-nav-link-padding-x: 0;
   color: $light;
 
   .navbar-nav {
-    .nav-item:not(:first-of-type) {
-      margin-left: 1rem;
+    .nav-link {
+      color: $light;
+      transition: all 100ms linear;
+      font-size: 1.125rem;
     }
   }
 }
@@ -17,4 +19,10 @@ $navbar-nav-link-padding-x: 0;
   top: 0;
   width: 100%;
   z-index: 999;
+
+  .navbar-nav {
+    .nav-link {
+      font-size: 1rem;
+    }
+  }
 }
