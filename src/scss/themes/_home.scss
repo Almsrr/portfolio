@@ -3,12 +3,24 @@
   align-items: center;
   min-height: 500px;
 
+  // .home-text {
+  // text-align: right;
+  // }
+
   .bigger {
     display: block;
     font-size: 3rem;
   }
 
-  .image {
-    overflow: hidden;
+  .home-image {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 200px;
+    }
   }
 }
