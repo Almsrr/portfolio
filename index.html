@@ -301,22 +301,49 @@
       </section>
       <!-- Contact  -->
       <section class="contact">
-        <h2 id="contact" class="text-center mb-4">Contact</h2>
         <div class="container">
-          <form action="">
-            <div class="control">
-              <label for="">Name</label>
-              <input type="text" />
+          <div class="row">
+            <div class="col-12">
+              <h2 id="contact" class="section-title">Contact</h2>
             </div>
-            <div class="control">
-              <label for="">Email</label>
-              <input type="email" />
-            </div>
-            <div class="control">
-              <label for="">Message</label>
-              <textarea name="" id="" cols="30" rows="10">hi...</textarea>
-            </div>
-          </form>
+          </div>
+          <div class="row">
+            <form action="" method="post">
+              <div class="row justify-content-center">
+                <div class="col-md-3">
+                  <label for="name" class="ms-1">Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="Marcelo Erizo"
+                  />
+                </div>
+                <div class="col-md-3">
+                  <label for="email" class="ms-1">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="marceloe@domain.com"
+                  />
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <label for="message" class="ms-1">Message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    class="form-control"
+                    placeholder="You're awesome but I don't play with Garen's mains >:)"
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
