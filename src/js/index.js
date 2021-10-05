@@ -1,4 +1,5 @@
-import { Collapse } from "bootstrap";
+import { popper } from "@popperjs/core";
+import { Collapse, Tooltip } from "bootstrap";
 import AOS from "aos";
 import $ from "jquery";
 
@@ -35,4 +36,12 @@ $(document).ready(() => {
   $(window).scroll(() => {
     stickyNavbar();
   });
+});
+
+//Tooltips
+var tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new Tooltip(tooltipTriggerEl);
 });
