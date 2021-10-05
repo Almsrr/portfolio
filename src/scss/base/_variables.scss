@@ -4,9 +4,8 @@ $enable-shadows: true;
 
 // Customize some defaults
 $body-color: #333;
-$body-bg: #f6f6f6;
-$border-radius: 0.4rem;
-$success: #7952b3;
+$body-bg: #f8f1f1;
+$success: #32cd32;
 
 //Containers
 $container-max: 960px;
@@ -18,17 +17,58 @@ $container-max-widths: (
   xxl: $container-max,
 );
 
-//Colors:
-$light: #fff;
-
-//Borders
-$card-border-radius: 0.5rem;
-
-$card-spacer-y: 0.75rem;
-$card-spacer-x: 0.75rem;
-
-// Typo
+// Typography
 $headings-font-family: "Lora", serif;
 $headings-font-weight: 700;
 $font-family-base: "Catamaran", sans-serif;
+
+//Colors:
+$light: #fff;
+$dark: #000;
 $link-color: red;
+
+// Project card
+$card-spacer-y: 0.75rem;
+$card-spacer-x: 0.75rem;
+$card-border-radius: 0.5rem;
+$card-border-color: #ccc;
+$card-color: #000;
+$card-bg: #fff;
+
+//Tech box
+$tech-box-color: #333;
+$tech-box-color-hover: #000;
+$tech-box-bg-color: #eee;
+$tech-box-border-color: #ddd;
+$tech-box-border-radius: 0.5rem;
+
+//CTA
+$cta-color: #333;
+$cta-bg-color: #eee;
+
+// Input
+$input-bg: #fff;
+$input-border-radius: 0;
+
+// Label
+$form-label-margin-bottom: 0.5rem;
+$form-label-font-size: null;
+$form-label-font-style: null;
+$form-label-font-weight: null;
+$form-label-color: null;
+
+//Banner top
+$banner-bg-color: red;
+$banner-color: #fff;
+
+//Navigation
+$navbar-nav-link-padding-x: 0;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color: #ccc;
+$nav-bg-color: blue;
+
+//Button
+$btn-padding-x: 1rem;
+$btn-font-size: 1rem;
+$btn-font-weight: 400;
+// $btn-border-radius: 1rem;

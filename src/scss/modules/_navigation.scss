@@ -1,10 +1,5 @@
-// Variables
-$navbar-nav-link-padding-x: 0;
-$navbar-dark-color: #fff;
-$navbar-dark-hover-color: #ccc;
-
 .navigation {
-  background-color: #000;
+  background-color: $nav-bg-color;
 
   .navbar-nav {
     .nav-link {

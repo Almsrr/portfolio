@@ -1,5 +1,6 @@
 .cta {
-  background-color: #eee;
+  background-color: $cta-bg-color;
+  color: $cta-color;
   margin-top: 2rem;
 
   .cta-text {

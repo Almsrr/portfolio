@@ -1,12 +1,12 @@
 .banner-top {
-  background-color: #6d9886;
-  color: $light;
+  background-color: $banner-bg-color;
+  color: $banner-color;
 
   .logo {
     font-family: "Lora", serif;
     padding: 0 0.5rem;
-    background-color: $light;
-    color: #6d9886;
+    background-color: $banner-color;
+    color: $banner-bg-color;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -21,7 +21,7 @@
       display: inline-flex;
       align-items: center;
       font-size: 1.25rem;
-      color: $light;
+      color: inherit;
       text-decoration: none;
     }
     .social-link:not(:first-of-type) {

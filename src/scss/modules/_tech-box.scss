@@ -5,8 +5,9 @@
   overflow: hidden;
   padding: 1.75rem;
   height: 230px;
-  background-color: #eeeeee;
-  border-radius: 0.5rem;
+  background-color: $tech-box-bg-color;
+  border-radius: $tech-box-border-radius;
+  border: 1px solid $tech-box-border-color;
 
   .box-body {
     display: flex;
@@ -27,7 +28,7 @@
       font-family: "Catamaran", sans-serif;
       font-size: 1.2em;
       font-weight: 700;
-      color: #8e8e8e;
+      color: $tech-box-color;
       text-transform: uppercase;
       margin-top: 0.5em;
       text-align: center;
@@ -42,12 +43,13 @@
       .line {
         width: 0;
         height: 1px;
-        background-color: #000;
+        background-color: $dark;
         margin: 0 auto 0.75rem;
         transition: all 0.2s ease-in-out;
       }
 
       .box-text {
+        color: $tech-box-color;
         text-align: center;
         font-size: 0.875em;
         margin-top: 0em;
@@ -66,7 +68,7 @@
       }
 
       .box-title {
-        color: #000;
+        color: $tech-box-color-hover;
       }
 
       .box-description {
