@@ -15,11 +15,9 @@
   width: 100%;
   z-index: 999;
 
-  @media screen and (min-width: $container-max) {
-    .navbar-nav {
-      .nav-link {
-        font-size: 1rem;
-      }
+  .navbar-nav {
+    .nav-link {
+      font-size: 1rem;
     }
   }
 }

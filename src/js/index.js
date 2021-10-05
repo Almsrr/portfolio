@@ -21,19 +21,30 @@ copy.innerHTML = `&copy;${currentYear}`;
 const navbar = document.getElementById("nav");
 const sticky = navbar.offsetTop;
 const pageContent = document.querySelector("main");
+const breakpoint = 768;
+let screenResolution = 0;
 
 const stickyNavbar = () => {
-  if (window.scrollY >= sticky) {
-    navbar.classList.add("sticky");
-    pageContent.style.paddingTop = `${navbar.offsetHeight}px`;
-  } else {
-    navbar.classList.remove("sticky");
-    pageContent.style.paddingTop = "0";
+  if (screenResolution >= breakpoint) {
+    if (window.scrollY >= sticky) {
+      navbar.classList.add("sticky");
+      pageContent.style.paddingTop = `${navbar.offsetHeight}px`;
+    } else {
+      navbar.classList.remove("sticky");
+      pageContent.style.paddingTop = "0";
+    }
   }
 };
 
+const getResolution = () => {
+  screenResolution = window.screen.availWidth;
+};
+
 $(document).ready(() => {
-  $(window).scroll(() => {
+  $(window).on("resize", () => {
+    getResolution();
+  });
+  $(window).on("scroll", () => {
     stickyNavbar();
   });
 });
