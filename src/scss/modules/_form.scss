@@ -1,5 +1,10 @@
 .contact-form {
-  button.btn-outline-success:hover {
-    color: #fff;
+  button.btn-outline-success {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }

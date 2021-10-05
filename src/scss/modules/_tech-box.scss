@@ -8,6 +8,7 @@
   background-color: $tech-box-bg-color;
   border-radius: $tech-box-border-radius;
   border: 1px solid $tech-box-border-color;
+  box-shadow: 0 4px 10px $gray;
 
   .box-body {
     display: flex;
@@ -49,7 +50,7 @@
       }
 
       .box-text {
-        color: $tech-box-color;
+        color: $tech-box-color-hover;
         text-align: center;
         font-size: 0.875em;
         margin-top: 0em;

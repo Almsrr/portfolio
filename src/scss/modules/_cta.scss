@@ -2,6 +2,7 @@
   background-color: $cta-bg-color;
   color: $cta-color;
   margin-top: 2rem;
+  box-shadow: 0 4px 10px $gray;
 
   .cta-text {
     font-weight: 700;
@@ -10,7 +11,12 @@
     margin: 0;
 
     .cta-link {
+      transition: color 200ms ease-out;
       color: inherit;
+
+      &:hover {
+        color: $link-color;
+      }
     }
   }
 }

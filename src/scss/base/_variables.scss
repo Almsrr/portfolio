@@ -3,10 +3,9 @@ $enable-gradients: false;
 $enable-shadows: true;
 
 // Customize some defaults
-$body-color: #333;
-$body-bg: #f8f1f1;
-$success: #32cd32;
-
+$body-color: #16262e;
+$body-bg: #f8f7f9;
+$success: #368f8b;
 //Containers
 $container-max: 960px;
 $container-max-widths: (
@@ -24,31 +23,32 @@ $font-family-base: "Catamaran", sans-serif;
 
 //Colors:
 $light: #fff;
-$dark: #000;
-$link-color: red;
+$dark: #142229;
+$link-color: #fe675d;
+$gray: #dfdce5;
 
 // Project card
 $card-spacer-y: 0.75rem;
 $card-spacer-x: 0.75rem;
 $card-border-radius: 0.5rem;
-$card-border-color: #ccc;
-$card-color: #000;
-$card-bg: #fff;
+$card-border-color: $gray;
+$card-color: $dark;
+$card-bg: $light;
 
 //Tech box
-$tech-box-color: #333;
-$tech-box-color-hover: #000;
-$tech-box-bg-color: #eee;
-$tech-box-border-color: #ddd;
+$tech-box-color: #6c757d;
+$tech-box-color-hover: $dark;
+$tech-box-bg-color: $light;
+$tech-box-border-color: $gray;
 $tech-box-border-radius: 0.5rem;
 
 //CTA
-$cta-color: #333;
-$cta-bg-color: #eee;
+$cta-color: inherit;
+$cta-bg-color: $light;
 
 // Input
-$input-bg: #fff;
-$input-border-radius: 0;
+$input-bg: $light;
+// $input-border-radius: 0;
 
 // Label
 $form-label-margin-bottom: 0.5rem;
@@ -58,17 +58,18 @@ $form-label-font-weight: null;
 $form-label-color: null;
 
 //Banner top
-$banner-bg-color: red;
+$banner-bg-color: #368f8b;
 $banner-color: #fff;
 
 //Navigation
 $navbar-nav-link-padding-x: 0;
 $navbar-dark-color: #fff;
-$navbar-dark-hover-color: #ccc;
-$nav-bg-color: blue;
+$navbar-dark-hover-color: $gray;
+$nav-bg-color: #0e2d2f;
 
 //Button
-$btn-padding-x: 1rem;
+$btn-padding-x: 2rem;
 $btn-font-size: 1rem;
-$btn-font-weight: 400;
+$btn-font-weight: 500;
 // $btn-border-radius: 1rem;
+// $btn-border-width: 1px;
