@@ -18504,27 +18504,44 @@ copy.innerHTML = "&copy;".concat(currentYear); // Navbar
 var navbar = document.getElementById("nav");
 var sticky = navbar.offsetTop;
 var pageContent = document.querySelector("main");
+var breakpoint = 768;
+var screenResolution = 0;
 
 var stickyNavbar = function stickyNavbar() {
-  if (window.scrollY >= sticky) {
-    navbar.classList.add("sticky");
-    pageContent.style.paddingTop = "".concat(navbar.offsetHeight, "px");
-  } else {
-    navbar.classList.remove("sticky");
-    pageContent.style.paddingTop = "0";
+  if (screenResolution >= breakpoint) {
+    if (window.scrollY >= sticky) {
+      navbar.classList.add("sticky");
+      pageContent.style.paddingTop = "".concat(navbar.offsetHeight, "px");
+    } else {
+      navbar.classList.remove("sticky");
+      pageContent.style.paddingTop = "0";
+    }
   }
 };
 
-jquery_default()(document).ready(function () {
-  jquery_default()(window).scroll(function () {
-    stickyNavbar();
-  });
-}); //Tooltips
+var getResolution = function getResolution() {
+  screenResolution = window.screen.availWidth;
+};
 
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new Tooltip(tooltipTriggerEl);
-});
+jquery_default()(document).ready(function () {
+  getResolution();
+  jquery_default()(window).on("scroll", function () {
+    stickyNavbar();
+  }); // Recalculate screenResolution var when screen resolution change
+  // (For example, portrait to landscape)
+
+  jquery_default()(window).on("resize", function () {
+    getResolution();
+  });
+}); // Tooltips
+
+var socialLinks = document.getElementsByClassName("social-link");
+
+for (var i = 0; i < socialLinks.length; i++) {
+  var tooltip = new Tooltip(socialLinks[i], {
+    placement: "bottom"
+  });
+}
 })();
 
 /******/ })()
