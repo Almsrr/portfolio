@@ -41,11 +41,16 @@ const getResolution = () => {
 };
 
 $(document).ready(() => {
-  $(window).on("resize", () => {
-    getResolution();
-  });
+  getResolution();
+
   $(window).on("scroll", () => {
     stickyNavbar();
+  });
+
+  // Recalculate screenResolution var when screen resolution change
+  // (For example, portrait to landscape)
+  $(window).on("resize", () => {
+    getResolution();
   });
 });
 
