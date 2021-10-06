@@ -24,3 +24,19 @@
     }
   }
 }
+
+.appear-bottom-animation {
+  animation: appear-bottom 500ms ease-out;
+}
+
+@keyframes appear-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
