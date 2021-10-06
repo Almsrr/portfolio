@@ -12,5 +12,13 @@ section {
   }
 }
 
+a {
+  transition: all 200ms ease-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 @import "home";
 @import "technologies";

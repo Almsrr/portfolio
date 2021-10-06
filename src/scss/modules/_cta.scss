@@ -9,14 +9,5 @@
     font-size: 1.5rem;
     text-align: center;
     margin: 0;
-
-    .cta-link {
-      transition: color 200ms ease-out;
-      color: inherit;
-
-      &:hover {
-        color: $link-color;
-      }
-    }
   }
 }

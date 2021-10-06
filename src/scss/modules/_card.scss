@@ -1,17 +1,13 @@
 .card {
   box-shadow: 0 4px 10px $gray;
 
-  .card-img-top {
-    transition: all 2s ease-out;
-  }
-
   .card-body {
     .card-text {
       font-size: 1rem;
     }
 
     .card-link {
-      transition: color 200ms ease-out;
+      color: $card-link-color;
       font-size: 1rem;
       float: right;
       text-transform: uppercase;
