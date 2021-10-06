@@ -49,10 +49,10 @@ $(document).ready(() => {
   });
 });
 
-//Tooltips
-var tooltipTriggerList = [].slice.call(
-  document.querySelectorAll('[data-bs-toggle="tooltip"]')
-);
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new Tooltip(tooltipTriggerEl);
-});
+// Tooltips
+const socialLinks = document.getElementsByClassName("social-link");
+for (let i = 0; i < socialLinks.length; i++) {
+  const tooltip = new Tooltip(socialLinks[i], {
+    placement: "bottom",
+  });
+}
