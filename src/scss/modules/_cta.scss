@@ -6,7 +6,7 @@
     background-color: $cta-bg-color;
 
     .cta__text {
-      font-weight: bold;
+      font-weight: $heading-font-weight;
       font-size: 2rem;
       text-align: center;
       margin: 0;
