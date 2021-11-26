@@ -2,12 +2,11 @@
 $enable-gradients: false;
 $enable-shadows: true;
 
-// Customize some defaults
-$body-color: #16262e;
-$body-bg: #f5f5f5;
-$success: #5d987c;
+// Base customizations
+$body-color: #f5f5f5;
+$body-bg: #222533;
 
-//Containers
+//Container
 $container-max: 960px;
 $container-max-widths: (
   sm: 540px,
@@ -18,63 +17,30 @@ $container-max-widths: (
 );
 
 // Typography
-$headings-font-family: "Lora", serif;
+$font-family-base: "Manrope", sans-serif;
 $headings-font-weight: 700;
-$font-family-base: "Catamaran", sans-serif;
+$headings-font-family: "Inter";
 
-//Colors:
+//Theme
 $light: #fff;
 $dark: #142229;
-$gray: #d6d6d6;
+$gray: #f5f5f8;
+$silver: #c0c0c0;
+$orange: #e34a27;
 
-// Link
-$link-color: $body-color;
-$link-hover-color: #ec6a32;
+//Banner top
+$banner-color: $light;
 
 // Project card
-$card-spacer-y: 0.75rem;
-$card-spacer-x: 0.75rem;
+$card-bg-color: #292d3d;
 $card-border-radius: 0.5rem;
-$card-border-color: $gray;
-$card-color: $dark;
-$card-bg: $light;
-$card-link-color: $link-hover-color;
 
 //Tech box
-$tech-box-color: #adadad;
-$tech-box-color-hover: $dark;
-$tech-box-bg-color: $light;
-$tech-box-border-color: $gray;
+$tech-box-color: $silver;
+$tech-box-color-hover: $light;
+$tech-box-bg-color: #292d3d;
 $tech-box-border-radius: 0.5rem;
 
 //CTA
 $cta-color: inherit;
-$cta-bg-color: $light;
-
-// Input
-$input-bg: $light;
-// $input-border-radius: 0;
-
-// Label
-$form-label-margin-bottom: 0.5rem;
-$form-label-font-size: null;
-$form-label-font-style: null;
-$form-label-font-weight: null;
-$form-label-color: null;
-
-//Banner top
-$banner-bg-color: #ef8354;
-$banner-color: #fff;
-
-//Navigation
-$navbar-nav-link-padding-x: 0;
-$navbar-dark-color: #fff;
-$navbar-dark-hover-color: $gray;
-$nav-bg-color: #292d3d;
-
-//Button
-$btn-padding-x: 2rem;
-$btn-font-size: 1rem;
-$btn-font-weight: 500;
-// $btn-border-radius: 1rem;
-// $btn-border-width: 1px;
+$cta-bg-color: #3e445b;
