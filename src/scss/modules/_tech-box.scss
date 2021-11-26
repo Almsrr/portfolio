@@ -7,8 +7,7 @@
   height: 230px;
   background-color: $tech-box-bg-color;
   border-radius: $tech-box-border-radius;
-  border: 1px solid $tech-box-border-color;
-  box-shadow: 0 4px 10px $gray;
+  transition: all 300ms ease-in-out;
 
   .box-body {
     display: flex;
@@ -19,13 +18,12 @@
     overflow: hidden;
     transition: all 0.2s ease-in-out;
 
-    .box-img {
+    .box-body__img {
       width: 75px;
       transition: all 0.2s ease-in-out;
-      filter: grayscale(100%) brightness(75%);
     }
 
-    .box-title {
+    .box-body__title {
       font-family: "Catamaran", sans-serif;
       font-size: 1.2em;
       font-weight: 700;
@@ -36,7 +34,7 @@
       transition: all 0.2s ease-in-out;
     }
 
-    .box-description {
+    .box-body__description {
       transform: scale(0, 0);
       transition: all 0.2s ease-in-out;
       height: 4rem;
@@ -44,12 +42,12 @@
       .line {
         width: 0;
         height: 1px;
-        background-color: $dark;
+        background-color: $light;
         margin: 0 auto 0.75rem;
         transition: all 0.2s ease-in-out;
       }
 
-      .box-text {
+      .text {
         color: $tech-box-color-hover;
         text-align: center;
         font-size: 0.875em;
@@ -59,20 +57,22 @@
   }
 
   &:hover {
+    background-color: #3e445b;
+
     .box-body {
       padding-top: 0em;
       cursor: pointer;
 
-      .box-img {
+      .box-body__img {
         width: 50px;
         filter: none;
       }
 
-      .box-title {
+      .box-body__title {
         color: $tech-box-color-hover;
       }
 
-      .box-description {
+      .box-body__description {
         transform: scale(1, 1);
         display: block;
 
