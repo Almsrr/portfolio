@@ -1,10 +1,14 @@
-footer {
+.page-footer {
   padding: 1.5rem 0;
 
-  .content {
+  .page-footer__content {
     p {
       margin: 0;
       font-size: 1rem;
+    }
+
+    .link {
+      color: inherit;
     }
   }
 }
