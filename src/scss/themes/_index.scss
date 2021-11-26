@@ -4,13 +4,12 @@ section {
 
     .heading-row__title {
       text-align: center;
-      font-weight: $heading-font-weight;
       font-size: 2rem;
     }
 
     .heading-row__subtitle {
       text-align: center;
-      font-weight: $heading-font-weight;
+      font-weight: bold;
       font-size: 1rem;
       color: $gray;
       margin: 0;
