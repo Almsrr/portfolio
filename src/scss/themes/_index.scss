@@ -1,19 +1,24 @@
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 section {
-  .section-title {
-    font-weight: 700;
-    margin-bottom: 2rem;
-    text-align: center;
+  .heading-row {
+    padding-bottom: 2rem;
+
+    .heading-row__title {
+      text-align: center;
+      font-weight: $heading-font-weight;
+      font-size: 2rem;
+    }
+
+    .heading-row__subtitle {
+      text-align: center;
+      font-weight: $heading-font-weight;
+      font-size: 1rem;
+      color: $gray;
+    }
   }
 }
 
 a {
-  transition: all 200ms ease-out;
+  transition: all 200ms linear;
 
   &:hover {
     text-decoration: none;

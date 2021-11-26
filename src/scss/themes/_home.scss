@@ -1,35 +1,24 @@
 .home {
-  display: flex;
-  align-items: center;
-  min-height: 500px;
+  padding: 100px 0 150px;
 
-  .home-text {
-    font-size: 1.25rem;
-    margin-bottom: 0;
-  }
+  .home__content {
+    .title {
+      font-size: 2.75rem;
+      text-align: center;
+    }
 
-  .bigger {
-    font-size: 3.5rem;
-  }
-
-  .home-image {
-    min-width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      max-width: 200px;
+    .text {
+      font-size: 1.25rem;
+      text-align: center;
     }
   }
 }
 
-.appear-bottom-animation {
-  animation: appear-bottom 500ms ease-out;
+.fade-animation {
+  animation: fade 500ms ease-in-out;
 }
 
-@keyframes appear-bottom {
+@keyframes fade {
   from {
     opacity: 0;
     transform: translateY(3rem);
