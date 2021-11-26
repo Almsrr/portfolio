@@ -1,13 +1,19 @@
-.cta {
-  background-color: $cta-bg-color;
-  color: $cta-color;
-  margin-top: 2rem;
-  box-shadow: 0 4px 10px $gray;
+.cta-row {
+  padding-top: 20px;
 
-  .cta-text {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0;
+  .cta {
+    padding: 50px 0;
+    background-color: $cta-bg-color;
+
+    .cta__text {
+      font-weight: bold;
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+
+      .link {
+        color: inherit;
+      }
+    }
   }
 }
