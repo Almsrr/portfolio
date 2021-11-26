@@ -9,6 +9,10 @@
 
     .link {
       color: inherit;
+
+      &:hover {
+        color: $orange;
+      }
     }
   }
 }
