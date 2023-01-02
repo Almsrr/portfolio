@@ -1,12 +1,14 @@
 {
-  "name": "alam-sierra-portfolio",
-  "version": "4.0.0",
+  "name": "alam-sierra-s-portfolio",
+  "version": "1.0.0",
   "private": true,
-  "description": "Front-End Developer portfolio",
+  "description": "Front-End Developer Portfolio",
   "author": "Alam Sierra",
   "keywords": [
     "gatsby",
-    "portfolio"
+    "portfolio",
+    "frontend",
+    "alamsierra"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -16,14 +18,16 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^5.2.0",
-    "gatsby-plugin-image": "^3.3.0",
-    "gatsby-plugin-sass": "^6.3.0",
-    "gatsby-plugin-sharp": "^5.3.0",
-    "gatsby-source-filesystem": "^5.3.0",
-    "gatsby-transformer-sharp": "^5.3.0",
+    "@mdx-js/react": "^2.2.1",
+    "gatsby": "^5.3.3",
+    "gatsby-plugin-image": "^3.3.2",
+    "gatsby-plugin-mdx": "^5.3.1",
+    "gatsby-plugin-sass": "^6.3.1",
+    "gatsby-plugin-sharp": "^5.3.2",
+    "gatsby-source-filesystem": "^5.3.1",
+    "gatsby-transformer-sharp": "^5.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.56.2"
+    "sass": "^1.57.1"
   }
 }
