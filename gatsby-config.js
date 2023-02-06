@@ -3,8 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "Alam Sierra's Portfolio",
+    title: "Alam Sierra",
     siteUrl: "https://www.alamsierra.com",
+    description:
+      "Portfolio website created by Alam Sierra, a passionate Dominican Front-End React Developer",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -15,18 +17,23 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        "name": "images",
-        "path": "./src/images/",
+        "name": `service`,
+        "path": `${__dirname}/data/services/`,
       },
-      __key: "images",
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        "name": "pages",
-        "path": "./src/pages/",
+        "name": `project`,
+        "path": `${__dirname}/data/projects/`,
       },
-      __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        "name": `technology`,
+        "path": `${__dirname}/data/stack/`,
+      },
     },
   ],
 };
