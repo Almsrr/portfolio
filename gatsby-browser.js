@@ -4,10 +4,5 @@ require("./src/sass/main.scss");
 const Layout = require("./src/components/Layout").default;
 
 exports.wrapPageElement = ({ element, props }) => {
-  return (
-    <Layout {...props}>
-      <p>Layout</p>
-      {element}
-    </Layout>
-  );
+  return <Layout {...props}>{element}</Layout>;
 };
