@@ -4,5 +4,31 @@ html,
 body {
   font-family: "Manrope", sans-serif;
   scroll-behavior: smooth;
-  // @include theme;
+  @include theme;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2,
+h3 {
+  margin-bottom: 1rem;
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: 0.75rem;
 }
