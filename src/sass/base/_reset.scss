@@ -1,5 +1,8 @@
+@use "../abstracts/mixins" as *;
+
 html,
 body {
   font-family: "Manrope", sans-serif;
   scroll-behavior: smooth;
+  // @include theme;
 }

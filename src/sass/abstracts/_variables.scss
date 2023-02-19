@@ -1,0 +1,19 @@
+// BREAKPOINTS
+$breakpoints: (
+  "sm": 700px,
+  "md": 800px,
+  "lg": 900px,
+);
+
+// THEME
+$white: #fff;
+$black: #000;
+$dark: $black;
+$light: $white;
+
+$primary-color: red;
+$secondary-color: blue;
+
+$sans-font: "Monrope";
+$serif-font: "Roboto Slab";
+$monospace-font: monospace;
