@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+.site-footer {
+  .container {
+    @include container;
+  }
+}

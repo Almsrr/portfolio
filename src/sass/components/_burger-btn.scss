@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.burger-btn {
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  border-top: 2px solid #f85051;
+  height: 25px;
+  width: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 30;
+  // left: 20px;
+  top: 15px;
+  cursor: pointer;
+  background-color: transparent;
+  @include transition(all 0.3s ease-in);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    left: 0;
+    background: #f85051;
+    top: 10px;
+    @include transition(all 0.3s ease-in);
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    left: 0;
+    background: #f85051;
+    bottom: 0;
+    @include transition(all 0.3s ease-in);
+  }
+}
