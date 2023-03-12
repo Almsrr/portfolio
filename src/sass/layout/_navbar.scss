@@ -13,12 +13,6 @@
       flex: 1 1;
     }
 
-    .btn-block {
-      @include respond-to("md") {
-        display: none;
-      }
-    }
-
     .logo-block {
       display: flex;
       justify-content: flex-end;

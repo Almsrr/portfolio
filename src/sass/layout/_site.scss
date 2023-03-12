@@ -1,7 +1,42 @@
+@use "../abstracts" as *;
+
 .site-layout {
   position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
 
-  .content {
+  .burger-btn-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .mobile-menu-container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #974094;
+    overflow: hidden;
+  }
+
+  .content-container {
     position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: visible;
+    @include transition(all 0.3s ease-in);
+    background-color: #000;
+  }
+}
+
+.site-layout.menu-open {
+  .content-container {
+    @include opacity(0);
+    @include scale(0.85);
+    visibility: hidden;
   }
 }

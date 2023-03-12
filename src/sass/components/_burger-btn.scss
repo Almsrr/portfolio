@@ -10,9 +10,8 @@
   box-sizing: border-box;
   position: absolute;
   z-index: 30;
-  // left: 20px;
+  left: 1px;
   top: 15px;
-  cursor: pointer;
   background-color: transparent;
   @include transition(all 0.3s ease-in);
 
@@ -38,5 +37,22 @@
     background: #f85051;
     bottom: 0;
     @include transition(all 0.3s ease-in);
+  }
+}
+
+.burger-btn.active {
+  border-color: transparent;
+
+  &::before {
+    @include rotate(45deg);
+    width: 33px;
+    left: -2;
+  }
+
+  &::after {
+    @include rotate(135deg);
+    bottom: 11px;
+    width: 33px;
+    left: -2;
   }
 }

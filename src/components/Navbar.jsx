@@ -7,9 +7,6 @@ export default function Navbar() {
   return (
     <nav className="site-navbar">
       <div className="container">
-        <div className="block btn-block">
-          <BurgerButton />
-        </div>
         <div className="block logo-block">
           <p className="logo">Logo</p>
         </div>
