@@ -12,7 +12,7 @@ export default function Layout({ children }) {
   const toggleMenu = () => setShowMenu((state) => !state);
 
   const layoutClasses = classNames("site-layout", {
-    ["menu-open"]: showMenu,
+    "menu-open": showMenu,
   });
 
   return (

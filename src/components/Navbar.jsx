@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import BurgerButton from "./BurgerButton";
-
 export default function Navbar() {
   return (
     <nav className="site-navbar">
