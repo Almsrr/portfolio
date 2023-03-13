@@ -3,6 +3,5 @@
 html,
 body {
   font-family: $sans-font;
-  scroll-behavior: smooth;
   @include theme;
 }

@@ -19,8 +19,8 @@ export default function Navbar() {
         </div>
         <div className="block actions-block">
           <div className="actions">
-            <button type="button">EN</button>
-            <button type="button">ES</button>
+            {/* <button type="button">EN</button>
+            <button type="button">ES</button> */}
             <button type="button">Light - Dark</button>
           </div>
         </div>

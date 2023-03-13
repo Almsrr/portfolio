@@ -1,8 +1,14 @@
 @use "../abstracts" as *;
 
 .site-navbar {
-  // padding: 1rem 0;
-  border: 1px solid #fff;
+  width: 100%;
+  padding: 10px 0 16px;
+
+  @include respond-to("md") {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
 
   .container {
     @include container;
