@@ -14,7 +14,7 @@ const NavbarLink = ({ children, to }) => {
 
   return (
     <Link to={to} className={linkClasses}>
-      {children} 
+      {children}
     </Link>
   );
 };
