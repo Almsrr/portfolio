@@ -1,28 +1,47 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import classNames from "classnames";
+
+const NavbarLink = ({ children, to }) => {
+  const urlArray = String(window.location.href).split("#");
+  const fragment = urlArray[urlArray.length - 1]; // the last fragment in the URL is the target
+  const linkFragment = to.replace("#", ""); // the fragment in the "to" prop
+
+  const linkClasses = classNames("navbar-link", {
+    "active": fragment === linkFragment,
+  });
+
+  return (
+    <Link to={to} className={linkClasses}>
+      {children} 
+    </Link>
+  );
+};
 
 export default function Navbar() {
   return (
     <nav className="site-navbar">
       <div className="container">
         <div className="block logo-block">
-          <StaticImage
-            src="../images/as-logo-color.png"
-            alt="alam-sierra-logo"
-            width={70}
-            height={70}
-            layout="fixed"
-            placeholder="dominantColor"
-          />
+          <Link to="#home">
+            <StaticImage
+              src="../images/as-logo-color.png"
+              alt="alam-sierra-logo"
+              width={70}
+              height={70}
+              layout="fixed"
+              placeholder="dominantColor"
+            />
+          </Link>
         </div>
         <div className="block links-block">
           <div className="links">
-            <Link to="#home">Home</Link>
-            <Link to="#services">Services</Link>
-            <Link to="#projects">Projects</Link>
-            <Link to="#stack">Stack</Link>
-            <Link to="#contact">Contact</Link>
+            <NavbarLink to="#home">Home</NavbarLink>
+            <NavbarLink to="#services">Services</NavbarLink>
+            <NavbarLink to="#projects">Projects</NavbarLink>
+            <NavbarLink to="#stack">Stack</NavbarLink>
+            <NavbarLink to="#contact">Contact</NavbarLink>
           </div>
         </div>
         <div className="block actions-block">
