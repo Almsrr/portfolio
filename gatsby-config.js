@@ -14,26 +14,5 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        "name": `service`,
-        "path": `${__dirname}/data/services/`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        "name": `project`,
-        "path": `${__dirname}/data/projects/`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        "name": `technology`,
-        "path": `${__dirname}/data/stack/`,
-      },
-    },
   ],
 };

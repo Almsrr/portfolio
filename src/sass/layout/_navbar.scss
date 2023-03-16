@@ -2,7 +2,7 @@
 
 .site-navbar {
   width: 100%;
-  padding: 10px 0 16px;
+  height: 80px;
 
   @include respond-to("md") {
     position: sticky;
@@ -14,6 +14,7 @@
     @include container;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .block {
       flex: 1 1;
