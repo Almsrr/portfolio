@@ -56,13 +56,29 @@
         gap: 4rem;
         height: 100%;
 
-        .navbar-link {
+        .navbar-link,
+        .navbar-link:link,
+        .navbar-link:visited {
           color: inherit;
           text-decoration: none;
+          line-height: 1;
+          display: inline-block;
+          text-align: center;
+          padding: 0 4px 10px;
+          padding-bottom: 10px;
+          border-bottom-style: solid;
+          border-bottom-width: 2px;
+          border-bottom-color: transparent;
+          box-sizing: border-box;
+          // @include transition(all 0.2s ease-in);
         }
 
+        // .navbar-link:hover {
+        //   color: $primary-color;
+        // }
+
         .navbar-link.active {
-          color: $primary-color;
+          border-bottom-color: $light;
         }
       }
     }
