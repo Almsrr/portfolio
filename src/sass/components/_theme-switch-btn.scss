@@ -11,7 +11,7 @@
   background-color: transparent;
   color: inherit;
 
-  &.active {
+  @include root-has-class("active") {
     // color: $light;
 
     i.sun {

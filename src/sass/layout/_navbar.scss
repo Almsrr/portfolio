@@ -61,6 +61,18 @@
           gap: 3rem;
         }
 
+        @include root-has-class("light") {
+          .navbar-link.active {
+            border-bottom-color: $dark;
+          }
+        }
+
+        @include root-has-class("dark") {
+          .navbar-link.active {
+            border-bottom-color: $light;
+          }
+        }
+
         .navbar-link,
         .navbar-link:link,
         .navbar-link:visited {
@@ -74,16 +86,12 @@
           border-bottom-width: 2px;
           border-bottom-color: transparent;
           box-sizing: border-box;
-          // @include transition(all 0.2s ease-in);
+          // @include transition(all 200s ease);
         }
 
         // .navbar-link:hover {
         //   color: $primary-color;
         // }
-
-        .navbar-link.active {
-          border-bottom-color: $light;
-        }
       }
     }
 

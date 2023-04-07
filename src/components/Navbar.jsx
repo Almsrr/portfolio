@@ -24,6 +24,10 @@ const NavbarLink = ({ children, to }) => {
 
 export default function Navbar() {
   const { toggleTheme, isDarkThemeActive } = useSiteContext();
+  const linksClassName = classNames("links", {
+    "light": !isDarkThemeActive,
+    "dark": isDarkThemeActive,
+  });
 
   return (
     <nav className="site-navbar">
@@ -41,7 +45,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="block links-block">
-          <div className="links">
+          <div className={linksClassName}>
             <NavbarLink to="#home">Home</NavbarLink>
             <NavbarLink to="#services">Services</NavbarLink>
             <NavbarLink to="#projects">Projects</NavbarLink>

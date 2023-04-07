@@ -5,7 +5,7 @@
   min-width: 100vw;
   min-height: 100vh;
 
-  &.light-theme {
+  @include root-has-class("light-theme") {
     .mobile-menu-container {
       @include theme;
     }
@@ -14,7 +14,7 @@
     }
   }
 
-  &.dark-theme {
+  @include root-has-class("dark-theme") {
     .mobile-menu-container {
       @include theme($dark, $light);
     }

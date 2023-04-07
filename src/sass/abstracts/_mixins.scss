@@ -83,3 +83,9 @@
   -o-border-radius: $radius;
   border-radius: $radius;
 }
+
+@mixin root-has-class($class-name) {
+  &.#{$class-name} {
+    @content;
+  }
+}
