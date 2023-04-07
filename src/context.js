@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export const SiteContext = React.createContext({
   theme: "",
@@ -6,7 +6,19 @@ export const SiteContext = React.createContext({
 });
 
 export default function SiteContextProvider({ children }) {
-  const [theme, setTheme] = useState("DARK");
+  const [theme, setTheme] = useState("");
+
+  useEffect(() => {
+    const storagedTheme = localStorage.getItem("theme");
+    const theme = storagedTheme || "DARK";
+
+    setTheme(theme);
+    localStorage.setItem("theme", theme);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prev) => {
