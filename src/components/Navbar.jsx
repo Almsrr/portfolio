@@ -23,8 +23,7 @@ const NavbarLink = ({ children, to }) => {
 };
 
 export default function Navbar() {
-  const [theme, toggleTheme] = useSiteContext();
-  const darkIsActive = theme === "DARK";
+  const { toggleTheme, isDarkThemeActive } = useSiteContext();
 
   return (
     <nav className="site-navbar">
@@ -54,7 +53,7 @@ export default function Navbar() {
           <div className="actions">
             <ThemeSwitchButton
               onClick={toggleTheme}
-              darkThemeIsActive={darkIsActive}
+              darkThemeIsActive={isDarkThemeActive}
             />
           </div>
         </div>

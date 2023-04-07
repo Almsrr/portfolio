@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { SiteContext } from "../context";
 
 export default function useSiteContext() {
-  const { theme, toggleTheme } = useContext(SiteContext);
+  const { theme, toggleTheme, isDarkThemeActive } = useContext(SiteContext);
 
-  return [theme, toggleTheme];
+  return { theme, toggleTheme, isDarkThemeActive };
 }

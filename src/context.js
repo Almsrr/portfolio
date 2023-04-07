@@ -3,10 +3,11 @@ import React, { useState, useEffect } from "react";
 export const SiteContext = React.createContext({
   theme: "",
   toggleTheme: () => {},
+  isDarkThemeActive: true,
 });
 
 export default function SiteContextProvider({ children }) {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("DARK");
 
   useEffect(() => {
     const storagedTheme = localStorage.getItem("theme");
@@ -27,8 +28,10 @@ export default function SiteContextProvider({ children }) {
     });
   };
 
+  const isDarkThemeActive = theme === "DARK";
+
   return (
-    <SiteContext.Provider value={{ theme, toggleTheme }}>
+    <SiteContext.Provider value={{ theme, toggleTheme, isDarkThemeActive }}>
       {children}
     </SiteContext.Provider>
   );
