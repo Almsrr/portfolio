@@ -56,6 +56,16 @@
 }
 
 .site-layout.menu-open {
+  .mobile-menu-container {
+    .mobile-menu {
+      .buttons {
+        button {
+          margin-left: 0;
+          width: 350px;
+        }
+      }
+    }
+  }
   .content-container {
     @include opacity(0);
     @include scale(0.85);
