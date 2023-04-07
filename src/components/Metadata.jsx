@@ -19,6 +19,7 @@ export default function Metadata({ pageTitle }) {
     <>
       <title>{siteTitle}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </>
   );
 }
