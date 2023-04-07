@@ -1,0 +1,48 @@
+@use "../abstracts" as *;
+
+.theme-switch-btn {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  color: $light;
+
+  &.active {
+    // color: $light;
+
+    i.sun {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    i.moon {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  i {
+    position: absolute;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    @include respond-to("lg") {
+      font-size: 30px;
+    }
+
+    &.sun {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &.moon {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}

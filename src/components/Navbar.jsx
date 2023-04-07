@@ -3,6 +3,9 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 
+import { useSiteContext } from "../hooks";
+import ThemeSwitchButton from "./ThemeSwitchButton";
+
 const NavbarLink = ({ children, to }) => {
   const urlArray = String(window.location.href).split("#");
   const fragment = urlArray[urlArray.length - 1]; // the last fragment in the URL is the target
@@ -20,6 +23,9 @@ const NavbarLink = ({ children, to }) => {
 };
 
 export default function Navbar() {
+  const [theme, toggleTheme] = useSiteContext();
+  const darkIsActive = theme === "DARK";
+
   return (
     <nav className="site-navbar">
       <div className="container">
@@ -46,9 +52,10 @@ export default function Navbar() {
         </div>
         <div className="block actions-block">
           <div className="actions">
-            {/* <button type="button">EN</button>
-            <button type="button">ES</button> */}
-            <button type="button">Light - Dark</button>
+            <ThemeSwitchButton
+              onClick={toggleTheme}
+              darkThemeIsActive={darkIsActive}
+            />
           </div>
         </div>
       </div>
