@@ -28,7 +28,7 @@ export default function Layout({ children }) {
         <MobileMenu onToggleMenu={toggleMenu} />
       </div>
       <div className="content-container">
-        <Navbar menuIsVisible={showMenu} onToggleMenu={toggleMenu} />
+        <Navbar menuIsVisible={showMenu} />
         <main>{children}</main>
         <Footer />
       </div>
