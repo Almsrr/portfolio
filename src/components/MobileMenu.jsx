@@ -1,15 +1,22 @@
 import { navigate } from "gatsby";
 import React from "react";
+import classNames from "classnames";
 
 import { useSiteContext } from "../hooks";
 
 export default function MobileMenu({ onToggleMenu }) {
-  const { toggleTheme } = useSiteContext();
+  const { theme, toggleTheme, isDarkThemeActive } = useSiteContext();
 
   const navigateTo = (path) => {
     onToggleMenu();
     navigate(path);
   };
+
+  const themeBtnLabel = `change to ${theme === "LIGHT" ? "dark" : "light"}`;
+  const iconClassName = classNames("bx", {
+    "bx-sun": isDarkThemeActive,
+    "bx-moon": !isDarkThemeActive,
+  });
 
   return (
     <div className="mobile-menu">
@@ -29,6 +36,11 @@ export default function MobileMenu({ onToggleMenu }) {
         </button>
         <button onClick={navigateTo.bind(null, "#contact")} type="button">
           Contact
+        </button>
+      </div>
+      <div className="config">
+        <button onClick={toggleTheme} type="button" className="theme-btn">
+          <span>{themeBtnLabel}</span> <i className={iconClassName} />
         </button>
       </div>
     </div>

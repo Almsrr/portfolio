@@ -4,3 +4,10 @@ html,
 body {
   font-family: $sans-font;
 }
+
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-weight: 400;
+}

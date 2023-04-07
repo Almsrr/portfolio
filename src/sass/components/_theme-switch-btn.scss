@@ -6,10 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none;
   position: relative;
-  background-color: transparent;
-  color: inherit;
 
   @include root-has-class("active") {
     // color: $light;
