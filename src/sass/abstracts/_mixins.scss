@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-@mixin theme($background-color: $dark, $text-color: $light) {
+@mixin theme($background-color: $light, $text-color: $dark) {
   background-color: $background-color;
   color: $text-color;
 }
