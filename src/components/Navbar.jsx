@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
@@ -24,13 +24,36 @@ const NavbarLink = ({ children, to }) => {
 
 export default function Navbar() {
   const { toggleTheme, isDarkThemeActive } = useSiteContext();
+  const [isVisible, setIsVisble] = useState(true);
+  const lastScrollTop = useRef(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    const { pageYOffset } = window;
+    if (pageYOffset > lastScrollTop.current) {
+      setIsVisble(false);
+    } else if (pageYOffset < lastScrollTop.current) {
+      setIsVisble(true);
+    } else {
+      // horizonal scroll
+    }
+    lastScrollTop.current = pageYOffset;
+  };
+
   const linksClassName = classNames("links", {
     "light": !isDarkThemeActive,
     "dark": isDarkThemeActive,
   });
 
+  const navbarClassName = classNames("site-navbar", { "visible": isVisible });
+
   return (
-    <nav className="site-navbar">
+    <nav className={navbarClassName}>
       <div className="container">
         <div className="block logo-block">
           <Link to="#home">

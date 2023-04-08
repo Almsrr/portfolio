@@ -3,6 +3,7 @@
 html,
 body {
   font-family: $sans-font;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -10,4 +11,9 @@ button {
   background-color: transparent;
   color: inherit;
   font-weight: 400;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
