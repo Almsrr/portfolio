@@ -6,6 +6,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.body::-webkit-scrollbar {
+  display: none;
+}
+
 button {
   border: none;
   background-color: transparent;
