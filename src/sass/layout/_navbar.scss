@@ -88,11 +88,8 @@
           }
         }
 
-        .navbar-link,
-        .navbar-link:link,
-        .navbar-link:visited {
+        .navbar-link {
           color: inherit;
-          text-decoration: none;
           line-height: 1;
           display: inline-block;
           text-align: center;
@@ -101,6 +98,7 @@
           border-bottom-width: 2px;
           border-bottom-color: transparent;
           box-sizing: border-box;
+          cursor: pointer;
           // @include transition(all 200s ease);
         }
 

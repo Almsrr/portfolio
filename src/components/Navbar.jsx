@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Link } from "gatsby";
+import React, { useRef, useEffect, useState, useCallback } from "react";
+import { Link, navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 
@@ -7,23 +7,19 @@ import { useSiteContext } from "../hooks";
 import ThemeSwitchButton from "./ThemeSwitchButton";
 import { generateId } from "../utils";
 
-const links = [
-  { href: "#home", title: "Home" },
-  { href: "#services", title: "Services" },
-  { href: "#projects", title: "Projects" },
-  { href: "#stack", title: "Stack" },
-  { href: "#contact", title: "Contact" },
-];
-
-const NavbarLink = ({ children, href, isActive }) => {
+const NavbarLink = ({ children, href, isActive, onClick }) => {
   const linkClasses = classNames("navbar-link", {
     "active": isActive,
   });
 
   return (
-    <Link to={href} className={linkClasses}>
+    <button
+      type="button"
+      className={linkClasses}
+      onClick={onClick.bind(null, href)}
+    >
       {children}
-    </Link>
+    </button>
   );
 };
 
@@ -31,14 +27,54 @@ export default function Navbar() {
   const { toggleTheme, isDarkThemeActive } = useSiteContext();
   const [isVisible, setIsVisble] = useState(true);
   const lastScrollTop = useRef(0);
+  const [sectionElements, setSectionElements] = useState([]);
+  const [navLinks, setNavLinks] = useState([
+    { href: "#home", title: "Home", active: true },
+    { href: "#services", title: "Services", active: false },
+    { href: "#projects", title: "Projects", active: false },
+    { href: "#stack", title: "Stack", active: false },
+    { href: "#contact", title: "Contact", active: false },
+  ]);
+
+  const handleLinksActivation = useCallback(() => {
+    let current = "";
+
+    sectionElements.forEach((s) => {
+      // 80 is the height of the navbar
+      const sectionTop = s.offsetTop - 80;
+      if (window.scrollY >= sectionTop) {
+        current = s.getAttribute("id");
+      }
+    });
+    if (!current) {
+      return;
+    }
+
+    setNavLinks((prev) => {
+      return prev.map((l) => {
+        const name = l.href.replace("#", "");
+        return { ...l, active: name === current };
+      });
+    });
+  }, [sectionElements]);
+
+  useEffect(() => {
+    setSectionElements(document.querySelectorAll("section"));
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleNavbarVisibility, {
       passive: true,
     });
+    window.addEventListener("scroll", handleLinksActivation, {
+      passive: true,
+    });
 
-    return () => window.removeEventListener("scroll", handleNavbarVisibility);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleNavbarVisibility);
+      window.removeEventListener("scroll", handleLinksActivation);
+    };
+  }, [handleLinksActivation]);
 
   const handleNavbarVisibility = () => {
     const { pageYOffset } = window;
@@ -52,12 +88,11 @@ export default function Navbar() {
     lastScrollTop.current = pageYOffset;
   };
 
-  const isLinkActive = (href) => {
-    const urlArray = String(window.location.href).split("#");
-    const fragment = urlArray[urlArray.length - 1]; // the last fragment in the URL is the target
-    const linkFragment = href.replace("#", ""); // the fragment in the "href" prop
-
-    return fragment === linkFragment;
+  const handleBtnClick = (href) => {
+    navigate(href);
+    // setNavLinks((prev) => {
+    //   return prev.map((l) => ({ ...l, active: l.href === href }));
+    // });
   };
 
   const linksClassName = classNames("links", {
@@ -83,11 +118,12 @@ export default function Navbar() {
         </div>
         <div className="block links-block">
           <div className={linksClassName}>
-            {links.map(({ href, title }) => (
+            {navLinks.map(({ href, title, active }) => (
               <NavbarLink
                 key={generateId()}
                 href={href}
-                isActive={isLinkActive(href)}
+                isActive={active}
+                onClick={handleBtnClick}
               >
                 {title}
               </NavbarLink>
