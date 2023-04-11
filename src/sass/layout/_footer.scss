@@ -1,6 +1,8 @@
 @use "../abstracts" as *;
 
 .site-footer {
+  height: 60px;
+
   .container {
     @include container;
   }

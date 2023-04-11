@@ -1,12 +1,9 @@
-import React, { useEffect } from "react";
-import { navigate } from "gatsby";
+import React from "react";
 
 import Metadata from "../components/Metadata";
 import HomeSection from "../components/sections/Home";
 
 export default function IndexPage() {
-  useEffect(() => navigate("/#home"), []);
-
   return (
     <>
       <HomeSection />
