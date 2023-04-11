@@ -105,7 +105,7 @@ export default function Navbar() {
     <nav className={navbarClassName}>
       <div className="container">
         <div className="block logo-block">
-          <Link to="#home">
+          <NavbarLink href="#home" isActive={false} onClick={handleBtnClick}>
             <StaticImage
               src="../images/as-logo-color.png"
               alt="alam-sierra-logo"
@@ -114,7 +114,7 @@ export default function Navbar() {
               layout="fixed"
               placeholder="dominantColor"
             />
-          </Link>
+          </NavbarLink>
         </div>
         <div className="block links-block">
           <div className={linksClassName}>
