@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import Card from "../Card";
 import { useSiteContext } from "../../hooks";
+import Heading from "./Heading";
 
 export default function ServicesSection() {
   const { isDarkThemeActive } = useSiteContext();
@@ -15,10 +16,10 @@ export default function ServicesSection() {
   return (
     <section className="services" id="services">
       <div className="services__container">
-        <header>
+        <Heading>
           <h2>Services</h2>
           <p>Skill-Set</p>
-        </header>
+        </Heading>
         <ul className={servicesListClassName}>
           <li>
             <Card className="service-card">

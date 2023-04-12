@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+.heading {
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p,
+  span,
+  h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    color: $primary-color;
+    margin-bottom: 60px;
+
+    &::after {
+      content: "";
+      width: 130px;
+      height: 5px;
+      position: absolute;
+      left: 0;
+      top: 120%;
+      background-color: $primary-color;
+    }
+  }
+}
