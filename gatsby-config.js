@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "Alam Sierra",
+    title: "Alam Sierra | Front-End Engineer",
     siteUrl: "https://www.alamsierra.com",
     description:
       "Portfolio website created by Alam Sierra, a passionate Dominican Front-End React Developer",
