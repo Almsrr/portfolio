@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
-$card-bg-light: #f7eeed;
-$card-bg-dark: #131519;
+$service-card-bg-light: #f7eeed;
+$service-card-bg-dark: #131519;
 
 .services {
   padding: 100px 0;
@@ -29,12 +29,12 @@ $card-bg-dark: #131519;
 
       @include root-has-class("light") {
         .service-card {
-          background-color: $card-bg-light;
+          background-color: $service-card-bg-light;
         }
       }
       @include root-has-class("dark") {
         .service-card {
-          background-color: $card-bg-dark;
+          background-color: $service-card-bg-dark;
         }
       }
 
