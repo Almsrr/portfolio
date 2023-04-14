@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { Link, navigate } from "gatsby";
+import { navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 

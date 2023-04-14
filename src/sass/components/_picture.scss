@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+$picture-border-radius: 150px;
+
+.picture {
+  overflow: hidden;
+
+  @include root-has-class("rounded-top-left") {
+    border-top-left-radius: $picture-border-radius;
+  }
+  @include root-has-class("rounded-top-right") {
+    border-top-right-radius: $picture-border-radius;
+  }
+  @include root-has-class("rounded-bottom-right") {
+    border-bottom-right-radius: $picture-border-radius;
+  }
+  @include root-has-class("rounded-bottom-left") {
+    border-bottom-left-radius: $picture-border-radius;
+  }
+}
