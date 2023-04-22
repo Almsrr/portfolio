@@ -103,7 +103,7 @@ export default function ProjectsSection() {
                   <h3>{p.title}</h3>
                   <p>{p.description}</p>
                   <a href="www.google.com" target="_blank" rel="norreferer">
-                    <i class="fa-solid fa-arrow-right-long" />
+                    <i className="fa-solid fa-arrow-right-long" />
                   </a>
                 </div>
               </article>

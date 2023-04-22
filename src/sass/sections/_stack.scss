@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+
+$stack-card-bg-light: #f7eeed;
+$stack-card-bg-dark: #131519;
+
+.stack {
+  padding: 100px 0;
+
+  .stack__container {
+    @include container;
+
+    .stack__items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 16px;
+      display: grid;
+      grid-auto-rows: 260px;
+
+      @include respond-to("sm") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include respond-to("lg") {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+      @include respond-to("xl") {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include root-has-class("light") {
+        .stack-card {
+          background-color: $stack-card-bg-light;
+
+          .body {
+            .description {
+              .line {
+                background-color: $stack-card-bg-dark;
+              }
+            }
+          }
+        }
+      }
+      @include root-has-class("dark") {
+        .stack-card {
+          background-color: $stack-card-bg-dark;
+
+          .body {
+            .description {
+              .line {
+                background-color: $stack-card-bg-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

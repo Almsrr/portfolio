@@ -1,0 +1,82 @@
+@use "../abstracts/" as *;
+@use "../components/card";
+
+$card-hover-bg-color: #3e445b;
+$card-width: 100%;
+$card-height: 100%;
+$card-body-p-top: calc(24px + card.$card-padding);
+
+.hover-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include border-radius($radius-md);
+  height: $card-height;
+  width: $card-width;
+
+  &,
+  & * {
+    @include transition(all 200ms ease-in-out);
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: $card-body-p-top;
+    min-height: 100%;
+
+    .img {
+      filter: grayscale(0.8);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    .description {
+      height: 64px;
+      @include scale(0);
+
+      .line {
+        width: 0;
+        height: 1px;
+        margin: 0 auto 0.75rem;
+        display: block;
+      }
+
+      p {
+        text-align: center;
+        font-size: 0.875em;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $card-hover-bg-color;
+
+    .body {
+      padding-top: 0;
+      cursor: pointer;
+
+      .img {
+        filter: none;
+      }
+
+      .description {
+        @include scale(1);
+
+        .line {
+          width: 50px;
+        }
+      }
+    }
+  }
+}
