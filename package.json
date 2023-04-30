@@ -22,6 +22,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@mdx-js/react": "^2.2.1",
+    "aos": "^2.3.4",
     "boxicons": "^2.1.4",
     "classnames": "^2.3.2",
     "gatsby": "^5.3.3",

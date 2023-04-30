@@ -49,7 +49,7 @@ export default function Navbar() {
 
     const link = "#" + current;
     setActiveLink(link);
-  }, [sectionElements]);
+  }, [sectionElements, activeLink]);
 
   useEffect(() => {
     setSectionElements(document.querySelectorAll("section"));

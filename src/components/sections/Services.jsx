@@ -21,7 +21,7 @@ export default function ServicesSection() {
           <p>Skill-Set</p>
         </Heading>
         <ul className={servicesListClassName}>
-          <li>
+          <li data-aos="zoom-in-up">
             <Card className="service-card">
               <p>icon</p>
               <h3>Title</h3>
@@ -32,7 +32,7 @@ export default function ServicesSection() {
               </p>
             </Card>
           </li>
-          <li>
+          <li data-aos="zoom-in-up">
             <Card className="service-card">
               <p>icon</p>
               <h3>Title</h3>
@@ -43,7 +43,40 @@ export default function ServicesSection() {
               </p>
             </Card>
           </li>
-          <li>
+          <li data-aos="zoom-in-up">
+            <Card className="service-card">
+              <p>icon</p>
+              <h3>Title</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
+                obcaecati ad?
+              </p>
+            </Card>
+          </li>
+          <li data-aos="zoom-in-up">
+            <Card className="service-card">
+              <p>icon</p>
+              <h3>Title</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
+                obcaecati ad?
+              </p>
+            </Card>
+          </li>
+          <li data-aos="zoom-in-up">
+            <Card className="service-card">
+              <p>icon</p>
+              <h3>Title</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
+                obcaecati ad?
+              </p>
+            </Card>
+          </li>
+          <li data-aos="zoom-in-up">
             <Card className="service-card">
               <p>icon</p>
               <h3>Title</h3>

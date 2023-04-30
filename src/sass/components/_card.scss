@@ -6,8 +6,8 @@ $card-padding: 30px;
   padding: $card-padding;
   flex-direction: column;
   box-sizing: border-box;
+  border-radius: $radius-md;
   // @include box-shadow(0px 5px 5px $shadow-color);
-  border-radius: $radius-sm;
 
   @include respond-to("md") {
     width: auto;

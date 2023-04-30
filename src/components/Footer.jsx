@@ -21,6 +21,7 @@ export default function Footer() {
             className={authorLinkClassName}
             href="https://github.com/almsrr/portfolio"
             target="_blank"
+            rel="noreferrer"
           >
             <i className="code bx bx-code-curly" />
             with
