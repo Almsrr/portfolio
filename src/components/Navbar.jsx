@@ -82,7 +82,7 @@ export default function Navbar() {
   };
 
   const handleBtnClick = (href) => {
-    setActiveLink(href);
+    // setActiveLink(href);
     navigate(href);
   };
 
