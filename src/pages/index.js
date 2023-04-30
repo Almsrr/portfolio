@@ -5,6 +5,7 @@ import HomeSection from "../components/sections/Home";
 import ServicesSection from "../components/sections/Services";
 import ProjectsSection from "../components/sections/Projects";
 import StackSection from "../components/sections/Stack";
+import ContactSection from "../components/sections/Contact";
 
 export default function IndexPage() {
   return (
@@ -13,6 +14,7 @@ export default function IndexPage() {
       <ServicesSection />
       <ProjectsSection />
       <StackSection />
+      <ContactSection />
     </>
   );
 }
