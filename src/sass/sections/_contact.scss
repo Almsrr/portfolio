@@ -4,7 +4,7 @@ $contact-item-bg-light: #f7eeed;
 $contact-item-bg-dark: #131519;
 
 .contact {
-  padding: 100px 0;
+  padding: 100px 0 30px;
 
   @include root-has-class("light") {
     background-color: $light;
@@ -120,7 +120,7 @@ $contact-item-bg-dark: #131519;
 
             p {
               margin-top: 10px;
-              font-size: 1.25rem;
+              font-size: 1.125rem;
             }
           }
 

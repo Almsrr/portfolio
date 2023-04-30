@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-$contact-form-font-size: 1.125rem;
+$contact-form-font-size: 1rem;
 $contact-form-input-padding: 18px;
 $contact-form-padding: 48px;
 $contact-form-error-color: red;
@@ -26,7 +26,7 @@ $contact-form-bg-dark: #131519;
       input,
       textarea {
         color: $dark;
-        border-color: $dark;
+        background-color: rgb(255, 255, 255);
       }
     }
   }
@@ -38,7 +38,7 @@ $contact-form-bg-dark: #131519;
       input,
       textarea {
         color: $light;
-        border-color: $light;
+        background-color: rgb(16, 16, 16);
       }
     }
   }
