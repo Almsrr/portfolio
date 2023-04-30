@@ -42,12 +42,6 @@ export default function ContactSection() {
               <p>Email</p>
             </div>
           </div>
-          <div className="contact-item availability">
-            <div className="card">
-              <span></span>
-              <p>Availability</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

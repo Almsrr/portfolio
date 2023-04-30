@@ -2,7 +2,7 @@
 
 $contact-form-font-size: 1.125rem;
 $contact-form-input-padding: 18px;
-$contact-form-padding: 36px;
+$contact-form-padding: 48px;
 $contact-form-error-color: red;
 $contact-form-bg-light: #f7eeed;
 $contact-form-bg-dark: #131519;
@@ -14,7 +14,7 @@ $contact-form-bg-dark: #131519;
   padding-top: $contact-form-padding;
   padding-left: $contact-form-padding;
   padding-right: $contact-form-padding;
-  padding-bottom: calc(3.5 * $contact-form-input-padding);
+  padding-bottom: calc(2 * $contact-form-padding);
   @include border-radius($radius-md);
   @include transition(all 300ms ease-in-out);
   // @include box-shadow();
@@ -105,7 +105,7 @@ $contact-form-bg-dark: #131519;
 
   .message-control {
     flex: 1;
-    min-height: 300px;
+    min-height: 200px;
   }
 
   @include respond-to("lg") {
