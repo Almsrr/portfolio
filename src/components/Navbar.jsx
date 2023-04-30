@@ -102,8 +102,8 @@ export default function Navbar() {
             <StaticImage
               src="../images/as-logo-color.png"
               alt="alam-sierra-logo"
-              width={70}
-              height={70}
+              width={60}
+              height={60}
               layout="fixed"
               placeholder="dominantColor"
             />
