@@ -20,11 +20,10 @@ $stack-card-bg-dark: #131519;
       @include respond-to("sm") {
         grid-template-columns: repeat(2, 1fr);
       }
-      @include respond-to("lg") {
+      @include respond-to("md") {
         grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
       }
-      @include respond-to("xl") {
+      @include respond-to("lg") {
         grid-template-columns: repeat(4, 1fr);
       }
 
