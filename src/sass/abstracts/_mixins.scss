@@ -89,3 +89,15 @@
     @content;
   }
 }
+
+@mixin hover-drop-shadow-center(
+  $shadow-color: $primary-color,
+  $transition-time: 0.5s
+) {
+  @include transition(box-shadow $transition-time ease-in-out);
+  @include box-shadow(0 0 0 0 transparent);
+
+  &:hover {
+    @include box-shadow(0 0 20px 0 rgba($color: $shadow-color, $alpha: 0.5));
+  }
+}

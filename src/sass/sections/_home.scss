@@ -74,26 +74,17 @@ $link-bg-dark: #131519;
             display: flex;
             gap: 1rem;
 
-            a,
-            a:link,
-            a:visited,
-            a:active {
+            a {
               color: inherit;
               text-decoration: none;
-              border-radius: $radius-sm;
+              border-radius: $radius-md;
               display: flex;
               width: 60px;
               height: 60px;
               align-items: center;
               justify-content: center;
               font-size: 28px;
-              @include transition(all 300ms ease);
             }
-
-            // a:hover {
-            //   color: $primary-color;
-            //   transform: scale(1.1);
-            // }
 
             @include root-has-class("light") {
               a {
