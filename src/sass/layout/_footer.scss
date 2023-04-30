@@ -1,9 +1,49 @@
 @use "../abstracts" as *;
 
 .site-footer {
-  height: 60px;
+  height: 50px;
+  padding-bottom: 30px;
 
   .container {
     @include container;
+    height: 100%;
+
+    & > div {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p,
+      a {
+        font-weight: 500;
+      }
+
+      .author {
+        text-decoration: none;
+        display: inline-flex;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: $dark;
+        @include transition(color 100ms linear);
+
+        &:hover {
+          border-bottom-color: transparent;
+          color: $primary-color;
+        }
+
+        i {
+          margin-top: -2px;
+          font-size: 19px;
+          padding-left: 3px;
+          padding-right: 3px;
+          padding-top: 2px;
+        }
+
+        .code {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
