@@ -26,19 +26,19 @@ export default function ContactSection() {
           </div>
           <div className="contact-item address">
             <div className="card">
-              <span></span>
+              <i className="map fa-regular fa-map" />
               <p>Address</p>
             </div>
           </div>
           <div className="contact-item phone">
             <div className="card">
-              <span></span>
+              <i className="phone bx bx-phone" />
               <p>Phone</p>
             </div>
           </div>
           <div className="contact-item email">
             <div className="card">
-              <span></span>
+              <i className="email fa-regular fa-envelope" />
               <p>Email</p>
             </div>
           </div>
