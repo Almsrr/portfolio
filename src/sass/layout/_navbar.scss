@@ -5,7 +5,6 @@
   height: 80px;
   background-color: inherit;
   position: static;
-  // display: none;
 
   @include respond-to("md") {
     position: fixed;
@@ -78,14 +77,14 @@
         }
 
         @include root-has-class("light") {
-          .navbar-link.active {
-            border-bottom-color: $dark;
+          .navbar-link::after {
+            background-color: $dark;
           }
         }
 
         @include root-has-class("dark") {
-          .navbar-link.active {
-            border-bottom-color: $light;
+          .navbar-link::after {
+            background-color: $light;
           }
         }
 
@@ -95,17 +94,36 @@
           display: inline-block;
           text-align: center;
           padding: 10px 4px;
-          border-bottom-style: solid;
-          border-bottom-width: 2px;
-          border-bottom-color: transparent;
           box-sizing: border-box;
           cursor: pointer;
-          // @include transition(all 200s ease);
-        }
+          position: relative;
+          @include transition(all 200ms ease-in-out);
 
-        // .navbar-link:hover {
-        //   color: $primary-color;
-        // }
+          &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            @include transition(transform 200ms ease-in-out);
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: transparent;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+
+          @include root-has-class("active") {
+            &::after {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
       }
     }
 

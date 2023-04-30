@@ -28,13 +28,7 @@ export default function Navbar() {
   const [isVisible, setIsVisble] = useState(true);
   const lastScrollTop = useRef(0);
   const [sectionElements, setSectionElements] = useState([]);
-  const [navLinks, setNavLinks] = useState([
-    { href: "#home", title: "Home", active: true },
-    { href: "#services", title: "Services", active: false },
-    { href: "#projects", title: "Projects", active: false },
-    { href: "#stack", title: "Stack", active: false },
-    { href: "#contact", title: "Contact", active: false },
-  ]);
+  const [activeLink, setActiveLink] = useState("");
 
   const handleLinksActivation = useCallback(() => {
     let current = "";
@@ -49,13 +43,12 @@ export default function Navbar() {
     if (!current) {
       return;
     }
+    if (current === activeLink) {
+      return;
+    }
 
-    setNavLinks((prev) => {
-      return prev.map((l) => {
-        const name = l.href.replace("#", "");
-        return { ...l, active: name === current };
-      });
-    });
+    const link = "#" + current;
+    setActiveLink(link);
   }, [sectionElements]);
 
   useEffect(() => {
@@ -89,11 +82,11 @@ export default function Navbar() {
   };
 
   const handleBtnClick = (href) => {
+    setActiveLink(href);
     navigate(href);
-    // setNavLinks((prev) => {
-    //   return prev.map((l) => ({ ...l, active: l.href === href }));
-    // });
   };
+
+  const isLinkActive = (href) => activeLink === href;
 
   const linksClassName = classNames("links", {
     "light": !isDarkThemeActive,
@@ -118,16 +111,46 @@ export default function Navbar() {
         </div>
         <div className="block links-block">
           <div className={linksClassName}>
-            {navLinks.map(({ href, title, active }) => (
-              <NavbarLink
-                key={generateId()}
-                href={href}
-                isActive={active}
-                onClick={handleBtnClick}
-              >
-                {title}
-              </NavbarLink>
-            ))}
+            <NavbarLink
+              key={generateId()}
+              href="#home"
+              isActive={isLinkActive("#home")}
+              onClick={handleBtnClick}
+            >
+              Home
+            </NavbarLink>
+            <NavbarLink
+              key={generateId()}
+              href="#services"
+              isActive={isLinkActive("#services")}
+              onClick={handleBtnClick}
+            >
+              Services
+            </NavbarLink>
+            <NavbarLink
+              key={generateId()}
+              href="#projects"
+              isActive={isLinkActive("#projects")}
+              onClick={handleBtnClick}
+            >
+              Projects
+            </NavbarLink>
+            <NavbarLink
+              key={generateId()}
+              href="#stack"
+              isActive={isLinkActive("#stack")}
+              onClick={handleBtnClick}
+            >
+              Stack
+            </NavbarLink>
+            <NavbarLink
+              key={generateId()}
+              href="#contact"
+              isActive={isLinkActive("#contact")}
+              onClick={handleBtnClick}
+            >
+              Contact
+            </NavbarLink>
           </div>
         </div>
         <div className="block actions-block">
