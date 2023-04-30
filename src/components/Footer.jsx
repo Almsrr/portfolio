@@ -1,13 +1,24 @@
 import React from "react";
 
+import classNames from "classnames";
+
+import { useSiteContext } from "../hooks";
+
 export default function Footer() {
+  const { isDarkThemeActive } = useSiteContext();
+
+  const authorLinkClassName = classNames("author", {
+    "light": !isDarkThemeActive,
+    "dark": isDarkThemeActive,
+  });
+
   return (
     <footer className="site-footer">
       <div className="container">
         <div>
           <p>&copy;2023</p>
           <a
-            className="author"
+            className={authorLinkClassName}
             href="https://github.com/almsrr/portfolio"
             target="_blank"
           >
