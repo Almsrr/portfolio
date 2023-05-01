@@ -4,6 +4,7 @@ $picture-border-radius: 150px;
 
 .picture {
   overflow: hidden;
+  @include border-radius($radius-sm);
 
   @include root-has-class("rounded-top-left") {
     border-top-left-radius: $picture-border-radius;
