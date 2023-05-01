@@ -29,6 +29,10 @@ $contact-form-bg-dark: #131519;
         background-color: rgb(255, 255, 255);
       }
     }
+
+    button[type="submit"] {
+      background-color: rgb(255, 255, 255);
+    }
   }
 
   @include root-has-class("dark") {
@@ -40,6 +44,10 @@ $contact-form-bg-dark: #131519;
         color: $light;
         background-color: rgb(16, 16, 16);
       }
+    }
+
+    button[type="submit"] {
+      background-color: rgb(16, 16, 16);
     }
   }
 
@@ -92,10 +100,15 @@ $contact-form-bg-dark: #131519;
     place-items: center;
     cursor: pointer;
     @include border-radius($radius-md);
-    background-color: $primary-color;
-    font-weight: 700;
+    // font-weight: 500;
     text-transform: uppercase;
+    border: none;
+    @include transition(background-color 300ms ease-out);
+  }
+
+  button[type="submit"]:hover {
     color: $light;
+    background-color: $primary-color;
   }
 
   .name-control,
