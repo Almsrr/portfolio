@@ -84,7 +84,11 @@ $link-bg-dark: #131519;
               align-items: center;
               justify-content: center;
               font-size: 28px;
-              @include transition(background-color 300ms ease-out);
+              transition: background-color 300ms ease-out, color 200ms linear;
+
+              &:hover {
+                color: $primary-color;
+              }
             }
 
             @include root-has-class("light") {
