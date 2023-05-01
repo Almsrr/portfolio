@@ -5,7 +5,6 @@ import classNames from "classnames";
 
 import { useSiteContext } from "../hooks";
 import ThemeSwitchButton from "./ThemeSwitchButton";
-import { generateId } from "../utils";
 
 const NavbarLink = ({ children, href, isActive, onClick }) => {
   const linkClasses = classNames("navbar-link", {
