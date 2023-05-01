@@ -16,7 +16,7 @@ $contact-form-bg-dark: #131519;
   padding-right: $contact-form-padding;
   padding-bottom: calc(2 * $contact-form-padding);
   @include border-radius($radius-md);
-  @include transition(all 300ms ease-in-out);
+  @include transition(background-color 300ms ease-out);
   // @include box-shadow();
 
   @include root-has-class("light") {
@@ -75,6 +75,7 @@ $contact-form-bg-dark: #131519;
       outline: none;
       background-color: inherit;
       overflow: hidden;
+      @include transition(background-color 300ms ease-out);
     }
 
     textarea {

@@ -12,7 +12,7 @@ export default function MobileMenu({ onToggleMenu }) {
     navigate(path);
   };
 
-  const themeBtnLabel = `change to ${theme === "LIGHT" ? "dark" : "light"}`;
+  const themeBtnLabel = `switch to ${theme === "LIGHT" ? "dark" : "light"}`;
   const iconClassName = classNames("bx", {
     "bx-sun": isDarkThemeActive,
     "bx-moon": !isDarkThemeActive,

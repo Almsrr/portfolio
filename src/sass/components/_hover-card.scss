@@ -11,14 +11,8 @@ $card-body-p-top: calc(24px + card.$card-padding);
   display: flex;
   align-items: center;
   overflow: hidden;
-  @include border-radius($radius-md);
   height: $card-height;
   width: $card-width;
-
-  &,
-  & * {
-    @include transition(all 200ms ease-in-out);
-  }
 
   .body {
     display: flex;
@@ -27,9 +21,11 @@ $card-body-p-top: calc(24px + card.$card-padding);
     align-items: center;
     padding-top: $card-body-p-top;
     min-height: 100%;
+    @include transition(padding 250ms ease-in-out);
 
     .img {
       filter: grayscale(0.8);
+      @include transition(filter 250ms ease-in-out);
     }
 
     h3 {
@@ -43,6 +39,7 @@ $card-body-p-top: calc(24px + card.$card-padding);
     .description {
       height: 64px;
       @include scale(0);
+      @include transition(transform 250ms ease-in-out);
 
       .line {
         width: 0;
@@ -60,7 +57,7 @@ $card-body-p-top: calc(24px + card.$card-padding);
   }
 
   &:hover {
-    background-color: $card-hover-bg-color;
+    // background-color: $card-hover-bg-color;
 
     .body {
       padding-top: 0;

@@ -26,7 +26,8 @@
       padding: 0.75rem 0;
       text-align: left;
       overflow: hidden;
-      @include transition(all 400ms ease-in);
+      font-weight: 500;
+      @include transition(margin 300ms ease-in);
 
       & + button {
         margin-left: -40px;
@@ -53,14 +54,29 @@
   .config {
     margin-top: 100px;
     padding-top: 20px;
-    border-top-width: 2px;
+    border-top-width: 3px;
     border-top-style: solid;
     border-top-color: rgb(193, 190, 190);
 
     .theme-btn {
-      line-height: 1;
-      font-size: 1.25rem;
-      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      padding: 0;
+
+      i,
+      span {
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+
+      span {
+        margin-right: 6px;
+      }
+
+      i {
+        padding-top: 2px;
+      }
     }
   }
 }

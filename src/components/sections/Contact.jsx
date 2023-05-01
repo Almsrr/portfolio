@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import { useSiteContext } from "../../hooks";
 import ContactForm from "../ContactForm";
+import Card from "../Card";
 
 export default function ContactSection() {
   const { isDarkThemeActive } = useSiteContext();
@@ -25,22 +26,22 @@ export default function ContactSection() {
             <ContactForm isDarkTheme={isDarkThemeActive} onSubmit={submit} />
           </div>
           <div className="contact-item address">
-            <div className="card">
+            <Card className="item-card">
               <i className="map fa-regular fa-map" />
               <p>Address</p>
-            </div>
+            </Card>
           </div>
           <div className="contact-item phone">
-            <div className="card">
+            <Card className="item-card">
               <i className="phone bx bx-phone" />
               <p>Phone</p>
-            </div>
+            </Card>
           </div>
           <div className="contact-item email">
-            <div className="card">
+            <Card className="item-card">
               <i className="email fa-regular fa-envelope" />
               <p>Email</p>
-            </div>
+            </Card>
           </div>
         </div>
       </div>

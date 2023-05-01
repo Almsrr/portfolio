@@ -5,7 +5,7 @@ import classNames from "classnames";
 import Card from "./Card";
 
 export default function HoverCard({ imgSrc, title, description, className }) {
-  const cardClassName = classNames(className, "hover-card");
+  const cardClassName = classNames("hover-card", className);
 
   return (
     <Card className={cardClassName}>

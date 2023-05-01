@@ -112,7 +112,6 @@ export default function Navbar() {
         <div className="block links-block">
           <div className={linksClassName}>
             <NavbarLink
-              key={generateId()}
               href="#home"
               isActive={isLinkActive("#home")}
               onClick={handleBtnClick}
@@ -120,7 +119,6 @@ export default function Navbar() {
               Home
             </NavbarLink>
             <NavbarLink
-              key={generateId()}
               href="#services"
               isActive={isLinkActive("#services")}
               onClick={handleBtnClick}
@@ -128,7 +126,6 @@ export default function Navbar() {
               Services
             </NavbarLink>
             <NavbarLink
-              key={generateId()}
               href="#projects"
               isActive={isLinkActive("#projects")}
               onClick={handleBtnClick}
@@ -136,7 +133,6 @@ export default function Navbar() {
               Projects
             </NavbarLink>
             <NavbarLink
-              key={generateId()}
               href="#stack"
               isActive={isLinkActive("#stack")}
               onClick={handleBtnClick}
@@ -144,7 +140,6 @@ export default function Navbar() {
               Stack
             </NavbarLink>
             <NavbarLink
-              key={generateId()}
               href="#contact"
               isActive={isLinkActive("#contact")}
               onClick={handleBtnClick}

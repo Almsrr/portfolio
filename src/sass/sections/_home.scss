@@ -84,6 +84,7 @@ $link-bg-dark: #131519;
               align-items: center;
               justify-content: center;
               font-size: 28px;
+              @include transition(background-color 300ms ease-out);
             }
 
             @include root-has-class("light") {
