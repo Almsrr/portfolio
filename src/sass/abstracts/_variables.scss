@@ -1,0 +1,29 @@
+// BREAKPOINTS
+$breakpoints: (
+  "sm": 480px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1600px,
+);
+
+// THEME
+$white: #fbf5f3;
+$black: #1b1c22;
+$dark: $black;
+$light: $white;
+
+$primary-color: #e34234;
+$secondary-color: #e09f3e;
+
+// TYPOGRAPHY
+$sans-font: "Manrope", sans-serif;
+$serif-font: "Roboto Slab", serif;
+$monospace-font: monospace;
+
+// RADIUS
+$radius-sm: 5px;
+$radius-md: 10px;
+$radius-lg: 20px;
+
+// SHADOW
+$shadow-color: #000;

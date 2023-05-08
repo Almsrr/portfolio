@@ -1,0 +1,73 @@
+@use "../abstracts" as *;
+
+.site-layout {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  @include root-has-class("light-theme") {
+    .mobile-menu-container {
+      @include theme;
+    }
+    .content-container {
+      @include theme;
+    }
+  }
+
+  @include root-has-class("dark-theme") {
+    .mobile-menu-container {
+      @include theme($dark, $light);
+    }
+    .content-container {
+      @include theme($dark, $light);
+    }
+  }
+
+  .burger-btn-container {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    z-index: 3;
+    display: block;
+
+    @include respond-to("md") {
+      display: none;
+    }
+  }
+
+  .mobile-menu-container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include transition(background-color 300ms ease-out);
+  }
+
+  .content-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+    visibility: visible;
+    @include transition(all 300ms ease-out);
+  }
+}
+
+.site-layout.menu-open {
+  .mobile-menu-container {
+    .mobile-menu {
+      .buttons {
+        button {
+          margin-left: 0;
+          width: 350px;
+        }
+      }
+    }
+  }
+  .content-container {
+    @include opacity(0);
+    @include scale(0.85);
+    visibility: hidden;
+  }
+}

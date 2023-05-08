@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+.burger-btn {
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  border-top: 3px solid $primary-color;
+  height: 25px;
+  width: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 30;
+  left: 1px;
+  top: 15px;
+  background-color: transparent;
+  @include transition(all 250ms linear);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    left: 0;
+    background: $primary-color;
+    top: 8px;
+    @include transition(all 250ms linear);
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    left: 0;
+    background: $primary-color;
+    bottom: 0;
+    @include transition(all 250ms linear);
+  }
+}
+
+.burger-btn.active {
+  border-color: transparent;
+
+  &::before {
+    @include rotate(45deg);
+    width: 33px;
+    left: -2;
+  }
+
+  &::after {
+    @include rotate(135deg);
+    bottom: 11px;
+    width: 33px;
+    left: -2;
+  }
+}

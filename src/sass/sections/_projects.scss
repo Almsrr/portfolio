@@ -1,0 +1,81 @@
+@use "../abstracts/" as *;
+
+.projects {
+  padding: 100px 0;
+
+  .projects__container {
+    @include container;
+
+    .projects__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      row-gap: 40px;
+      grid-auto-rows: 260px;
+
+      @include respond-to("md") {
+        grid-auto-rows: 280px;
+      }
+
+      @include respond-to("lg") {
+        grid-auto-rows: 300px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .project-card {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        .image {
+          height: 100%;
+          width: 50%;
+          background-color: #efe2e1;
+          box-sizing: border-box;
+        }
+
+        .description {
+          width: 50%;
+          height: 100%;
+          flex: 1;
+          max-width: 50%;
+          padding: 5px 30px 30px;
+          box-sizing: border-box;
+
+          h3 {
+            font-size: 2.5rem;
+            color: $primary-color;
+            // font-family: $serif-font;
+          }
+
+          p {
+            line-height: 1.4;
+          }
+
+          a {
+            text-decoration: underline;
+            padding: 0;
+            color: inherit;
+            margin-top: 24px;
+            display: inline-block;
+            color: $primary-color;
+            @include transition(all 200ms linear);
+
+            &:hover {
+              padding-left: 15px;
+            }
+          }
+        }
+
+        @include root-has-class("normal") {
+          flex-direction: row;
+        }
+        @include root-has-class("inverted") {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}

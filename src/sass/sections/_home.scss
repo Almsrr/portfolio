@@ -1,0 +1,113 @@
+@use "../abstracts" as *;
+
+$link-bg-light: #f7eeed;
+$link-bg-dark: #131519;
+
+.home {
+  @include respond-to("md") {
+    // the height of the navbar
+    padding-top: 80px;
+  }
+
+  .home__container {
+    @include container;
+    padding-top: 70px;
+
+    .hero {
+      display: grid;
+      align-items: center;
+
+      @include respond-to("lg") {
+        height: 600px;
+        overflow-y: hidden;
+        overflow-x: visible;
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: 100%;
+      }
+
+      .hero__bio {
+        h1 {
+          font-size: 3rem;
+          font-weight: 400;
+
+          span:first-child {
+            color: $primary-color;
+          }
+
+          span:last-child {
+            display: block;
+            font-size: 4rem;
+            font-weight: 700;
+          }
+        }
+
+        p {
+          line-height: 1.4;
+          font-size: 1.25rem;
+        }
+
+        @include respond-to("md") {
+          h1 {
+            font-size: 3rem;
+
+            span:last-child {
+              font-size: 5rem;
+            }
+          }
+
+          p {
+            line-height: 1.5;
+          }
+        }
+
+        .socials {
+          margin-top: 80px;
+
+          h3 {
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 1.75rem;
+            font-size: 1.25rem;
+          }
+
+          .socials__links {
+            display: flex;
+            gap: 1rem;
+
+            a {
+              color: inherit;
+              text-decoration: none;
+              border-radius: $radius-md;
+              display: flex;
+              width: 60px;
+              height: 60px;
+              align-items: center;
+              justify-content: center;
+              font-size: 28px;
+              transition: background-color 300ms ease-out, color 200ms linear;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+
+            @include root-has-class("light") {
+              a {
+                background-color: $link-bg-light;
+              }
+            }
+            @include root-has-class("dark") {
+              a {
+                background-color: $link-bg-dark;
+              }
+            }
+          }
+        }
+      }
+
+      .hero__img-container {
+        justify-self: center;
+      }
+    }
+  }
+}

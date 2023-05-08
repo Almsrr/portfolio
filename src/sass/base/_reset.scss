@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+html,
+body {
+  font-family: $sans-font;
+  scroll-behavior: smooth;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}

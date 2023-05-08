@@ -1,0 +1,140 @@
+@use "../abstracts/" as *;
+
+$contact-form-font-size: 1rem;
+$contact-form-input-padding: 18px;
+$contact-form-padding: 48px;
+$contact-form-error-color: red;
+$contact-form-bg-light: #f7eeed;
+$contact-form-bg-dark: #131519;
+
+.contact-form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-top: $contact-form-padding;
+  padding-left: $contact-form-padding;
+  padding-right: $contact-form-padding;
+  padding-bottom: calc(2 * $contact-form-padding);
+  @include border-radius($radius-md);
+  @include transition(background-color 300ms ease-out);
+  // @include box-shadow();
+
+  @include root-has-class("light") {
+    background-color: $contact-form-bg-light;
+
+    .control {
+      input,
+      textarea {
+        color: $dark;
+        background-color: #efe2e1;
+      }
+    }
+
+    button[type="submit"] {
+      background-color: #efe2e1;
+    }
+  }
+
+  @include root-has-class("dark") {
+    background-color: $contact-form-bg-dark;
+
+    .control {
+      input,
+      textarea {
+        color: $light;
+        background-color: rgb(16, 16, 16);
+      }
+    }
+
+    button[type="submit"] {
+      background-color: rgb(16, 16, 16);
+    }
+  }
+
+  .control {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 26px;
+    margin-bottom: 8px;
+    overflow: hidden;
+
+    label {
+      width: max-content;
+      margin: 0 1px 8px;
+      font-size: $contact-form-font-size;
+    }
+
+    .error-message {
+      color: $contact-form-error-color;
+      font-size: calc($contact-form-font-size - 2px);
+      position: absolute;
+      left: 1px;
+      bottom: 1px;
+    }
+
+    input,
+    textarea {
+      padding: $contact-form-input-padding;
+      @include border-radius($radius-md);
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      outline: none;
+      background-color: inherit;
+      overflow: hidden;
+      @include transition(background-color 300ms ease-out);
+    }
+
+    textarea {
+      flex: 1;
+      resize: none;
+    }
+  }
+
+  button[type="submit"] {
+    padding: 14px;
+    width: 100%;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    @include border-radius($radius-md);
+    // font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    @include transition(background-color 300ms ease-out);
+  }
+
+  button[type="submit"]:hover {
+    color: $light;
+    background-color: $primary-color;
+  }
+
+  .name-control,
+  .email-control,
+  .message-control {
+    width: 100%;
+  }
+
+  .message-control {
+    flex: 1;
+    min-height: 200px;
+  }
+
+  @include respond-to("lg") {
+    .input-container {
+      display: flex;
+      gap: 28px;
+
+      .control {
+        flex: 1;
+      }
+    }
+
+    button[type="submit"] {
+      width: 350px;
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@use "../abstracts" as *;
+
+.site-navbar {
+  width: 100%;
+  height: 80px;
+  background-color: inherit;
+  position: static;
+
+  @include respond-to("md") {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    // the same the height of the element
+    transform: translate(0, -80px);
+    @include transition(background-color 300ms ease-out);
+    @include transition(transform 300ms ease-out);
+  }
+
+  /* 
+  this class applies to all resolutions but only works from md onwards 
+  because that is when the position property changed to fixed.
+  */
+  @include root-has-class("visible") {
+    top: 0;
+    transform: translate(0);
+  }
+
+  .container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .block {
+      flex: 1 1;
+    }
+
+    .logo-block {
+      display: flex;
+      justify-content: flex-end;
+
+      @include respond-to("md") {
+        justify-content: flex-start;
+      }
+    }
+
+    .links-block,
+    .actions-block {
+      display: none;
+
+      @include respond-to("md") {
+        display: block;
+      }
+    }
+
+    .links-block {
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        height: 100%;
+        @include transition(gap 300ms linear);
+
+        @include respond-to("lg") {
+          gap: 3rem;
+        }
+
+        @include root-has-class("light") {
+          .navbar-link::after {
+            background-color: $dark;
+          }
+        }
+
+        @include root-has-class("dark") {
+          .navbar-link::after {
+            background-color: $light;
+          }
+        }
+
+        .navbar-link {
+          color: inherit;
+          line-height: 1;
+          display: inline-block;
+          text-align: center;
+          padding: 10px 4px;
+          box-sizing: border-box;
+          cursor: pointer;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            top: 100%;
+            left: 0;
+            transition: transform 200ms ease-in-out,
+              background-color 300ms ease-out;
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: transparent;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+
+          @include root-has-class("active") {
+            &::after {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
+      }
+    }
+
+    .actions-block {
+      .actions {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        height: 100%;
+      }
+    }
+  }
+}
