@@ -11,10 +11,10 @@ export default function SiteContextProvider({ children }) {
 
   useEffect(() => {
     const storagedTheme = localStorage.getItem("theme");
-    const theme = storagedTheme || "DARK";
 
-    setTheme(theme);
-    localStorage.setItem("theme", theme);
+    if (storagedTheme) {
+      setTheme(storagedTheme);
+    }
   }, []);
 
   useEffect(() => {
