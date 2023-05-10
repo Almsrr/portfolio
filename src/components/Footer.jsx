@@ -1,4 +1,5 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
 
@@ -6,6 +7,24 @@ import { useSiteContext } from "../hooks";
 
 export default function Footer() {
   const { isDarkThemeActive } = useSiteContext();
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPerson {
+        nodes {
+          fullName
+        }
+      }
+      allContentfulMetadata {
+        nodes {
+          source
+        }
+      }
+    }
+  `);
+
+  const authorFullName = data.allContentfulPerson.nodes[0].fullName;
+  const authorFirstName = authorFullName.split(" ")[0];
+  const siteSourceCode = data.allContentfulMetadata.nodes[0].source;
 
   const authorLinkClassName = classNames("author", {
     "light": !isDarkThemeActive,
@@ -19,14 +38,14 @@ export default function Footer() {
           <p>&copy;2023</p>
           <a
             className={authorLinkClassName}
-            href="https://github.com/almsrr/portfolio"
+            href={siteSourceCode}
             target="_blank"
             rel="noreferrer"
           >
             <i className="code bx bx-code-curly" />
             with
             <i className="heart bx bxs-heart" />
-            by Alam
+            by {authorFirstName}
           </a>
         </div>
       </div>

@@ -3,10 +3,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "Alam Sierra | Front-End Engineer",
+    title: "",
     siteUrl: "https://www.alamsierra.com",
-    description:
-      "Portfolio website created by Alam Sierra, a passionate Dominican Front-End React Developer",
+    description: "",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -14,5 +13,12 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: "m2c3h995rx1f",
+        accessToken: "hfqh_f5fnEImcTNOUgngrpXHN3xIfdvmWTQp5BGbJHE",
+      },
+    },
   ],
 };
