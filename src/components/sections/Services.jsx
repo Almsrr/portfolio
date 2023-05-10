@@ -19,6 +19,7 @@ export default function ServicesSection() {
           title
           icon {
             gatsbyImageData(width: 60)
+            filename
           }
         }
       }
@@ -45,7 +46,7 @@ export default function ServicesSection() {
                   <div>
                     <GatsbyImage
                       image={getImage(service.icon)}
-                      alt={service.title}
+                      alt={service.icon.filename}
                     />
                   </div>
                   <h3>{service.title}</h3>
