@@ -1,13 +1,21 @@
 import React from "react";
 import classNames from "classnames";
-// import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default function Picture({ src, roundedBorder, className }) {
+export default function Picture({ imageData, roundedBorder, className }) {
   let pictureClassNames = classNames("picture", className);
 
   if (roundedBorder) {
     pictureClassNames += ` rounded-${roundedBorder}`;
   }
 
-  return <div className={pictureClassNames} />;
+  return (
+    <GatsbyImage
+      image={getImage(imageData)}
+      alt={imageData.filename}
+      className={pictureClassNames}
+      objectFit="cover"
+      objectPosition="center"
+    />
+  );
 }
