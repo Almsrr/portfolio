@@ -1,4 +1,6 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+
 import classNames from "classnames";
 
 import { useSiteContext } from "../../hooks";
@@ -7,6 +9,19 @@ import Card from "../Card";
 
 export default function ContactSection() {
   const { isDarkThemeActive } = useSiteContext();
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPerson {
+        nodes {
+          email
+          phone
+          address
+        }
+      }
+    }
+  `);
+
+  const contactInfo = data.allContentfulPerson.nodes[0];
 
   const contactSectionClassName = classNames("contact", {
     "light": !isDarkThemeActive,
@@ -28,19 +43,19 @@ export default function ContactSection() {
           <div className="contact-item address">
             <Card className="item-card">
               <i className="map fa-regular fa-map" />
-              <p>Address</p>
+              <p>{contactInfo.address}</p>
             </Card>
           </div>
           <div className="contact-item phone">
             <Card className="item-card">
               <i className="phone bx bx-phone" />
-              <p>Phone</p>
+              <p>{contactInfo.phone}</p>
             </Card>
           </div>
           <div className="contact-item email">
             <Card className="item-card">
               <i className="email fa-regular fa-envelope" />
-              <p>Email</p>
+              <p>{contactInfo.email}</p>
             </Card>
           </div>
         </div>
