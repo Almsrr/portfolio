@@ -32,7 +32,7 @@ $stack-card-bg-dark: #131519;
           background-color: $stack-card-bg-light;
 
           .body {
-            .description {
+            .hover-card__description {
               .line {
                 background-color: $stack-card-bg-dark;
               }
@@ -45,7 +45,7 @@ $stack-card-bg-dark: #131519;
           background-color: $stack-card-bg-dark;
 
           .body {
-            .description {
+            .hover-card__description {
               .line {
                 background-color: $stack-card-bg-light;
               }

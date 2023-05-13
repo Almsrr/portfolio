@@ -1,12 +1,15 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: "Alam Sierra | Front-End Engineer",
+    title: "",
     siteUrl: "https://www.alamsierra.com",
-    description:
-      "Portfolio website created by Alam Sierra, a passionate Dominican Front-End React Developer",
+    description: "",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -14,5 +17,12 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_TOKEN,
+      },
+    },
   ],
 };

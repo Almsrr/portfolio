@@ -1,16 +1,53 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from "gatsby";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import classNames from "classnames";
 
 import { useSiteContext } from "../../hooks";
 
 export default function HomeSection() {
   const { isDarkThemeActive } = useSiteContext();
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPerson {
+        nodes {
+          discordChannelLink
+          fullName
+          githubProfileLink
+          instagramProfileLink
+          linkedInProfileLink
+          specialization
+          presentationPicture {
+            gatsbyImageData(width: 500)
+            filename
+          }
+          bio {
+            raw
+          }
+        }
+      }
+    }
+  `);
+
+  const person = data.allContentfulPerson.nodes[0];
+  const {
+    fullName,
+    specialization,
+    bio,
+    linkedInProfileLink,
+    githubProfileLink,
+    instagramProfileLink,
+    discordChannelLink,
+    presentationPicture,
+  } = person;
 
   const linkClassName = classNames("socials__links", {
     "light": !isDarkThemeActive,
     "dark": isDarkThemeActive,
   });
+
   return (
     <section className="home" id="home">
       <div className="home__container">
@@ -18,21 +55,15 @@ export default function HomeSection() {
           <div className="hero__bio">
             <h1>
               Hey, <span>I'm</span>
-              <span>Alam Sierra</span>
-              Front-End Engineer
+              <span>{fullName}</span>
+              {specialization}
             </h1>
-            <p>
-              Making the world a better place with quality software. Dominican
-              Republic native looking for new challenges and a team to
-              accomplish them. The type of person you can party with until you
-              forget your name, and then have the deepest programming
-              conversation of your life the following day.
-            </p>
+            {renderRichText(bio)}
             <div className="socials">
               <h3>Find me on</h3>
               <div className={linkClassName}>
                 <a
-                  href="https://www.linkedin.com/in/alam-sierra-6b49ab219/"
+                  href={linkedInProfileLink}
                   target="_blank"
                   title="LinkedIn"
                   rel="noreferrer"
@@ -40,7 +71,7 @@ export default function HomeSection() {
                   <i className="bx bxl-linkedin" />
                 </a>
                 <a
-                  href="https://github.com/Almsrr"
+                  href={githubProfileLink}
                   target="_blank"
                   title="Github"
                   rel="noreferrer"
@@ -48,7 +79,7 @@ export default function HomeSection() {
                   <i className="bx bxl-github" />
                 </a>
                 <a
-                  href="https://discord.com/"
+                  href={discordChannelLink}
                   target="_blank"
                   title="Discord"
                   rel="noreferrer"
@@ -56,7 +87,7 @@ export default function HomeSection() {
                   <i className="bx bxl-discord-alt" />
                 </a>
                 <a
-                  href="https://www.instagram.com/alamsierrad/"
+                  href={instagramProfileLink}
                   target="_blank"
                   title="Instagram"
                   rel="noreferrer"
@@ -67,12 +98,9 @@ export default function HomeSection() {
             </div>
           </div>
           <div className="hero__img-container">
-            <StaticImage
-              src="../../images/astronaut.png"
-              alt="astronaut"
-              width={500}
-              height={500}
-              placeholder="blurred"
+            <GatsbyImage
+              image={getImage(presentationPicture)}
+              alt={presentationPicture.filename}
             />
           </div>
         </div>

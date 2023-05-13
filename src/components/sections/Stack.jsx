@@ -1,4 +1,6 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+
 import classNames from "classnames";
 
 import { useSiteContext } from "../../hooks";
@@ -7,6 +9,25 @@ import HoverCard from "../HoverCard";
 
 export default function StackSection() {
   const { isDarkThemeActive } = useSiteContext();
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulTechnology {
+        nodes {
+          id
+          title
+          description {
+            description
+          }
+          image {
+            filename
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+  `);
 
   const stackClassName = classNames("stack__items", {
     "light": !isDarkThemeActive,
@@ -21,54 +42,20 @@ export default function StackSection() {
           <p>Toolbelt</p>
         </Heading>
         <ul className={stackClassName}>
-          <li>
-            <HoverCard
-              title="Title"
-              imgSrc=""
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-              className="stack-card"
-            />
-          </li>
-          <li>
-            <HoverCard
-              title="Title"
-              imgSrc=""
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-              className="stack-card"
-            />
-          </li>
-          <li>
-            <HoverCard
-              title="Title"
-              imgSrc=""
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-              className="stack-card"
-            />
-          </li>
-          <li>
-            <HoverCard
-              title="Title"
-              imgSrc=""
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-              className="stack-card"
-            />
-          </li>
-          <li>
-            <HoverCard
-              title="Title"
-              imgSrc=""
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-              className="stack-card"
-            />
-          </li>
-          <li>
-            <HoverCard
-              title="Title"
-              imgSrc=""
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit."
-              className="stack-card"
-            />
-          </li>
+          {data.allContentfulTechnology.nodes.map(
+            ({ id, title, image, description }) => {
+              return (
+                <li key={id}>
+                  <HoverCard
+                    title={title}
+                    image={image}
+                    description={description.description}
+                    className="stack-card"
+                  />
+                </li>
+              );
+            }
+          )}
         </ul>
       </div>
     </section>

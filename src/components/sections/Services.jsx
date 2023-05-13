@@ -1,4 +1,7 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import classNames from "classnames";
 
 import Card from "../Card";
@@ -7,6 +10,21 @@ import Heading from "./Heading";
 
 export default function ServicesSection() {
   const { isDarkThemeActive } = useSiteContext();
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulService {
+        nodes {
+          id
+          description
+          title
+          icon {
+            gatsbyImageData(width: 60)
+            filename
+          }
+        }
+      }
+    }
+  `);
 
   const servicesListClassName = classNames("services__list", {
     "light": !isDarkThemeActive,
@@ -21,72 +39,22 @@ export default function ServicesSection() {
           <p>Skill-Set</p>
         </Heading>
         <ul className={servicesListClassName}>
-          <li data-aos="zoom-in-up">
-            <Card className="service-card">
-              <p>icon</p>
-              <h3>Title</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
-                obcaecati ad?
-              </p>
-            </Card>
-          </li>
-          <li data-aos="zoom-in-up">
-            <Card className="service-card">
-              <p>icon</p>
-              <h3>Title</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
-                obcaecati ad?
-              </p>
-            </Card>
-          </li>
-          <li data-aos="zoom-in-up">
-            <Card className="service-card">
-              <p>icon</p>
-              <h3>Title</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
-                obcaecati ad?
-              </p>
-            </Card>
-          </li>
-          <li data-aos="zoom-in-up">
-            <Card className="service-card">
-              <p>icon</p>
-              <h3>Title</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
-                obcaecati ad?
-              </p>
-            </Card>
-          </li>
-          <li data-aos="zoom-in-up">
-            <Card className="service-card">
-              <p>icon</p>
-              <h3>Title</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
-                obcaecati ad?
-              </p>
-            </Card>
-          </li>
-          <li data-aos="zoom-in-up">
-            <Card className="service-card">
-              <p>icon</p>
-              <h3>Title</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Possimus animi deleniti nobis totam culpa. Sed et corrupti nulla
-                obcaecati ad?
-              </p>
-            </Card>
-          </li>
+          {data.allContentfulService.nodes.map((service) => {
+            return (
+              <li data-aos="zoom-in-up" key={service.id}>
+                <Card className="service-card">
+                  <div>
+                    <GatsbyImage
+                      image={getImage(service.icon)}
+                      alt={service.icon.filename}
+                    />
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </Card>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

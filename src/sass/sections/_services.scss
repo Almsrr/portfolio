@@ -15,6 +15,7 @@ $service-card-bg-dark: #131519;
       margin: 0;
       display: grid;
       gap: 1rem;
+      grid-auto-rows: minmax(250px, max-content);
 
       @include respond-to("sm") {
         grid-template-columns: repeat(2, 1fr);
@@ -41,9 +42,11 @@ $service-card-bg-dark: #131519;
       .service-card {
         display: flex;
         padding-top: 60px;
+        height: 100%;
 
         h3 {
           margin-top: 1rem;
+          margin-bottom: 0.75rem;
           text-transform: capitalize;
         }
 
