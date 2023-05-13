@@ -38,3 +38,21 @@
     transform: translateY(0);
   }
 }
+
+@keyframes scale-vertical {
+  0% {
+    transform: scale(0.7) rotate(-35deg);
+  }
+  // 25% {
+  //   transform: scale(0.5);
+  // }
+  50% {
+    transform: scale(1) rotate(-35deg);
+  }
+  // 75% {
+  //   transform: scale(0.5);
+  // }
+  100% {
+    transform: scale(0.7) rotate(-35deg);
+  }
+}
