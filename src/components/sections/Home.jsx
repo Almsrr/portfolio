@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import classNames from "classnames";
 
@@ -12,20 +13,18 @@ export default function HomeSection() {
     query {
       allContentfulPerson {
         nodes {
+          discordChannelLink
           fullName
           githubProfileLink
           instagramProfileLink
           linkedInProfileLink
           specialization
-          discordChannelLink
+          presentationPicture {
+            gatsbyImageData(width: 500)
+            filename
+          }
           bio {
             raw
-          }
-          presentationPicture {
-            file {
-              url
-              fileName
-            }
           }
         }
       }
@@ -99,11 +98,9 @@ export default function HomeSection() {
             </div>
           </div>
           <div className="hero__img-container">
-            <img
-              src={presentationPicture.file.url}
-              alt={presentationPicture.file.fileName}
-              width={500}
-              height={500}
+            <GatsbyImage
+              image={getImage(presentationPicture)}
+              alt={presentationPicture.filename}
             />
           </div>
         </div>
