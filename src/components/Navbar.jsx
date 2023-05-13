@@ -104,7 +104,7 @@ export default function Navbar() {
               width={60}
               height={60}
               layout="fixed"
-              placeholder="dominantColor"
+              placeholder="none"
             />
           </NavbarLink>
         </div>

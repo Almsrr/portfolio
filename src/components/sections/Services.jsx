@@ -18,7 +18,7 @@ export default function ServicesSection() {
           description
           title
           icon {
-            gatsbyImageData(width: 60)
+            gatsbyImageData(width: 60, layout: FIXED, placeholder: NONE)
             filename
           }
         }

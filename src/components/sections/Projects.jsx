@@ -22,7 +22,7 @@ export default function ProjectsSection() {
           externalReference
           roundedBorderSide
           image {
-            gatsbyImageData
+            gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
             filename
           }
         }
