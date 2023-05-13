@@ -12,7 +12,7 @@ export default function ProjectsSection() {
   const { isDarkThemeActive } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProject {
+      allContentfulProject(sort: { createdAt: ASC }) {
         nodes {
           id
           title

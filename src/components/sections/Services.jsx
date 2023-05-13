@@ -12,7 +12,7 @@ export default function ServicesSection() {
   const { isDarkThemeActive } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
-      allContentfulService {
+      allContentfulService(sort: { createdAt: ASC }) {
         nodes {
           id
           description
