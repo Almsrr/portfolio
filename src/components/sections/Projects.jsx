@@ -12,7 +12,7 @@ export default function ProjectsSection() {
   const { isDarkThemeActive } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProject {
+      allContentfulProject(sort: { createdAt: ASC }) {
         nodes {
           id
           title
@@ -22,7 +22,7 @@ export default function ProjectsSection() {
           externalReference
           roundedBorderSide
           image {
-            gatsbyImageData
+            gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
             filename
           }
         }
@@ -59,7 +59,7 @@ export default function ProjectsSection() {
             return (
               <article key={p.id} className={projectCardClassName}>
                 <Picture
-                  className="image"
+                  className="img"
                   imageData={p.image}
                   roundedBorder={p.roundedBorderSide}
                 />

@@ -53,6 +53,23 @@ $stack-card-bg-dark: #131519;
           }
         }
       }
+
+      li:first-child {
+        position: relative;
+
+        &::before {
+          content: "My turn!";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: -25px;
+          font-size: 1.25rem;
+          font-weight: bold;
+          color: inherit;
+          @include transition(transform 200ms linear);
+          animation: 4s linear 0ms infinite scale-vertical;
+        }
+      }
     }
   }
 }

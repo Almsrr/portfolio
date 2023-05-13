@@ -20,7 +20,7 @@ export default function HomeSection() {
           linkedInProfileLink
           specialization
           presentationPicture {
-            gatsbyImageData(width: 500)
+            gatsbyImageData(width: 500, layout: CONSTRAINED, placeholder: NONE)
             filename
           }
           bio {

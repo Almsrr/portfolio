@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+@use "../base/" as *;
 
 $link-bg-light: #f7eeed;
 $link-bg-dark: #131519;
@@ -26,6 +27,8 @@ $link-bg-dark: #131519;
       }
 
       .hero__bio {
+        animation: fade-down 600ms ease-in-out;
+
         h1 {
           font-size: 3rem;
           font-weight: 400;
@@ -107,6 +110,7 @@ $link-bg-dark: #131519;
 
       .hero__img-container {
         justify-self: center;
+        animation: fade-up 500ms ease-in-out;
       }
     }
   }

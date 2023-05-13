@@ -12,13 +12,13 @@ export default function ServicesSection() {
   const { isDarkThemeActive } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
-      allContentfulService {
+      allContentfulService(sort: { createdAt: ASC }) {
         nodes {
           id
           description
           title
           icon {
-            gatsbyImageData(width: 60)
+            gatsbyImageData(width: 60, layout: FIXED, placeholder: NONE)
             filename
           }
         }

@@ -11,7 +11,7 @@ export default function StackSection() {
   const { isDarkThemeActive } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
-      allContentfulTechnology {
+      allContentfulTechnology(sort: { createdAt: ASC }) {
         nodes {
           id
           title
