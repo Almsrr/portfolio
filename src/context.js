@@ -6,7 +6,7 @@ export const SiteContext = React.createContext({
   isDarkThemeActive: true,
 });
 
-const storagedTheme = localStorage.getItem("theme");
+const storagedTheme = localStorage ? localStorage.getItem("theme") : "";
 
 export default function SiteContextProvider({ children }) {
   const [theme, setTheme] = useState(storagedTheme);
