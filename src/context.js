@@ -7,8 +7,14 @@ export const SiteContext = React.createContext({
 });
 
 export default function SiteContextProvider({ children }) {
-  const storagedTheme = localStorage.getItem("theme") || "DARK";
-  const [theme, setTheme] = useState(storagedTheme);
+  const [theme, setTheme] = useState("DARK");
+
+  useEffect(() => {
+    const storagedTheme = localStorage.getItem("theme");
+    if (storagedTheme) {
+      setTheme(storagedTheme);
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
