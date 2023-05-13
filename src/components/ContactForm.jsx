@@ -16,7 +16,12 @@ export default function ContactForm({ isDarkTheme, onSubmit }) {
   });
 
   return (
-    <form className={formClassName} method="POST" name="contact" netlify>
+    <form
+      className={formClassName}
+      method="POST"
+      name="contact"
+      data-netlify="true"
+    >
       <div className="input-container">
         <div className="control name-control">
           <label htmlFor="name">Name</label>
