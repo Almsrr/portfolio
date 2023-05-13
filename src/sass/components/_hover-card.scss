@@ -1,10 +1,9 @@
 @use "../abstracts/" as *;
-@use "../components/card";
 
 $card-hover-bg-color: #3e445b;
 $card-width: 100%;
 $card-height: 100%;
-$card-body-p-top: calc(24px + card.$card-padding);
+$card-body-p-top: 30px;
 
 .hover-card {
   position: relative;
@@ -23,9 +22,11 @@ $card-body-p-top: calc(24px + card.$card-padding);
     min-height: 100%;
     @include transition(padding 250ms ease-in-out);
 
-    .img {
-      filter: grayscale(0.8);
-      @include transition(filter 250ms ease-in-out);
+    .hover-card__img {
+      width: 80px;
+      height: 80px;
+      filter: grayscale(1);
+      @include transition(all 250ms ease-in-out);
     }
 
     h3 {
@@ -36,7 +37,7 @@ $card-body-p-top: calc(24px + card.$card-padding);
       text-align: center;
     }
 
-    .description {
+    .hover-card__description {
       height: 64px;
       @include scale(0);
       @include transition(transform 250ms ease-in-out);
@@ -46,6 +47,7 @@ $card-body-p-top: calc(24px + card.$card-padding);
         height: 1px;
         margin: 0 auto 0.75rem;
         display: block;
+        @include transition(width 250ms linear);
       }
 
       p {
@@ -63,11 +65,13 @@ $card-body-p-top: calc(24px + card.$card-padding);
       padding-top: 0;
       cursor: pointer;
 
-      .img {
-        filter: none;
+      .hover-card__img {
+        width: 40px;
+        height: 40px;
+        filter: grayscale(0);
       }
 
-      .description {
+      .hover-card__description {
         @include scale(1);
 
         .line {
