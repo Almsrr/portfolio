@@ -59,7 +59,7 @@ export default function ProjectsSection() {
             return (
               <article key={p.id} className={projectCardClassName}>
                 <Picture
-                  className="image"
+                  className="img"
                   imageData={p.image}
                   roundedBorder={p.roundedBorderSide}
                 />
