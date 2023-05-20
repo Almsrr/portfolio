@@ -10,7 +10,7 @@
   span,
   h3 {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 900;
     display: inline-block;
     position: relative;
     color: $primary-color;
@@ -19,7 +19,7 @@
     &::after {
       content: "";
       width: 33%;
-      height: 5px;
+      height: 6px;
       position: absolute;
       left: 0;
       top: 120%;
