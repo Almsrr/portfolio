@@ -10,7 +10,7 @@ export default function MobileMenu({
 }) {
   const navigateTo = (path) => {
     onToggleMenu();
-    navigate(path);
+    navigate(`/${path}`);
   };
 
   const themeBtnLabel = `switch to ${!isDarkActive ? "dark" : "light"}`;

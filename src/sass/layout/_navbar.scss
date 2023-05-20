@@ -12,8 +12,7 @@
     z-index: 99;
     // the same the height of the element
     transform: translate(0, -80px);
-    @include transition(background-color 300ms ease-out);
-    @include transition(transform 300ms ease-out);
+    transition: background-color 300ms ease-out, transform 300ms ease-out;
   }
 
   /* 
