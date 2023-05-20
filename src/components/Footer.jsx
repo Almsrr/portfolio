@@ -42,13 +42,13 @@ export default function Footer() {
             <span className="spec">{authorSpecialization}</span>
           </p>
           <p className={sourceLinkClassName}>
-            <span className="copy">&copy;2023.</span>
             <a href={siteSourceCode} target="_blank" rel="noreferrer">
               <i className="code bx bx-code-curly" />
               with
               <i className="heart bx bxs-heart" />
-              by {authorFirstName}
+              by {authorFirstName}.
             </a>
+            <span className="copy">&copy;2023</span>
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 .site-footer {
   padding-top: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
 
   .container {
     @include container;
@@ -37,7 +37,7 @@
 
       .source {
         .copy {
-          margin-right: 2px;
+          margin-left: 3px;
         }
         a {
           text-decoration: none;
