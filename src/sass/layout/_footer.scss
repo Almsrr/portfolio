@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .site-footer {
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 70px;
 
   .container {
@@ -46,7 +46,7 @@
           display: inline-flex;
           border-bottom-width: 1px;
           border-bottom-style: solid;
-          @include transition(color 100ms linear);
+          transition: color 200ms linear, border-bottom-color 200ms linear;
 
           &:hover {
             color: $primary-color;
