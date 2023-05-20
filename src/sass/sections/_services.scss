@@ -22,6 +22,8 @@ $service-card-bg-dark: #131519;
       }
       @include respond-to("md") {
         grid-template-columns: repeat(3, 1fr);
+      }
+      @include respond-to("lg") {
         gap: 2rem;
       }
       @include respond-to("xl") {
