@@ -1,9 +1,6 @@
 @use "../abstracts" as *;
 @use "../base/" as *;
 
-$link-bg-light: #f7eeed;
-$link-bg-dark: #131519;
-
 .home {
   @include respond-to("md") {
     // the height of the navbar
@@ -44,9 +41,10 @@ $link-bg-dark: #131519;
           }
         }
 
-        p {
+        .bio {
           line-height: 1.4;
           font-size: 1.25rem;
+          margin-bottom: 80px;
         }
 
         @include respond-to("md") {
@@ -58,52 +56,8 @@ $link-bg-dark: #131519;
             }
           }
 
-          p {
+          .bio {
             line-height: 1.5;
-          }
-        }
-
-        .socials {
-          margin-top: 80px;
-
-          h3 {
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-bottom: 1.75rem;
-            font-size: 1.25rem;
-          }
-
-          .socials__links {
-            display: flex;
-            gap: 1rem;
-
-            a {
-              color: inherit;
-              text-decoration: none;
-              border-radius: $radius-md;
-              display: flex;
-              width: 60px;
-              height: 60px;
-              align-items: center;
-              justify-content: center;
-              font-size: 28px;
-              transition: background-color 300ms ease-out, color 200ms linear;
-
-              &:hover {
-                color: $primary-color;
-              }
-            }
-
-            @include root-has-class("light") {
-              a {
-                background-color: $link-bg-light;
-              }
-            }
-            @include root-has-class("dark") {
-              a {
-                background-color: $link-bg-dark;
-              }
-            }
           }
         }
       }

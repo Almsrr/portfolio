@@ -2,22 +2,16 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { BLOCKS } from "@contentful/rich-text-types";
 
-import classNames from "classnames";
-
-import { useSiteContext } from "../../hooks";
+import Socials from "../Socials";
 
 export default function HomeSection() {
-  const { isDarkThemeActive } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
       allContentfulPerson {
         nodes {
-          discordChannelLink
           fullName
-          githubProfileLink
-          instagramProfileLink
-          linkedInProfileLink
           specialization
           presentationPicture {
             gatsbyImageData(width: 500, layout: CONSTRAINED, placeholder: NONE)
@@ -32,21 +26,13 @@ export default function HomeSection() {
   `);
 
   const person = data.allContentfulPerson.nodes[0];
-  const {
-    fullName,
-    specialization,
-    bio,
-    linkedInProfileLink,
-    githubProfileLink,
-    instagramProfileLink,
-    discordChannelLink,
-    presentationPicture,
-  } = person;
+  const { fullName, specialization, bio, presentationPicture } = person;
 
-  const linkClassName = classNames("socials__links", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
-  });
+  const renderRichConfig = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <p className="bio">{children}</p>,
+    },
+  };
 
   return (
     <section className="home" id="home">
@@ -58,44 +44,8 @@ export default function HomeSection() {
               <span>{fullName}</span>
               {specialization}
             </h1>
-            {renderRichText(bio)}
-            <div className="socials">
-              <h3>Find me on</h3>
-              <div className={linkClassName}>
-                <a
-                  href={linkedInProfileLink}
-                  target="_blank"
-                  title="LinkedIn"
-                  rel="noreferrer"
-                >
-                  <i className="bx bxl-linkedin" />
-                </a>
-                <a
-                  href={githubProfileLink}
-                  target="_blank"
-                  title="Github"
-                  rel="noreferrer"
-                >
-                  <i className="bx bxl-github" />
-                </a>
-                <a
-                  href={discordChannelLink}
-                  target="_blank"
-                  title="Discord"
-                  rel="noreferrer"
-                >
-                  <i className="bx bxl-discord-alt" />
-                </a>
-                <a
-                  href={instagramProfileLink}
-                  target="_blank"
-                  title="Instagram"
-                  rel="noreferrer"
-                >
-                  <i className="bx bxl-instagram" />
-                </a>
-              </div>
-            </div>
+            {renderRichText(bio, renderRichConfig)}
+            <Socials />
           </div>
           <div className="hero__img-container">
             <GatsbyImage

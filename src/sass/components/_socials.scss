@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+$social-link-bg-light: #f7eeed;
+$social-link-bg-dark: #131519;
+
+.socials {
+  h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
+    font-size: 1.25rem;
+  }
+
+  .socials__links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-radius: $radius-md;
+      display: flex;
+      width: 60px;
+      height: 60px;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      transition: background-color 300ms ease-out, color 200ms linear;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    @include root-has-class("light") {
+      a {
+        background-color: $social-link-bg-light;
+      }
+    }
+    @include root-has-class("dark") {
+      a {
+        background-color: $social-link-bg-dark;
+      }
+    }
+  }
+}
