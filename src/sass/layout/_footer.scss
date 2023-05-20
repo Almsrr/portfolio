@@ -1,55 +1,79 @@
 @use "../abstracts" as *;
 
 .site-footer {
-  height: 50px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 80px;
 
   .container {
     @include container;
-    height: 100%;
 
     & > div {
-      height: 100%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+      gap: 2rem;
 
-      p,
-      a {
-        font-weight: 500;
-        font-size: 1rem;
+      @include respond-to("lg") {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
       }
 
       .author {
-        text-decoration: none;
-        display: inline-flex;
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        @include transition(color 100ms linear);
-
-        &:hover {
-          color: $primary-color;
-          border-bottom-color: transparent !important;
+        span {
+          display: block;
         }
+        .name {
+          font-weight: bold;
+          font-size: 2.5rem;
+        }
+        .spec {
+          color: $primary-color;
+          font-size: 1.5rem;
+        }
+      }
 
+      .source {
+        .copy {
+          margin-right: 2px;
+        }
+        a {
+          text-decoration: none;
+          display: inline-flex;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          @include transition(color 100ms linear);
+
+          &:hover {
+            color: $primary-color;
+            border-bottom-color: transparent !important;
+          }
+
+          i {
+            margin-top: -2px;
+            font-size: 19px;
+            padding-left: 3px;
+            padding-right: 3px;
+            padding-top: 2px;
+          }
+
+          .code {
+            padding-left: 0;
+            font-size: 18px;
+          }
+        }
         @include root-has-class("light") {
-          border-bottom-color: $dark;
+          a {
+            order-bottom-color: $dark;
+          }
         }
 
         @include root-has-class("dark") {
-          border-bottom-color: $light;
-        }
-
-        i {
-          margin-top: -2px;
-          font-size: 19px;
-          padding-left: 3px;
-          padding-right: 3px;
-          padding-top: 2px;
-        }
-
-        .code {
-          font-size: 18px;
+          a {
+            border-bottom-color: $light;
+          }
         }
       }
     }
