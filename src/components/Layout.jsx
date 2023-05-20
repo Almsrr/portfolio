@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
 
 import Navbar from "./Navbar";
@@ -8,13 +8,11 @@ import BurgerButton from "./BurgerButton";
 import { useSiteContext } from "../hooks";
 
 export default function Layout({ children }) {
-  const [showMenu, setShowMenu] = useState(false);
-  const { isDarkThemeActive } = useSiteContext();
-
-  const toggleMenu = () => setShowMenu((state) => !state);
+  const { isDarkThemeActive, showMobileMenu, toggleMobileMenu, toggleTheme } =
+    useSiteContext();
 
   const layoutClasses = classNames("site-layout", {
-    "menu-open": showMenu,
+    "menu-open": showMobileMenu,
     "light-theme": !isDarkThemeActive,
     "dark-theme": isDarkThemeActive,
   });
@@ -22,13 +20,21 @@ export default function Layout({ children }) {
   return (
     <div className={layoutClasses}>
       <div className="burger-btn-container">
-        <BurgerButton menuIsVisible={showMenu} onClick={toggleMenu} />
+        <BurgerButton
+          menuIsVisible={showMobileMenu}
+          onClick={toggleMobileMenu}
+        />
       </div>
       <div className="mobile-menu-container">
-        <MobileMenu onToggleMenu={toggleMenu} />
+        <MobileMenu
+          isDarkActive={isDarkThemeActive}
+          isVisible={showMobileMenu}
+          onToggleMenu={toggleMobileMenu}
+          onToggleTheme={toggleTheme}
+        />
       </div>
       <div className="content-container">
-        <Navbar menuIsVisible={showMenu} />
+        <Navbar />
         <main>{children}</main>
         <Footer />
       </div>
