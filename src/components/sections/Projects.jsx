@@ -66,7 +66,7 @@ export default function ProjectsSection() {
                 />
                 <div className="description">
                   <h3>{p.title}</h3>
-                  <p className="date">{p.date}</p>
+                  {/* <p className="date">{p.date}</p> */}
                   {renderRichText(p.description)}
                   <a
                     href={p.externalReference}
