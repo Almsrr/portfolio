@@ -2,7 +2,8 @@
 
 $contact-form-font-size: 1rem;
 $contact-form-input-padding: 18px;
-$contact-form-padding: 48px;
+$contact-form-sm-padding: 20px;
+$contact-form-lg-padding: 48px;
 $contact-form-error-color: red;
 $contact-form-bg-light: #f7eeed;
 $contact-form-bg-dark: #131519;
@@ -11,13 +12,20 @@ $contact-form-bg-dark: #131519;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding-top: $contact-form-padding;
-  padding-left: $contact-form-padding;
-  padding-right: $contact-form-padding;
-  padding-bottom: calc(2 * $contact-form-padding);
+  padding-top: $contact-form-sm-padding;
+  padding-left: $contact-form-sm-padding;
+  padding-right: $contact-form-sm-padding;
+  padding-bottom: calc(2 * $contact-form-sm-padding);
   @include border-radius($radius-md);
   @include transition(background-color 300ms ease-out);
   // @include box-shadow();
+
+  @include respond-to("lg") {
+    padding-top: $contact-form-lg-padding;
+    padding-left: $contact-form-lg-padding;
+    padding-right: $contact-form-lg-padding;
+    padding-bottom: calc(2 * $contact-form-lg-padding);
+  }
 
   @include root-has-class("light") {
     background-color: $contact-form-bg-light;

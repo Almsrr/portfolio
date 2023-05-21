@@ -82,7 +82,7 @@ export default function Navbar() {
 
   const handleBtnClick = (href) => {
     // setActiveLink(href);
-    navigate(href);
+    navigate(`/${href}`);
   };
 
   const isLinkActive = (href) => activeLink === href;

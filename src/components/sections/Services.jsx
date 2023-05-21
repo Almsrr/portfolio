@@ -36,7 +36,7 @@ export default function ServicesSection() {
       <div className="services__container">
         <Heading>
           <h2>Services</h2>
-          <p>Skill-Set</p>
+          <h3>Skill-Set</h3>
         </Heading>
         <ul className={servicesListClassName}>
           {data.allContentfulService.nodes.map((service) => {

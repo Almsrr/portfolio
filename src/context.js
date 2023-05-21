@@ -3,11 +3,14 @@ import React, { useState, useEffect } from "react";
 export const SiteContext = React.createContext({
   theme: "",
   toggleTheme: () => {},
-  isDarkThemeActive: true,
+  isDarkThemeActive: false,
+  showMobileMenu: false,
+  toggleMobileMenu: () => {},
 });
 
 export default function SiteContextProvider({ children }) {
   const [theme, setTheme] = useState("DARK");
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   useEffect(() => {
     const storagedTheme = localStorage.getItem("theme");
@@ -27,10 +30,20 @@ export default function SiteContextProvider({ children }) {
     });
   };
 
+  const toggleMobileMenu = () => setShowMobileMenu((state) => !state);
+
   const isDarkThemeActive = theme === "DARK";
 
   return (
-    <SiteContext.Provider value={{ theme, toggleTheme, isDarkThemeActive }}>
+    <SiteContext.Provider
+      value={{
+        theme,
+        toggleTheme,
+        isDarkThemeActive,
+        showMobileMenu,
+        toggleMobileMenu,
+      }}
+    >
       {children}
     </SiteContext.Provider>
   );

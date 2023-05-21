@@ -2,24 +2,29 @@ import { navigate } from "gatsby";
 import React from "react";
 import classNames from "classnames";
 
-import { useSiteContext } from "../hooks";
-
-export default function MobileMenu({ onToggleMenu }) {
-  const { theme, toggleTheme, isDarkThemeActive } = useSiteContext();
-
+export default function MobileMenu({
+  isDarkActive,
+  onToggleTheme,
+  isVisible,
+  onToggleMenu,
+}) {
   const navigateTo = (path) => {
     onToggleMenu();
-    navigate(path);
+    navigate(`/${path}`);
   };
 
-  const themeBtnLabel = `switch to ${theme === "LIGHT" ? "dark" : "light"}`;
+  const themeBtnLabel = `switch to ${!isDarkActive ? "dark" : "light"}`;
   const iconClassName = classNames("bx", {
-    "bx-sun": isDarkThemeActive,
-    "bx-moon": !isDarkThemeActive,
+    "bx-sun": isDarkActive,
+    "bx-moon": !isDarkActive,
+  });
+
+  const menuClassName = classNames("mobile-menu", {
+    "visible": isVisible,
   });
 
   return (
-    <div className="mobile-menu">
+    <div className={menuClassName}>
       <h2>Menu</h2>
       <div className="buttons">
         <button onClick={navigateTo.bind(null, "#home")} type="button">
@@ -39,7 +44,7 @@ export default function MobileMenu({ onToggleMenu }) {
         </button>
       </div>
       <div className="config">
-        <button onClick={toggleTheme} type="button" className="theme-btn">
+        <button onClick={onToggleTheme} type="button" className="theme-btn">
           <span>{themeBtnLabel}</span> <i className={iconClassName} />
         </button>
       </div>

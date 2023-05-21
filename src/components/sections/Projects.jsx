@@ -44,7 +44,7 @@ export default function ProjectsSection() {
       <div className="projects__container">
         <Heading>
           <h2>Projects</h2>
-          <p>Award winning work</p>
+          <h3>Award winning work</h3>
         </Heading>
         <div className={projectsListClassName}>
           {data.allContentfulProject.nodes.map((p, i) => {
