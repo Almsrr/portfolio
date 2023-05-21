@@ -33,9 +33,30 @@
           color: $primary-color;
           font-size: 1.5rem;
         }
+        @include root-has-class("dark") {
+          color: $light;
+        }
       }
 
       .source {
+        @include root-has-class("light") {
+          a {
+            order-bottom-color: $dark;
+          }
+          .copy,
+          a {
+            color: inherit;
+          }
+        }
+        @include root-has-class("dark") {
+          a {
+            border-bottom-color: $light;
+          }
+          .copy,
+          a {
+            color: $light;
+          }
+        }
         .copy {
           margin-left: 3px;
           font-weight: 500;
@@ -50,9 +71,8 @@
 
           &:hover {
             color: $primary-color;
-            border-bottom-color: transparent !important;
+            border-bottom-color: transparent;
           }
-
           i {
             margin-top: -2px;
             font-size: 19px;
@@ -60,21 +80,9 @@
             padding-right: 3px;
             padding-top: 2px;
           }
-
           .code {
             padding-left: 0;
             font-size: 18px;
-          }
-        }
-        @include root-has-class("light") {
-          a {
-            order-bottom-color: $dark;
-          }
-        }
-
-        @include root-has-class("dark") {
-          a {
-            border-bottom-color: $light;
           }
         }
       }

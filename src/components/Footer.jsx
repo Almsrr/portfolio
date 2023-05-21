@@ -33,11 +33,16 @@ export default function Footer() {
     "dark": isDarkThemeActive,
   });
 
+  const authorLinkClassName = classNames("author", {
+    "light": !isDarkThemeActive,
+    "dark": isDarkThemeActive,
+  });
+
   return (
     <footer className="site-footer">
       <div className="container">
         <div>
-          <p className="author">
+          <p className={authorLinkClassName}>
             <span className="name">{authorFullName}</span>
             <span className="spec">{authorSpecialization}</span>
           </p>

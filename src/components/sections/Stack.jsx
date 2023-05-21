@@ -39,7 +39,7 @@ export default function StackSection() {
       <div className="stack__container">
         <Heading>
           <h2>Stack</h2>
-          <p>Toolbelt</p>
+          <h3>Toolbelt</h3>
         </Heading>
         <ul className={stackClassName}>
           {data.allContentfulTechnology.nodes.map(

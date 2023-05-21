@@ -7,19 +7,19 @@
 
   @include root-has-class("light-theme") {
     .mobile-menu-container {
-      @include theme;
+      @include theme-light;
     }
     .content-container {
-      @include theme;
+      @include theme-light;
     }
   }
 
   @include root-has-class("dark-theme") {
     .mobile-menu-container {
-      @include theme($dark, $light);
+      @include theme-dark;
     }
     .content-container {
-      @include theme($dark, $light);
+      @include theme-dark;
     }
   }
 

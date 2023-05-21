@@ -21,6 +21,10 @@ $contact-item-bg-dark: #131519;
       .contact-item {
         .item-card {
           background-color: $contact-item-bg-dark;
+
+          p {
+            color: $light;
+          }
         }
       }
     }

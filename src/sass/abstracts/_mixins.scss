@@ -5,6 +5,23 @@
   color: $text-color;
 }
 
+@mixin theme-light() {
+  background-color: $light;
+  color: $dark;
+
+  p {
+    color: $light-font-color;
+  }
+}
+@mixin theme-dark() {
+  background-color: $dark;
+  color: $light;
+
+  p {
+    color: $dark-font-color;
+  }
+}
+
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media (min-width: map-get($breakpoints, $breakpoint)) {
