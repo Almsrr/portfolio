@@ -1,7 +1,12 @@
-import React from "react";
-import Layout from "./src/components/Layout";
+const React = require("react");
+const AOS = require("aos");
+const api = require("./gatsby-api-methods");
 
-export const onRenderBody = ({ setHeadComponents }) => {
+exports.onRenderBody = ({
+  setHeadComponents,
+  setBodyAttributes,
+  setHtmlAttributes,
+}) => {
   setHeadComponents([
     <link
       rel="preload"
@@ -52,8 +57,12 @@ export const onRenderBody = ({ setHeadComponents }) => {
       key="robotoSlabBoldFont"
     />,
   ]);
+  setBodyAttributes({ className: "site-body" });
+  setHtmlAttributes({ lang: "en" });
 };
 
-export const wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>;
-};
+exports.onRenderBody = () => AOS.init();
+
+exports.wrapPageElement = api.wrapWithLayout;
+
+exports.wrapRootElement = api.wrapWithProvider;
