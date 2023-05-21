@@ -57,7 +57,7 @@ exports.onRenderBody = ({
       key="robotoSlabBoldFont"
     />,
   ]);
-  setBodyAttributes({ className: "site-body" });
+  setBodyAttributes({ className: "body-dark" });
   setHtmlAttributes({ lang: "en" });
 };
 
