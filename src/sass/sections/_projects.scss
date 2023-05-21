@@ -44,7 +44,15 @@
           h3 {
             font-size: 2rem;
             color: $primary-color;
+            margin-bottom: 8px;
             // font-family: $serif-font;
+          }
+
+          .date {
+            color: inherit;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-transform: capitalize;
           }
 
           p {
