@@ -6,7 +6,7 @@ $btn-margin-left: 40px;
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  padding: 80px 30px 80px;
+  padding: 80px 40px 50px;
   @include opacity(0);
   @include transition(opacity 400ms ease-in-out);
 
@@ -21,7 +21,7 @@ $btn-margin-left: 40px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    overflow: hidden;
+    // overflow: hidden;
 
     button {
       width: 0;
