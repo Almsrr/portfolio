@@ -25,6 +25,7 @@ export default function ProjectsSection() {
             gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
             filename
           }
+          date(formatString: "MMMM YYYY")
         }
       }
     }
@@ -65,6 +66,7 @@ export default function ProjectsSection() {
                 />
                 <div className="description">
                   <h3>{p.title}</h3>
+                  <p className="date">{p.date}</p>
                   {renderRichText(p.description)}
                   <a
                     href={p.externalReference}
