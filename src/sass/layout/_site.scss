@@ -1,5 +1,12 @@
 @use "../abstracts" as *;
 
+.body-light {
+  @include theme-light;
+}
+.body-dark {
+  @include theme-dark;
+}
+
 .site-layout {
   position: relative;
   min-width: 100vw;
