@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocalStorage } from "./hooks";
+// import { useLocalStorage } from "./hooks";
 
 export const SiteContext = React.createContext({
   theme: "",
@@ -13,7 +13,12 @@ const callback = (theme) =>
   document.body.classList.add(`body-${theme.toLocaleLowerCase()}`);
 
 export default function SiteContextProvider({ children }) {
-  const [theme, setTheme] = useLocalStorage("theme", "DARK", callback);
+  const [theme, setTheme] = useState(() => {
+    const initialTheme = "DARK";
+    callback(initialTheme);
+
+    return initialTheme;
+  });
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
 
