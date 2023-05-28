@@ -1,12 +1,7 @@
 const React = require("react");
-const AOS = require("aos");
-// const api = require("./gatsby-api-methods");
+const api = require("./gatsby-api-methods");
 
-exports.onRenderBody = ({
-  setHeadComponents,
-  setBodyAttributes,
-  setHtmlAttributes,
-}) => {
+exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
   setHeadComponents([
     <link
       rel="preload"
@@ -57,12 +52,7 @@ exports.onRenderBody = ({
       key="robotoSlabBoldFont"
     />,
   ]);
-  setBodyAttributes({ className: "body-dark" });
   setHtmlAttributes({ lang: "en" });
 };
 
-exports.onRenderBody = () => AOS.init();
-
-// exports.wrapPageElement = api.wrapWithLayout;
-
-// exports.wrapRootElement = api.wrapWithProvider;
+exports.wrapRootElement = api.wrapWithProvider;
