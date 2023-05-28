@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocalStorage } from "./hooks";
 
 export const SiteContext = React.createContext({
   theme: "",
@@ -8,39 +9,31 @@ export const SiteContext = React.createContext({
   toggleMobileMenu: () => {},
 });
 
+const callback = (theme) =>
+  document.body.classList.add(`body-${theme.toLocaleLowerCase()}`);
+
 export default function SiteContextProvider({ children }) {
-  const [theme, setTheme] = useState("DARK");
+  const [theme, setTheme] = useLocalStorage("theme", "DARK", callback);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
 
   useEffect(() => {
-    const storagedTheme = localStorage.getItem("theme");
-    if (storagedTheme) {
-      setTheme(storagedTheme);
-    }
-  }, []);
-
-  const updateBodyClasses = useCallback((prevTheme = "DARK", newTheme) => {
-    document.body.classList.remove(`body-${prevTheme.toLocaleLowerCase()}`);
-    document.body.classList.add(`body-${newTheme.toLocaleLowerCase()}`);
-  }, []);
-
-  useEffect(() => {
-    updateBodyClasses(undefined, theme);
-    localStorage.setItem("theme", theme);
-  }, [theme, updateBodyClasses]);
+    setIsDarkThemeActive(theme === "DARK");
+  }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => {
-      const newTheme = prev === "DARK" ? "LIGHT" : "DARK";
-      updateBodyClasses(prev, newTheme);
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === "DARK" ? "LIGHT" : "DARK";
 
+      document.body.classList.replace(
+        `body-${prevTheme.toLocaleLowerCase()}`,
+        `body-${newTheme.toLocaleLowerCase()}`
+      );
       return newTheme;
     });
   };
 
   const toggleMobileMenu = () => setShowMobileMenu((state) => !state);
-
-  const isDarkThemeActive = theme === "DARK";
 
   return (
     <SiteContext.Provider
