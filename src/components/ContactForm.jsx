@@ -6,7 +6,7 @@ import classNames from "classnames";
 export default function ContactForm({ isDarkTheme, onSubmit }) {
   const {
     register,
-    // handleSubmit,
+    handleSubmit,
     formState: { errors },
   } = useForm();
 
@@ -18,9 +18,9 @@ export default function ContactForm({ isDarkTheme, onSubmit }) {
   return (
     <form
       className={formClassName}
-      method="POST"
       name="contact"
-      // data-netlify="true"
+      onSubmit={handleSubmit(onSubmit)}
+      netlify
     >
       <div className="input-container">
         <div className="control name-control">
