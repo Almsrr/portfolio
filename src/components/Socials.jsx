@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
@@ -7,6 +7,15 @@ import { useSiteContext } from "../hooks";
 
 export default function Socials() {
   const { isDarkTheme } = useSiteContext();
+  const [linkClassName, setLinkClassName] = useState("");
+
+  useEffect(() => {
+    const classes = classNames("socials__links", {
+      "dark": isDarkTheme,
+      "light": !isDarkTheme,
+    });
+    setLinkClassName(classes);
+  });
 
   const data = useStaticQuery(graphql`
     query {
@@ -28,11 +37,6 @@ export default function Socials() {
     instagramProfileLink,
     discordChannelLink,
   } = person;
-
-  const linkClassName = classNames("socials__links", {
-    "dark": isDarkTheme,
-    "light": !isDarkTheme,
-  });
 
   return (
     <div className="socials">
