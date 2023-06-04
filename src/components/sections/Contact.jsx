@@ -38,7 +38,7 @@ export default function ContactSection() {
         </header>
         <div className="grid">
           <div className="form">
-            <ContactForm isDarkTheme={isDarkTheme} onSubmit={submit} />
+            <ContactForm isDarkTheme={true} onSubmit={submit} />
           </div>
           <div className="contact-item address">
             <Card className="item-card">

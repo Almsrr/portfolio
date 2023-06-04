@@ -1,5 +1,6 @@
 const React = require("react");
 const api = require("./gatsby-api-methods");
+const AOS = require("aos");
 
 exports.onRenderBody = ({
   setHeadComponents,
@@ -61,3 +62,5 @@ exports.onRenderBody = ({
 };
 
 exports.wrapRootElement = api.wrapWithProvider;
+
+exports.onPreRenderHTML = AOS.init();
