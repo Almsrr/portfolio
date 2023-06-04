@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 
-import { useSiteContext } from "../hooks";
+import { useTheme } from "../hooks";
 import ThemeSwitchButton from "./ThemeSwitchButton";
 
 const NavbarLink = ({ children, href, isActive, onClick }) => {
@@ -23,7 +23,7 @@ const NavbarLink = ({ children, href, isActive, onClick }) => {
 };
 
 export default function Navbar() {
-  const { toggleTheme, isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme, toggleTheme } = useTheme();
   const [isVisible, setIsVisble] = useState(true);
   const lastScrollTop = useRef(0);
   const [sectionElements, setSectionElements] = useState([]);
@@ -88,8 +88,8 @@ export default function Navbar() {
   const isLinkActive = (href) => activeLink === href;
 
   const linksClassName = classNames("links", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "light": !isDarkTheme,
+    "dark": isDarkTheme,
   });
   const navbarClassName = classNames("site-navbar", { "visible": isVisible });
 
@@ -151,7 +151,7 @@ export default function Navbar() {
           <div className="actions">
             <ThemeSwitchButton
               onClick={toggleTheme}
-              darkThemeIsActive={isDarkThemeActive}
+              darkThemeIsActive={isDarkTheme}
             />
           </div>
         </div>

@@ -1,7 +1,11 @@
 const React = require("react");
 const api = require("./gatsby-api-methods");
 
-exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
+exports.onRenderBody = ({
+  setHeadComponents,
+  setHtmlAttributes,
+  setBodyAttributes,
+}) => {
   setHeadComponents([
     <link
       rel="preload"
@@ -53,6 +57,7 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
     />,
   ]);
   setHtmlAttributes({ lang: "en" });
+  setBodyAttributes({ className: "none" });
 };
 
 exports.wrapRootElement = api.wrapWithProvider;

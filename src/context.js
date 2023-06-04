@@ -1,39 +1,24 @@
-import React, { useState, useEffect } from "react";
-// import { useLocalStorage } from "./hooks";
+import React, { useState } from "react";
+import { useLocalStorage } from "./hooks";
 
 export const SiteContext = React.createContext({
   theme: "",
   toggleTheme: () => {},
-  isDarkThemeActive: false,
   showMobileMenu: false,
   toggleMobileMenu: () => {},
 });
 
-const callback = (theme) =>
-  document.body.classList.add(`body-${theme.toLocaleLowerCase()}`);
-
 export default function SiteContextProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    const initialTheme = "DARK";
-    callback(initialTheme);
-
-    return initialTheme;
-  });
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [isDarkThemeActive, setIsDarkThemeActive] = useState(false);
-
-  useEffect(() => {
-    setIsDarkThemeActive(theme === "DARK");
-  }, [theme]);
+  const [theme, setTheme] = useLocalStorage("theme", "dark", (theme) =>
+    document.body.classList.add(`body-${theme}`)
+  );
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
-      const newTheme = prevTheme === "DARK" ? "LIGHT" : "DARK";
+      const newTheme = prevTheme === "dark" ? "light" : "dark";
 
-      document.body.classList.replace(
-        `body-${prevTheme.toLocaleLowerCase()}`,
-        `body-${newTheme.toLocaleLowerCase()}`
-      );
+      document.body.classList.replace(`body-${prevTheme}`, `body-${newTheme}`);
       return newTheme;
     });
   };
@@ -45,7 +30,6 @@ export default function SiteContextProvider({ children }) {
       value={{
         theme,
         toggleTheme,
-        isDarkThemeActive,
         showMobileMenu,
         toggleMobileMenu,
       }}
