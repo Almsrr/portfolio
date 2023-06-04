@@ -11,10 +11,10 @@ export default function IndexPage() {
   return (
     <>
       <HomeSection />
-      <ServicesSection />
+      {/* <ServicesSection />
       <ProjectsSection />
       <StackSection />
-      <ContactSection />
+      <ContactSection /> */}
     </>
   );
 }
