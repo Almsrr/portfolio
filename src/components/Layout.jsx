@@ -11,10 +11,9 @@ export default function Layout({ children }) {
   const { showMobileMenu, toggleMobileMenu } = useMobileMenu();
   const { isDarkTheme, toggleTheme } = useTheme();
 
-  const layoutClasses = classNames("site-layout", {
+  const layoutClasses = classNames("site-layout dark-theme", {
     "menu-open": showMobileMenu,
     "light-theme": !isDarkTheme,
-    "dark-theme": isDarkTheme,
   });
 
   return (
