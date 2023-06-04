@@ -63,4 +63,4 @@ exports.onRenderBody = ({
 
 exports.wrapRootElement = api.wrapWithProvider;
 
-exports.onPreRenderHTML = AOS.init();
+// exports.onPreRenderHTML = AOS.init();

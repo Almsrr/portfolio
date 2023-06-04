@@ -6,6 +6,6 @@ require("aos/dist/aos.css");
 const AOS = require("aos");
 const api = require("./gatsby-api-methods");
 
-exports.onInitialClientRender = () => AOS.init();
+// exports.onInitialClientRender = () => AOS.init();
 
 exports.wrapRootElement = api.wrapWithProvider;
