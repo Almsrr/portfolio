@@ -7,7 +7,7 @@ export default function useSiteContext() {
     useContext(SiteContext);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
 
-  useEffect(() => setIsDarkTheme(theme === "dark"), [theme]);
+  useEffect(() => setIsDarkTheme(theme.variant === "dark"), [theme]);
 
   return {
     theme,
