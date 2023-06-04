@@ -24,8 +24,8 @@ export default function ContactSection() {
   const contactInfo = data.allContentfulPerson.nodes[0];
 
   const contactSectionClassName = classNames("contact", {
-    "dark": true,
-    "light": false,
+    "dark": isDarkTheme,
+    "light": !isDarkTheme,
   });
 
   const submit = () => {};
@@ -38,7 +38,7 @@ export default function ContactSection() {
         </header>
         <div className="grid">
           <div className="form">
-            <ContactForm isDarkTheme={true} onSubmit={submit} />
+            <ContactForm isDarkTheme={isDarkTheme} onSubmit={submit} />
           </div>
           <div className="contact-item address">
             <Card className="item-card">

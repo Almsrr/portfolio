@@ -27,7 +27,7 @@ export default function Layout({ children }) {
       </div>
       <div className="mobile-menu-container">
         <MobileMenu
-          isDarkActive={true}
+          isDarkActive={isDarkTheme}
           isVisible={showMobileMenu}
           onToggleMenu={toggleMobileMenu}
           onToggleTheme={toggleTheme}

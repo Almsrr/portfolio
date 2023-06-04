@@ -30,8 +30,8 @@ export default function Socials() {
   } = person;
 
   const linkClassName = classNames("socials__links", {
-    "dark": true,
-    "light": false,
+    "dark": isDarkTheme,
+    "light": !isDarkTheme,
   });
 
   return (
