@@ -10,15 +10,22 @@ export const SiteContext = React.createContext({
 
 export default function SiteContextProvider({ children }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [theme, setTheme] = useLocalStorage("theme", "dark", (theme) =>
-    document.body.classList.add(`body-${theme}`)
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    { variant: "dark" },
+    (theme) => document.body.classList.add(`body-${theme.variant}`)
   );
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
-      const newTheme = prevTheme === "dark" ? "light" : "dark";
+      const newTheme = {
+        variant: prevTheme.variant === "dark" ? "light" : "dark",
+      };
 
-      document.body.classList.replace(`body-${prevTheme}`, `body-${newTheme}`);
+      document.body.classList.replace(
+        `body-${prevTheme.variant}`,
+        `body-${newTheme.variant}`
+      );
       return newTheme;
     });
   };
