@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql, navigate } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
 
@@ -28,19 +28,6 @@ export default function ContactSection() {
     "light": !isDarkTheme,
   });
 
-  const submit = (data, event) => {
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => navigate("/thank-you/"))
-      .catch((error) => alert(error));
-  };
-
   return (
     <section className={contactSectionClassName} id="contact">
       <div className="contact__container">
@@ -49,7 +36,7 @@ export default function ContactSection() {
         </header>
         <div className="grid">
           <div className="form">
-            <ContactForm isDarkTheme={isDarkTheme} onSubmit={submit} />
+            <ContactForm isDarkTheme={isDarkTheme} />
           </div>
           <div className="contact-item address">
             <Card className="item-card">
