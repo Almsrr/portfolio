@@ -23,9 +23,8 @@ export default function ContactSection() {
 
   const contactInfo = data.allContentfulPerson.nodes[0];
 
-  const contactSectionClassName = classNames("contact", {
+  const contactSectionClassName = classNames("contact dark", {
     "light": !isDarkTheme,
-    "dark": isDarkTheme,
   });
 
   const submit = () => {};
