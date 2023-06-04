@@ -16,25 +16,13 @@ export default function ContactForm({ isDarkTheme }) {
     "dark": isDarkTheme,
   });
 
-  const submit = (data, event) => {
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => reset())
-      .catch((error) => console.log(error.message));
-  };
+  const submit = (data, event) => {};
 
   return (
     <form
       className={formClassName}
       name="contact"
       onSubmit={handleSubmit(submit)}
-      netlify="true"
     >
       <div className="input-container">
         <div className="control name-control">
