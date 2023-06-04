@@ -3,10 +3,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
 
-export default function ContactForm({ isDarkTheme, onSubmit }) {
+export default function ContactForm({ isDarkTheme }) {
   const {
     register,
-    // handleSubmit,
+    handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -15,12 +16,25 @@ export default function ContactForm({ isDarkTheme, onSubmit }) {
     "dark": isDarkTheme,
   });
 
+  const submit = (data, event) => {
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => reset())
+      .catch((error) => console.log(error.message));
+  };
+
   return (
     <form
       className={formClassName}
-      method="POST"
       name="contact"
-      data-netlify="true"
+      onSubmit={handleSubmit(submit)}
+      netlify
     >
       <div className="input-container">
         <div className="control name-control">

@@ -4,11 +4,11 @@ import { useStaticQuery, graphql } from "gatsby";
 import classNames from "classnames";
 
 import { useSiteContext } from "../../hooks";
-import Heading from "./Heading";
+import Heading from "../Heading";
 import HoverCard from "../HoverCard";
 
 export default function StackSection() {
-  const { isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
       allContentfulTechnology(sort: { createdAt: ASC }) {
@@ -30,8 +30,8 @@ export default function StackSection() {
   `);
 
   const stackClassName = classNames("stack__items", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "dark": isDarkTheme,
+    "light": !isDarkTheme,
   });
 
   return (

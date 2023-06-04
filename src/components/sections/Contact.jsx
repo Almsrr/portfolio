@@ -8,7 +8,7 @@ import ContactForm from "../ContactForm";
 import Card from "../Card";
 
 export default function ContactSection() {
-  const { isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
       allContentfulPerson {
@@ -24,11 +24,9 @@ export default function ContactSection() {
   const contactInfo = data.allContentfulPerson.nodes[0];
 
   const contactSectionClassName = classNames("contact", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "dark": isDarkTheme,
+    "light": !isDarkTheme,
   });
-
-  const submit = () => {};
 
   return (
     <section className={contactSectionClassName} id="contact">
@@ -38,7 +36,7 @@ export default function ContactSection() {
         </header>
         <div className="grid">
           <div className="form">
-            <ContactForm isDarkTheme={isDarkThemeActive} onSubmit={submit} />
+            <ContactForm isDarkTheme={isDarkTheme} />
           </div>
           <div className="contact-item address">
             <Card className="item-card">

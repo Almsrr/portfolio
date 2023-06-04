@@ -8,13 +8,13 @@ import BurgerButton from "./BurgerButton";
 import { useSiteContext } from "../hooks";
 
 export default function Layout({ children }) {
-  const { isDarkThemeActive, showMobileMenu, toggleMobileMenu, toggleTheme } =
+  const { isDarkTheme, toggleTheme, showMobileMenu, toggleMobileMenu } =
     useSiteContext();
 
   const layoutClasses = classNames("site-layout", {
     "menu-open": showMobileMenu,
-    "light-theme": !isDarkThemeActive,
-    "dark-theme": isDarkThemeActive,
+    "dark-theme": isDarkTheme,
+    "light-theme": !isDarkTheme,
   });
 
   return (
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
       </div>
       <div className="mobile-menu-container">
         <MobileMenu
-          isDarkActive={isDarkThemeActive}
+          isDarkActive={isDarkTheme}
           isVisible={showMobileMenu}
           onToggleMenu={toggleMobileMenu}
           onToggleTheme={toggleTheme}

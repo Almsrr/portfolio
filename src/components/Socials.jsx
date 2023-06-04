@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useSiteContext } from "../hooks";
 
 export default function Socials() {
-  const { isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme } = useSiteContext();
 
   const data = useStaticQuery(graphql`
     query {
@@ -30,8 +30,8 @@ export default function Socials() {
   } = person;
 
   const linkClassName = classNames("socials__links", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "dark": isDarkTheme,
+    "light": !isDarkTheme,
   });
 
   return (

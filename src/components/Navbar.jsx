@@ -23,7 +23,7 @@ const NavbarLink = ({ children, href, isActive, onClick }) => {
 };
 
 export default function Navbar() {
-  const { toggleTheme, isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme, toggleTheme } = useSiteContext();
   const [isVisible, setIsVisble] = useState(true);
   const lastScrollTop = useRef(0);
   const [sectionElements, setSectionElements] = useState([]);
@@ -88,8 +88,8 @@ export default function Navbar() {
   const isLinkActive = (href) => activeLink === href;
 
   const linksClassName = classNames("links", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "dark": isDarkTheme,
+    "light": !isDarkTheme,
   });
   const navbarClassName = classNames("site-navbar", { "visible": isVisible });
 
@@ -151,7 +151,7 @@ export default function Navbar() {
           <div className="actions">
             <ThemeSwitchButton
               onClick={toggleTheme}
-              darkThemeIsActive={isDarkThemeActive}
+              darkThemeIsActive={isDarkTheme}
             />
           </div>
         </div>

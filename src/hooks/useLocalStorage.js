@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { isBrowser } from "browser-or-node";
 
-export default function useLocalStorage(key, initialValue, callback = null) {
+export default function useLocalStorage(
+  key,
+  initialValue = null,
+  onInit = null
+) {
   const [storedValue, setStoredValue] = useState(() => {
     if (!isBrowser) {
       return initialValue;
@@ -11,8 +15,8 @@ export default function useLocalStorage(key, initialValue, callback = null) {
     if (valueFromStorage) {
       try {
         valueFromStorage = JSON.parse(valueFromStorage);
-        if (callback && callback instanceof Function) {
-          callback(valueFromStorage);
+        if (onInit && onInit instanceof Function) {
+          onInit(valueFromStorage);
         }
         return valueFromStorage;
       } catch (error) {
@@ -20,6 +24,11 @@ export default function useLocalStorage(key, initialValue, callback = null) {
         return initialValue;
       }
     }
+
+    if (onInit && onInit instanceof Function && initialValue) {
+      onInit(initialValue);
+    }
+    return initialValue;
   });
 
   const setValue = (value) => {
