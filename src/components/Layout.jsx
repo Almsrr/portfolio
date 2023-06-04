@@ -13,8 +13,8 @@ export default function Layout({ children }) {
 
   const layoutClasses = classNames("site-layout", {
     "menu-open": showMobileMenu,
-    "dark-theme": isDarkTheme,
-    "light-theme": !isDarkTheme,
+    "dark-theme": true,
+    "light-theme": false,
   });
 
   return (

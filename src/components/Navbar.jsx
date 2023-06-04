@@ -88,8 +88,8 @@ export default function Navbar() {
   const isLinkActive = (href) => activeLink === href;
 
   const linksClassName = classNames("links", {
-    "dark": isDarkTheme,
-    "light": !isDarkTheme,
+    "dark": true,
+    "light": false,
   });
   const navbarClassName = classNames("site-navbar", { "visible": isVisible });
 

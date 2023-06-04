@@ -11,8 +11,8 @@ export default function ContactForm({ isDarkTheme, onSubmit }) {
   } = useForm();
 
   const formClassName = classNames("contact-form", {
-    "light": !isDarkTheme,
-    "dark": isDarkTheme,
+    "light": false,
+    "dark": true,
   });
 
   return (

@@ -30,8 +30,8 @@ export default function StackSection() {
   `);
 
   const stackClassName = classNames("stack__items", {
-    "dark": isDarkTheme,
-    "light": !isDarkTheme,
+    "dark": true,
+    "light": false,
   });
 
   return (

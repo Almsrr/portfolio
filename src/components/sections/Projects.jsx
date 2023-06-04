@@ -32,8 +32,8 @@ export default function ProjectsSection() {
   `);
 
   const projectsListClassName = classNames("projects__list", {
-    "dark": isDarkTheme,
-    "light": !isDarkTheme,
+    "dark": true,
+    "light": false,
   });
 
   const calculateRowNumber = (index, columns) => {
