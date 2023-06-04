@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
 
-import { useTheme } from "../hooks";
+import { useSiteContext } from "../hooks";
 
 export default function Socials() {
-  const { isDarkTheme } = useTheme();
+  const { isDarkTheme } = useSiteContext();
 
   const data = useStaticQuery(graphql`
     query {

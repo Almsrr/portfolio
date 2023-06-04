@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
 
-import { useTheme } from "../../hooks";
+import { useSiteContext } from "../../hooks";
 import ContactForm from "../ContactForm";
 import Card from "../Card";
 
 export default function ContactSection() {
-  const { isDarkTheme } = useTheme();
+  const { isDarkTheme } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
       allContentfulPerson {

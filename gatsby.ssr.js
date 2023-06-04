@@ -57,7 +57,7 @@ exports.onRenderBody = ({
     />,
   ]);
   setHtmlAttributes({ lang: "en" });
-  setBodyAttributes({ className: "none" });
+  setBodyAttributes({ className: "" });
 };
 
 exports.wrapRootElement = api.wrapWithProvider;
