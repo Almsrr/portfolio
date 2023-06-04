@@ -23,7 +23,8 @@ export default function ContactSection() {
 
   const contactInfo = data.allContentfulPerson.nodes[0];
 
-  const contactSectionClassName = classNames("contact dark", {
+  const contactSectionClassName = classNames("contact", {
+    "dark": isDarkTheme,
     "light": !isDarkTheme,
   });
 

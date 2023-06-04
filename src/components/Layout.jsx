@@ -11,8 +11,9 @@ export default function Layout({ children }) {
   const { isDarkTheme, toggleTheme, showMobileMenu, toggleMobileMenu } =
     useSiteContext();
 
-  const layoutClasses = classNames("site-layout dark-theme", {
+  const layoutClasses = classNames("site-layout", {
     "menu-open": showMobileMenu,
+    "dark-theme": isDarkTheme,
     "light-theme": !isDarkTheme,
   });
 

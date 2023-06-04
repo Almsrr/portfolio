@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useLocalStorage } from "./hooks";
 
 export const SiteContext = React.createContext({
@@ -10,14 +10,9 @@ export const SiteContext = React.createContext({
 
 export default function SiteContextProvider({ children }) {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
   const [theme, setTheme] = useLocalStorage("theme", "dark", (theme) =>
     document.body.classList.add(`body-${theme}`)
   );
-
-  useEffect(() => {
-    setIsDarkTheme(theme === "dark");
-  }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
@@ -35,7 +30,6 @@ export default function SiteContextProvider({ children }) {
       value={{
         theme,
         toggleTheme,
-        isDarkTheme,
         showMobileMenu,
         toggleMobileMenu,
       }}

@@ -26,7 +26,8 @@ export default function ServicesSection() {
     }
   `);
 
-  const servicesListClassName = classNames("services__list dark", {
+  const servicesListClassName = classNames("services__list", {
+    "dark": isDarkTheme,
     "light": !isDarkTheme,
   });
 

@@ -29,7 +29,8 @@ export default function Socials() {
     discordChannelLink,
   } = person;
 
-  const linkClassName = classNames("socials__links dark", {
+  const linkClassName = classNames("socials__links", {
+    "dark": isDarkTheme,
     "light": !isDarkTheme,
   });
 

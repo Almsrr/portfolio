@@ -31,7 +31,8 @@ export default function ProjectsSection() {
     }
   `);
 
-  const projectsListClassName = classNames("projects__list dark", {
+  const projectsListClassName = classNames("projects__list", {
+    "dark": isDarkTheme,
     "light": !isDarkTheme,
   });
 
