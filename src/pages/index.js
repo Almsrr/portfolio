@@ -13,8 +13,8 @@ export default function IndexPage() {
       <HomeSection />
       <ServicesSection />
       <ProjectsSection />
-      {/* <StackSection />
-      <ContactSection /> */}
+      <StackSection />
+      {/* <ContactSection /> */}
     </>
   );
 }
