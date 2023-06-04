@@ -74,7 +74,7 @@ $contact-form-bg-dark: #131519;
     }
 
     .error-message {
-      color: $contact-form-error-color;
+      color: $contact-form-error-color !important;
       font-size: calc($contact-form-font-size - 2px);
       position: absolute;
       left: 1px;
