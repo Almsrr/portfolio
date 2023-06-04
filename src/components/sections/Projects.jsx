@@ -4,12 +4,12 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 import classNames from "classnames";
 
-import { useTheme } from "../../hooks";
+import { useSiteContext } from "../../hooks";
 import Heading from "../Heading";
 import Picture from "../Picture";
 
 export default function ProjectsSection() {
-  const { isDarkTheme } = useTheme();
+  const { isDarkTheme } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
       allContentfulProject(sort: { createdAt: ASC }) {

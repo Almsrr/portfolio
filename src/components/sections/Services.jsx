@@ -5,11 +5,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 
 import Card from "../Card";
-import { useTheme } from "../../hooks";
+import { useSiteContext } from "../../hooks";
 import Heading from "../Heading";
 
 export default function ServicesSection() {
-  const { isDarkTheme } = useTheme();
+  const { isDarkTheme } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
       allContentfulService(sort: { createdAt: ASC }) {

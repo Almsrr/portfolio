@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 
-import { useTheme } from "../hooks";
+import { useSiteContext } from "../hooks";
 import ThemeSwitchButton from "./ThemeSwitchButton";
 
 const NavbarLink = ({ children, href, isActive, onClick }) => {
@@ -23,7 +23,7 @@ const NavbarLink = ({ children, href, isActive, onClick }) => {
 };
 
 export default function Navbar() {
-  const { isDarkTheme, toggleTheme } = useTheme();
+  const { isDarkTheme, toggleTheme } = useSiteContext();
   const [isVisible, setIsVisble] = useState(true);
   const lastScrollTop = useRef(0);
   const [sectionElements, setSectionElements] = useState([]);

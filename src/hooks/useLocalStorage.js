@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { isBrowser } from "browser-or-node";
 
-export default function useLocalStorage(key, initialValue, onInit = null) {
+export default function useLocalStorage(
+  key,
+  initialValue = null,
+  onInit = null
+) {
   const [storedValue, setStoredValue] = useState(() => {
     if (!isBrowser) {
       return initialValue;
@@ -20,6 +24,11 @@ export default function useLocalStorage(key, initialValue, onInit = null) {
         return initialValue;
       }
     }
+
+    if (onInit && onInit instanceof Function && initialValue) {
+      onInit(initialValue);
+    }
+    return initialValue;
   });
 
   const setValue = (value) => {

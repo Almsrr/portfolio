@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
 
-import { useTheme } from "../../hooks";
+import { useSiteContext } from "../../hooks";
 import Heading from "../Heading";
 import HoverCard from "../HoverCard";
 
 export default function StackSection() {
-  const { isDarkTheme } = useTheme();
+  const { isDarkTheme } = useSiteContext();
   const data = useStaticQuery(graphql`
     query {
       allContentfulTechnology(sort: { createdAt: ASC }) {
