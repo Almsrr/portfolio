@@ -1,11 +1,12 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import classNames from "classnames";
 
 import { useSiteContext } from "../../hooks";
 import Heading from "../Heading";
-import HoverCard from "../HoverCard";
+// import HoverCard from "../HoverCard";
 
 export default function StackSection() {
   const { isDarkTheme } = useSiteContext();
@@ -20,9 +21,7 @@ export default function StackSection() {
           }
           image {
             filename
-            file {
-              url
-            }
+            gatsbyImageData(width: 90, layout: FIXED, placeholder: NONE)
           }
         }
       }
@@ -42,20 +41,15 @@ export default function StackSection() {
           <h3>Toolbelt</h3>
         </Heading>
         <ul className={stackClassName}>
-          {data.allContentfulTechnology.nodes.map(
-            ({ id, title, image, description }) => {
-              return (
-                <li key={id}>
-                  <HoverCard
-                    title={title}
-                    image={image}
-                    description={description.description}
-                    className="stack-card"
-                  />
-                </li>
-              );
-            }
-          )}
+          {data.allContentfulTechnology.nodes.map(({ id, image }) => {
+            return (
+              <li key={id}>
+                <div className="stack-card">
+                  <GatsbyImage image={getImage(image)} alt={image.filename} />
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

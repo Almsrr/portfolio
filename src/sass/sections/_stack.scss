@@ -14,52 +14,36 @@ $stack-card-bg-dark: #131519;
       padding: 0;
       margin: 0;
       gap: 16px;
-      display: grid;
-      grid-auto-rows: 260px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
-      @include respond-to("sm") {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @include respond-to("md") {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @include respond-to("lg") {
-        grid-template-columns: repeat(4, 1fr);
-      }
+      .stack-card {
+        width: 130px;
+        height: 110px;
+        display: grid;
+        place-items: center;
+        @include transition(all 200ms linear);
 
-      @include root-has-class("light") {
-        .stack-card {
-          background-color: $stack-card-bg-light;
-
-          .body {
-            .hover-card__description {
-              .line {
-                background-color: $stack-card-bg-dark;
-              }
-            }
-          }
+        &:hover {
+          transform: scale(1.1);
+          filter: grayscale(0);
         }
       }
-      @include root-has-class("dark") {
-        .stack-card {
-          background-color: $stack-card-bg-dark;
 
-          .body {
-            .hover-card__description {
-              .line {
-                background-color: $stack-card-bg-light;
-              }
-              // p {
-              //   color: $light;
-              // }
-            }
-          }
-        }
-      }
+      // @include root-has-class("light") {
+      //   .stack-card {
+      //     background-color: $stack-card-bg-light;
+      //   }
+      // }
+      // @include root-has-class("dark") {
+      //   .stack-card {
+      //     background-color: $stack-card-bg-dark;
+      //   }
+      // }
 
       li:first-child {
         position: relative;
-
         &::before {
           content: "My turn!";
           position: absolute;
