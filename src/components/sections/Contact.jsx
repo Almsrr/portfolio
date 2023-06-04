@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
 
-import { useSiteContext } from "../../hooks";
+import { useTheme } from "../../hooks";
 import ContactForm from "../ContactForm";
 import Card from "../Card";
 
 export default function ContactSection() {
-  const { isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme } = useTheme();
   const data = useStaticQuery(graphql`
     query {
       allContentfulPerson {
@@ -24,8 +24,8 @@ export default function ContactSection() {
   const contactInfo = data.allContentfulPerson.nodes[0];
 
   const contactSectionClassName = classNames("contact", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "light": !isDarkTheme,
+    "dark": isDarkTheme,
   });
 
   const submit = () => {};
@@ -38,7 +38,7 @@ export default function ContactSection() {
         </header>
         <div className="grid">
           <div className="form">
-            <ContactForm isDarkTheme={isDarkThemeActive} onSubmit={submit} />
+            <ContactForm isDarkTheme={isDarkTheme} onSubmit={submit} />
           </div>
           <div className="contact-item address">
             <Card className="item-card">

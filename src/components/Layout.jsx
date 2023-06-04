@@ -5,16 +5,16 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import MobileMenu from "./MobileMenu";
 import BurgerButton from "./BurgerButton";
-import { useSiteContext } from "../hooks";
+import { useMobileMenu, useTheme } from "../hooks";
 
 export default function Layout({ children }) {
-  const { isDarkThemeActive, showMobileMenu, toggleMobileMenu, toggleTheme } =
-    useSiteContext();
+  const { showMobileMenu, toggleMobileMenu } = useMobileMenu();
+  const { isDarkTheme, toggleTheme } = useTheme();
 
   const layoutClasses = classNames("site-layout", {
     "menu-open": showMobileMenu,
-    "light-theme": !isDarkThemeActive,
-    "dark-theme": isDarkThemeActive,
+    "light-theme": !isDarkTheme,
+    "dark-theme": isDarkTheme,
   });
 
   return (
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
       </div>
       <div className="mobile-menu-container">
         <MobileMenu
-          isDarkActive={isDarkThemeActive}
+          isDarkActive={isDarkTheme}
           isVisible={showMobileMenu}
           onToggleMenu={toggleMobileMenu}
           onToggleTheme={toggleTheme}

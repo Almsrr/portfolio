@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import classNames from "classnames";
 
-import { useSiteContext } from "../hooks";
+import { useTheme } from "../hooks";
 
 export default function Socials() {
-  const { isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme } = useTheme();
 
   const data = useStaticQuery(graphql`
     query {
@@ -30,8 +30,8 @@ export default function Socials() {
   } = person;
 
   const linkClassName = classNames("socials__links", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "light": !isDarkTheme,
+    "dark": isDarkTheme,
   });
 
   return (

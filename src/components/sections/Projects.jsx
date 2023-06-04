@@ -4,12 +4,12 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 
 import classNames from "classnames";
 
-import { useSiteContext } from "../../hooks";
-import Heading from "./Heading";
+import { useTheme } from "../../hooks";
+import Heading from "../Heading";
 import Picture from "../Picture";
 
 export default function ProjectsSection() {
-  const { isDarkThemeActive } = useSiteContext();
+  const { isDarkTheme } = useTheme();
   const data = useStaticQuery(graphql`
     query {
       allContentfulProject(sort: { createdAt: ASC }) {
@@ -32,8 +32,8 @@ export default function ProjectsSection() {
   `);
 
   const projectsListClassName = classNames("projects__list", {
-    "light": !isDarkThemeActive,
-    "dark": isDarkThemeActive,
+    "light": !isDarkTheme,
+    "dark": isDarkTheme,
   });
 
   const calculateRowNumber = (index, columns) => {
