@@ -1,4 +1,5 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import classNames from "classnames";
 
 import Navbar from "./Navbar";
@@ -10,6 +11,19 @@ import { useSiteContext } from "../hooks";
 export default function Layout({ children }) {
   const { isDarkTheme, toggleTheme, showMobileMenu, toggleMobileMenu } =
     useSiteContext();
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulPerson {
+        nodes {
+          logo {
+            filename
+            gatsbyImage(width: 60)
+          }
+        }
+      }
+    }
+  `);
+  const logo = data.allContentfulPerson.nodes[0].logo;
 
   const layoutClasses = classNames("site-layout", {
     "menu-open": showMobileMenu,
@@ -34,7 +48,7 @@ export default function Layout({ children }) {
         />
       </div>
       <div className="content-container">
-        <Navbar />
+        <Navbar logo={logo} />
         <main>{children}</main>
         <Footer />
       </div>
