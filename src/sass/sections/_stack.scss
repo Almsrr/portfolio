@@ -19,11 +19,11 @@ $stack-card-bg-dark: #131519;
       justify-content: center;
 
       .stack-card {
-        width: 130px;
-        height: 110px;
+        width: 140px;
+        height: 120px;
         display: grid;
         place-items: center;
-        @include transition(all 200ms linear);
+        @include transition(all 200ms ease-in);
         filter: grayscale(1);
 
         &:hover {
