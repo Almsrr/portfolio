@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { navigate } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 
 import { useSiteContext } from "../hooks";
@@ -22,7 +22,7 @@ const NavbarLink = ({ children, href, isActive, onClick }) => {
   );
 };
 
-export default function Navbar() {
+export default function Navbar(props) {
   const { isDarkTheme, toggleTheme } = useSiteContext();
   const [isVisible, setIsVisble] = useState(true);
   const lastScrollTop = useRef(0);
@@ -98,12 +98,9 @@ export default function Navbar() {
       <div className="container">
         <div className="block logo-block">
           <NavbarLink href="#home" isActive={false} onClick={handleBtnClick}>
-            <StaticImage
-              src="../images/as-logo-color.png"
-              alt="alam-sierra-logo"
-              width={60}
-              height={60}
-              layout="fixed"
+            <GatsbyImage
+              image={getImage(props.logo)}
+              alt={props.logo.filename}
               placeholder="none"
             />
           </NavbarLink>
