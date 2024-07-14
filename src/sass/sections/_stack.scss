@@ -43,7 +43,7 @@ $stack-card-bg-dark: #131519;
       //   }
       // }
 
-      li:first-child {
+      li:last-child {
         position: relative;
         &::before {
           content: "My turn!";
