@@ -27,6 +27,7 @@ export default function Footer() {
   const authorSpecialization = data.allContentfulPerson.nodes[0].specialization;
   const authorFirstName = authorFullName.split(" ")[0];
   const siteSourceCode = data.allContentfulMetadata.nodes[0].source;
+  const copyrightYear = new Date().getFullYear();
 
   const sourceLinkClassName = classNames("source", {
     "light": !isDarkThemeActive,
@@ -53,7 +54,7 @@ export default function Footer() {
               <i className="heart bx bxs-heart" />
               by {authorFirstName}.
             </a>
-            <span className="copy">&copy;2023</span>
+            <span className="copy">&copy;{copyrightYear}</span>
           </p>
         </div>
       </div>
