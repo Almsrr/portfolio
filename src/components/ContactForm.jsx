@@ -22,7 +22,9 @@ export default function ContactForm({ isDarkTheme }) {
       className={formClassName}
       name="contact"
       onSubmit={handleSubmit(submit)}
+      netlify
     >
+      <input type="hidden" name="contact-form" value="contact" />
       <div className="input-container">
         <div className="control name-control">
           <label htmlFor="name">Name</label>
