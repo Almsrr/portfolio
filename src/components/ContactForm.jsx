@@ -23,7 +23,7 @@ export default function ContactForm({ isDarkTheme }) {
       name="contact"
       method="post"
       // onSubmit={handleSubmit(submit)}
-      data-netlify="true"
+      // data-netlify="true"
     >
       <input type="hidden" name="contact-form" value="contact" />
       <div className="input-container">
