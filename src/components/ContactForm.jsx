@@ -2,11 +2,12 @@ import React from "react";
 
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
+import { navigate } from "gatsby";
 
 export default function ContactForm({ isDarkTheme }) {
   const {
     register,
-    // handleSubmit,
+    handleSubmit,
     formState: { errors },
   } = useForm();
 
@@ -15,15 +16,28 @@ export default function ContactForm({ isDarkTheme }) {
     "dark": isDarkTheme,
   });
 
-  // const submit = (data, event) => {};
+  const submit = async (_, event) => {
+    const form = event.target;
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+      if (res.ok) {
+        navigate(form.getAttribute("action"));
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <form
       className={formClassName}
       name="contact"
-      method="post"
       action="/thank-you/"
-      // onSubmit={handleSubmit(submit)}
+      onSubmit={handleSubmit(submit)}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
