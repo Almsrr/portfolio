@@ -40,9 +40,9 @@ export default function HomeSection() {
         <div className="hero">
           <div className="hero__bio">
             <h1>
-              Hey, <span>I'm</span>
-              <span>{fullName}</span>
-              {specialization}
+              Hey, I'm <br />
+              <b>{fullName}</b> <br />
+              <span>{specialization}</span>
             </h1>
             {renderRichText(bio, renderRichConfig)}
             <Socials />

@@ -6,7 +6,7 @@ import classNames from "classnames";
 export default function ContactForm({ isDarkTheme }) {
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     formState: { errors },
   } = useForm();
 
@@ -15,17 +15,20 @@ export default function ContactForm({ isDarkTheme }) {
     "dark": isDarkTheme,
   });
 
-  const submit = (data, event) => {};
+  // const submit = (data, event) => {};
 
   return (
     <form
       className={formClassName}
       name="contact"
-      onSubmit={handleSubmit(submit)}
+      method="post"
+      // onSubmit={handleSubmit(submit)}
+      data-netlify="true"
     >
+      <input type="hidden" name="contact-form" value="contact" />
       <div className="input-container">
         <div className="control name-control">
-          {/* <label htmlFor="name">Name</label> */}
+          <label htmlFor="name">Name</label>
           <input
             name="name"
             type="text"
@@ -37,7 +40,7 @@ export default function ContactForm({ isDarkTheme }) {
           )}
         </div>
         <div className="control email-control">
-          {/* <label htmlFor="email">Email</label> */}
+          <label htmlFor="email">Email</label>
           <input
             name="email"
             type="email"
@@ -52,7 +55,7 @@ export default function ContactForm({ isDarkTheme }) {
         </div>
       </div>
       <div className="control message-control">
-        {/* <label htmlFor="message">Message</label> */}
+        <label htmlFor="message">Message</label>
         <textarea
           name="message"
           placeholder="Type your message here..."
