@@ -15,13 +15,13 @@ export default function ContactForm({ isDarkTheme }) {
     "dark": isDarkTheme,
   });
 
-  const submit = (data, event) => {};
+  // const submit = (data, event) => {};
 
   return (
     <form
       className={formClassName}
       name="contact"
-      onSubmit={handleSubmit(submit)}
+      // onSubmit={handleSubmit(submit)}
       netlify
     >
       <input type="hidden" name="contact-form" value="contact" />
