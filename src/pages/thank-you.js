@@ -17,13 +17,13 @@ export default function ThankYouPage() {
   `);
 
   return (
-    <div className="thank-you">
+    <main className="thank-you">
       <div className="thank-you__content">
         <h1>{data.contentfulThankYou.heading}</h1>
         {renderRichText(data.contentfulThankYou.message)}
         <Link to="/">{data.contentfulThankYou.homeLinkText}</Link>
       </div>
-    </div>
+    </main>
   );
 }
 
