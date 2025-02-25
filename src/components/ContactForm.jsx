@@ -22,6 +22,7 @@ export default function ContactForm({ isDarkTheme }) {
       className={formClassName}
       name="contact"
       method="post"
+      action="/thank-you"
       // onSubmit={handleSubmit(submit)}
       data-netlify="true"
       data-netlify-honeypot="bot-field"
