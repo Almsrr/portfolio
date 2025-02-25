@@ -45,4 +45,4 @@ export default function NotFoundPage() {
   );
 }
 
-export const Head = () => <Metadata title="Not found" />;
+export const Head = () => <Metadata pageTitle="Not found" />;

@@ -8,7 +8,7 @@ import MobileMenu from "./MobileMenu";
 import BurgerButton from "./BurgerButton";
 import { useSiteContext } from "../hooks";
 
-export default function Layout({ children }) {
+export default function Layout({ children, pageContext }) {
   const { isDarkTheme, toggleTheme, showMobileMenu, toggleMobileMenu } =
     useSiteContext();
   const data = useStaticQuery(graphql`
@@ -30,6 +30,10 @@ export default function Layout({ children }) {
     "dark-theme": isDarkTheme,
     "light-theme": !isDarkTheme,
   });
+
+  if (pageContext.layout === "none") {
+    return <>{children}</>;
+  }
 
   return (
     <div className={layoutClasses}>

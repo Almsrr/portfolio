@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.thank-you {
+  width: 100%;
+  height: 600px;
+  display: grid;
+  place-items: center;
+
+  .thank-you__content {
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: $primary-color;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 0.75rem;
+    }
+  }
+
+  @include respond-to("md") {
+    height: 800px;
+
+    .thank-you__content {
+      h1 {
+        font-size: 4rem;
+      }
+
+      p,
+      a {
+        font-size: 1.25rem;
+      }
+
+      a {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-export default function Metadata() {
+export default function Metadata({ pageTitle }) {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -23,9 +23,11 @@ export default function Metadata() {
   const metaFromConfig = data.site.siteMetadata;
   const metaFromContentful = data.allContentfulMetadata.nodes[0];
 
-  const title = metaFromContentful.title || metaFromConfig.title;
+  const siteTitle = metaFromContentful.title || metaFromConfig.title;
   const description =
     metaFromContentful.description.description || metaFromConfig.description;
+
+  const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle;
 
   return (
     <>
