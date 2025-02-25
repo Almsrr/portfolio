@@ -30,14 +30,13 @@
           font-size: 3rem;
           font-weight: 500;
 
-          span:first-child {
-            color: $primary-color;
-          }
-
-          span:last-child {
-            display: block;
+          b {
             font-size: 4rem;
             font-weight: 900;
+          }
+
+          span {
+            color: $primary-color;
           }
         }
 
@@ -49,9 +48,9 @@
 
         @include respond-to("md") {
           h1 {
-            font-size: 3rem;
+            font-size: 4rem;
 
-            span:last-child {
+            b {
               font-size: 5rem;
             }
           }
