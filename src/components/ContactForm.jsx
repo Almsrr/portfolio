@@ -24,12 +24,14 @@ export default function ContactForm({ isDarkTheme }) {
       method="post"
       // onSubmit={handleSubmit(submit)}
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="contact-form" value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
       <div className="input-container">
         <div className="control name-control">
           <label htmlFor="name">Name</label>
           <input
+            id="name"
             name="name"
             type="text"
             placeholder="Marcelo Erizo"
@@ -42,6 +44,7 @@ export default function ContactForm({ isDarkTheme }) {
         <div className="control email-control">
           <label htmlFor="email">Email</label>
           <input
+            id="email"
             name="email"
             type="email"
             placeholder="marceloerizo@example.com"
@@ -57,6 +60,7 @@ export default function ContactForm({ isDarkTheme }) {
       <div className="control message-control">
         <label htmlFor="message">Message</label>
         <textarea
+          id="message"
           name="message"
           placeholder="Type your message here..."
           {...register("message", { required: "The message is required" })}
