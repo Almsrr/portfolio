@@ -27,4 +27,4 @@ export default function ThankYouPage() {
   );
 }
 
-export const Head = () => <Metadata />;
+export const Head = () => <Metadata pageTitle="Thank You" />;
