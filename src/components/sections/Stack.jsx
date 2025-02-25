@@ -21,7 +21,7 @@ export default function StackSection() {
           }
           image {
             filename
-            gatsbyImageData(width: 90, layout: FIXED, placeholder: NONE)
+            gatsbyImageData(width: 100, layout: FIXED, placeholder: NONE)
           }
         }
       }
