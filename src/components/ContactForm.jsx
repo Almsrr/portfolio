@@ -6,7 +6,7 @@ import classNames from "classnames";
 export default function ContactForm({ isDarkTheme }) {
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     formState: { errors },
   } = useForm();
 
