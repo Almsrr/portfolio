@@ -21,7 +21,7 @@ export default function StackSection() {
           }
           image {
             filename
-            gatsbyImageData(width: 100, layout: FIXED, placeholder: NONE)
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
           }
         }
       }
@@ -45,7 +45,11 @@ export default function StackSection() {
             return (
               <li key={id}>
                 <div className="stack-card">
-                  <GatsbyImage image={getImage(image)} alt={image.filename} />
+                  <GatsbyImage
+                    image={getImage(image)}
+                    alt={image.filename}
+                    class="img"
+                  />
                 </div>
               </li>
             );

@@ -26,6 +26,10 @@ $stack-card-bg-dark: #131519;
         @include transition(all 200ms ease-out);
         filter: grayscale(1);
 
+        .img {
+          width: 100px;
+        }
+
         &:hover {
           transform: scale(1.2);
           filter: grayscale(0);
