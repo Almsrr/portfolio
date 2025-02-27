@@ -14,7 +14,7 @@ export default function HomeSection() {
           fullName
           specialization
           presentationPicture {
-            gatsbyImageData(width: 500, layout: CONSTRAINED, placeholder: NONE)
+            gatsbyImageData(layout: CONSTRAINED, placeholder: NONE)
             filename
           }
           bio {
@@ -51,6 +51,7 @@ export default function HomeSection() {
             <GatsbyImage
               image={getImage(presentationPicture)}
               alt={presentationPicture.filename}
+              class="img"
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function ServicesSection() {
           description
           title
           icon {
-            gatsbyImageData(width: 60, layout: FIXED, placeholder: NONE)
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
             filename
           }
         }
@@ -43,12 +43,11 @@ export default function ServicesSection() {
             return (
               <li data-aos="zoom-in-up" key={service.id}>
                 <Card className="service-card">
-                  <div>
-                    <GatsbyImage
-                      image={getImage(service.icon)}
-                      alt={service.icon.filename}
-                    />
-                  </div>
+                  <GatsbyImage
+                    image={getImage(service.icon)}
+                    alt={service.icon.filename}
+                    className="img"
+                  />
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </Card>
