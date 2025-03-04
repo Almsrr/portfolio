@@ -40,6 +40,12 @@
           box-sizing: border-box;
           padding: 0.5rem 1rem 1rem 1rem;
 
+          h3,
+          p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
           h3 {
             font-size: 1.5rem;
             // color: $primary-color;

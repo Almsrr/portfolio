@@ -1,12 +1,22 @@
 @use "../abstracts/" as *;
 
-$card-padding: 30px;
+$card-sm-padding: 16px;
+$card-md-padding: 24px;
+$card-lg-padding: 30px;
 
 .card {
-  padding: $card-padding;
+  padding: $card-sm-padding;
   flex-direction: column;
   box-sizing: border-box;
   border-radius: $radius-md;
   @include transition(background-color 300ms ease-out);
   // @include box-shadow(0px 5px 5px $shadow-color);
+
+  @include respond-to("md") {
+    padding: $card-md-padding;
+  }
+
+  @include respond-to("lg") {
+    padding: $card-lg-padding;
+  }
 }
